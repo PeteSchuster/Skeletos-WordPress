@@ -1,0 +1,79 @@
+
+/* ===BEGIN STRUCTURE AND CUSTOM ELEMENTS=== */
+
+#container,
+.wrapper 		{ margin: 0 20px; }
+
+
+/* ===HEADER START=== */
+
+.header 	{ margin-bottom: 20px; padding-top: 20px; background: #e1e1e1; position: relative;
+
+	//.logo	{ display: block; text-indent: -9999px; overflow: hidden; background: url('../images/ui/logo.png') 0 0 no-repeat; float: left; }
+	
+	hgroup 	{ float: left; }
+
+	nav 	{ margin-left: -20px; padding: 20px; width: 100%; display: none; position: absolute; left: 0; top: 94px; z-index: 90; background: #eee; }
+
+	.show_menu 	{ float: right; }
+
+}
+		
+ul.list_primary_nav 	{ margin: 0; font-size: .875em; text-align: center;
+
+	ul, li 	{ margin: 0; list-style: none; }
+
+	a 	{ display: block; text-decoration: none; }
+
+	li ul 	{ display: none; }
+
+	li:hover > ul,
+	li.hover > ul	{ display: block; }
+
+}
+
+/* ===CONTENT START=== */
+
+.content 	{ margin-bottom: 20px; }
+
+article.post_comment 	{
+
+	> img 	{ margin-right: 20px; max-width: 65px; float: left; }
+
+	> div 	{ padding-top: 10px; overflow: hidden; }
+
+	p.right 	{ margin: 0; }
+
+}
+
+.entry	{ margin-bottom: 1.25em; padding-bottom: 1.25em; }
+
+.bypostauthor,
+.gallery-caption,
+.sticky				{ position: static; }
+
+ul.list_comments 	{ font-size: 1em;
+
+	> li 	{ margin-left: -20px; padding: 20px; width: 100%; }
+
+	> li.even 	{ background: rgba(0,0,0,.1); }
+
+}
+
+/* ===SIDEBAR START=== */
+
+ul.list_widgets 	{ margin: 0; font-size: 1em;
+
+	> li 	{ margin-top: 1em; padding-top: 1em; border-top: 1px solid #e1e1e1; }
+	> li:first-child 	{ margin: 0; padding: 0; border: 0; } 
+
+	ul		{ margin-bottom: 20 / 14 * 1em; font-size: .875em; }
+	ul ul	{ margin: 0; font-size: 1em; }
+
+}
+
+
+/* ===FOOTER START=== */
+
+.footer 	{ padding: 1.25em 0; background: #333; color: #fff; }
+.footer a 	{ color: #fff; }
