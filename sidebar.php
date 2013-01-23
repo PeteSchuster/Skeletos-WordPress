@@ -7,7 +7,7 @@
 
 <div class="sidebar" role="complementary">
 
-	<ul class="list_styled list_widgets">
+	<ul class="list_widgets">
 
 		<?php dynamic_sidebar( 'ss_widgets' ); ?>
 		

@@ -29,7 +29,7 @@
     </nav>
     <?php endif; // check for comment navigation ?>
 
-    <ul class="list_styled list_comments">
+    <ul class="list_comments">
         <?php wp_list_comments( array( 'callback' => 'ss_comment' ) ); ?>
     </ul>
 

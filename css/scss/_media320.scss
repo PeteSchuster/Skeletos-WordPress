@@ -19,7 +19,7 @@
 
 }
 		
-ul.list_primary_nav 	{ margin: 0; font-size: .875em; text-align: center;
+.list_primary_nav 	{ margin: 0; font-size: .875em; text-align: center;
 
 	ul, li 	{ margin: 0; list-style: none; }
 
@@ -36,7 +36,7 @@ ul.list_primary_nav 	{ margin: 0; font-size: .875em; text-align: center;
 
 .content 	{ margin-bottom: 20px; }
 
-article.post_comment 	{
+.post_comment 	{
 
 	> img 	{ margin-right: 20px; max-width: 65px; float: left; }
 
@@ -52,7 +52,7 @@ article.post_comment 	{
 .gallery-caption,
 .sticky				{ position: static; }
 
-ul.list_comments 	{ font-size: 1em;
+.list_comments 	{ font-size: 1em;
 
 	> li 	{ margin-left: -20px; padding: 20px; width: 100%; }
 
@@ -62,7 +62,7 @@ ul.list_comments 	{ font-size: 1em;
 
 /* ===SIDEBAR START=== */
 
-ul.list_widgets 	{ margin: 0; font-size: 1em;
+.list_widgets 	{ margin: 0; font-size: 1em;
 
 	> li 	{ margin-top: 1em; padding-top: 1em; border-top: 1px solid #e1e1e1; }
 	> li:first-child 	{ margin: 0; padding: 0; border: 0; } 
