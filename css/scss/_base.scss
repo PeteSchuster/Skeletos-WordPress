@@ -7,23 +7,23 @@ body 	{ background: #fff; color: #333; @include wordBreak(); }
 /* ===GENERAL FIELDSETS=== */
 
 label,
-legend 						{ font-size: .875em; line-height: 2em; display: block; cursor: pointer; }
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=search],
-input[type=tel],
-input[type=url],
-input[type=file],
+legend 					{ font-size: .875em; line-height: 2em; display: block; cursor: pointer; }
+[type=text],
+[type=password],
+[type=email],
+[type=search],
+[type=tel],
+[type=url],
+[type=file],
 textarea,
-select 						{ margin-bottom: .75em; padding: .5em 1em; width: 180px; max-width: 100%; border: 1px solid #666; -webkit-appearance: none; background-color: #fff; font-size: .75em; color: #000; }
-input[type=submit],
-input[type=button] 			{ padding: .5em 1em; background: #666; border: none; color: #fff; cursor: pointer; -webkit-appearance: none; }
-input[type=submit]:hover,
-input[type=submit]:focus,
-input[type=button]:hover,
-input[type=button]:focus	{ background: #333; }
-textarea 					{ width: 220px; height: 8em; max-width: 100%; resize: vertical; }
+select 					{ margin-bottom: .75em; padding: .5em 1em; width: 180px; max-width: 100%; border: 1px solid #666; -webkit-appearance: none; background-color: #fff; font-size: .75em; color: #000; }
+[type=submit],
+[type=button] 			{ padding: .5em 1em; background: #666; border: none; color: #fff; cursor: pointer; -webkit-appearance: none; }
+[type=submit]:hover,
+[type=submit]:focus,
+[type=button]:hover,
+[type=button]:focus		{ background: #333; }
+textarea 				{ width: 220px; height: 8em; max-width: 100%; resize: vertical; }
 
 fieldset 	{ margin-bottom: 10px;
 
