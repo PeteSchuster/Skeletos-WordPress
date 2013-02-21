@@ -1,17 +1,8 @@
 
 /* ===RESETS=== */
 
-* 	{ margin: 0; padding: 0; border: none; outline: none; }
-
-html	{ font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-body 	{ font-family: Arial, sans-serif; background: #fff; color: #333; @include wordBreak(); }
-
-/* ===HTML5 RESETS=== */
-
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
-audio:not([controls]) { display: none; }
-[hidden] { display: none; }
+html	{ overflow-y: scroll; }
+body 	{ background: #fff; color: #333; @include wordBreak(); }
 
 /* ===GENERAL FIELDSETS=== */
 
@@ -32,7 +23,7 @@ input[type=submit]:hover,
 input[type=submit]:focus,
 input[type=button]:hover,
 input[type=button]:focus	{ background: #333; }
-textarea 					{ width: 220px; height: 8em; max-width: 100%; font-family: Arial, Helvetica, sans-serif; overflow: auto; vertical-align: top; resize: vertical; }
+textarea 					{ width: 220px; height: 8em; max-width: 100%; resize: vertical; }
 
 fieldset 	{ margin-bottom: 10px;
 
@@ -78,7 +69,6 @@ hgroup { margin-bottom: 20 / 16 * 1em;
 a 			{ text-decoration: none; color: #4b64f5; @include transition( color, .2 ); }
 a:hover,
 a:focus 	{ text-decoration: underline; color: #3c50c2; }
-a:focus 	{ outline: thin dotted; }
 a:active 	{ color: #f5644b; }
 
 [class*=button]		{ margin-bottom: 1.125em; padding: .5em 1em; display: inline-block; font-size: .875em; background: #333; color: #fff; text-decoration: none; border-radius: 5px; cursor: pointer; }
@@ -143,20 +133,11 @@ figure embed,
 figcaption		{ margin-bottom: .625em; max-width: 100%; height: auto; display: block; }
 figcaption p	{ display: block; text-align: center; font-size: .688em; color: #666; font-style: italic; }
 
-table 	{ margin-bottom: 1.125em; border-collapse: collapse; border-spacing: 0; border-top: 1px solid #666; border-left: 1px solid #666; }
+table 	{ margin-bottom: 1.125em; border-top: 1px solid #666; border-left: 1px solid #666; }
 th		{ padding: 1em; font-size: .875em; color: #fff; background: #333; border-right: 1px solid #666; border-bottom: 1px solid #666; }
 td 		{ padding: 1em; font-size: .75em; vertical-align: top; border-right: 1px solid #666; border-bottom: 1px solid #666; }
 
-pre,
-code,
-kbd,
-samp 			{ font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
-pre 			{ margin: 0 1.25em 1.25em; padding: 1.25em; white-space: pre; white-space: pre-wrap; word-wrap: break-word; background: #333; color: #fff; }
-small 			{ font-size: 85%; }
-sub,
-sup 			{ font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-sup 			{ top: -0.5em; }
-sub 			{ bottom: -0.25em; }
+pre 			{ margin: 0 1.25em 1.25em; padding: 1.25em; word-wrap: break-word; background: #333; color: #fff; }
 blockquote 		{ margin: 0 1.125em 1.125em; padding: 1.125em 1.125em 0; border-left: .25em solid #666; display: block; background: #eee; font-style: italic; overflow: hidden; }
 blockquote p	{ font-size: 1em; }
 
