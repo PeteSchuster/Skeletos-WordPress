@@ -71,7 +71,7 @@ a:hover,
 a:focus 	{ text-decoration: underline; color: #3c50c2; }
 a:active 	{ color: #f5644b; }
 
-[class*=button]		{ margin-bottom: 1.125em; padding: .5em 1em; display: inline-block; font-size: .875em; background: #333; color: #fff; text-decoration: none; border-radius: 5px; cursor: pointer; }
+[class*=button]		{ margin-bottom: 1.125em; padding: .5em 1em; display: inline-block; font-size: .875em; background: #333; color: #fff; text-decoration: none; border-radius: 5px; cursor: pointer;
 	
 	&:hover,
 	&:focus		{ background: #666; }

@@ -8,7 +8,7 @@
 add_editor_style( 'css/wysiwyg.css' );
 
 //remove admin bar
-//add_filter('show_admin_bar', '__return_false');  
+add_filter('show_admin_bar', '__return_false');  
 
 //adds menu support
 add_theme_support( 'menus' );
