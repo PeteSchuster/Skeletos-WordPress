@@ -6,7 +6,7 @@
 get_header(); ?>
 
 <div class="content clearfix">
-	<div class="content_main" role="main">
+	<div class="content-main" role="main">
 		
 	<?php if ( have_posts() ) : ?>
 	
@@ -51,7 +51,7 @@ get_header(); ?>
         	
     <?php endif; ?>
 
-	</div><!--/end .content_main-->
+	</div><!--/end .content-main-->
 	<?php get_sidebar(); ?>
 </div><!--/end .content-->
 <?php get_footer(); ?>

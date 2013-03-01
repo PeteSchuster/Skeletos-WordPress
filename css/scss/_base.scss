@@ -82,11 +82,11 @@ a:active 	{ color: #f5644b; }
 
 [class*=icon] 	{}
 
-[class*=ui_message]	{ margin: 0 0 15px -15px; padding: 15px 15px 0; width: 100%; clear: both; background: #eee; border: 1px solid #333; }
+[class*=ui-message]	{ margin: 0 0 15px -15px; padding: 15px 15px 0; width: 100%; clear: both; background: #eee; border: 1px solid #333; }
 
-.ui_error 	{ background-color: #ff9e9e; border-color: #cc0000; }
-.ui_alert 	{ background-color: #fffe88; border-color: #ffba00; }
-.ui_success	{ background-color: #7cc187; border-color: #005f10; }
+.ui-message-error 	{ background-color: #ff9e9e; border-color: #cc0000; }
+.ui-message-alert 	{ background-color: #fffe88; border-color: #ffba00; }
+.ui-message-success	{ background-color: #7cc187; border-color: #005f10; }
 
 p,
 ul,
@@ -101,7 +101,7 @@ dd		{ margin-left: 21 / 14 * 1em; }
 ul ul,
 ol ol 	{ margin: 0; font-size: 1em; }
 
-[class*=list_] 	{ margin-left: 0; list-style: none;
+[class*=list-] 	{ margin-left: 0; list-style: none;
 	
 	> li 	{ margin-left: 0; list-style: none; }
 

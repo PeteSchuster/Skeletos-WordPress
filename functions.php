@@ -67,7 +67,7 @@ function ss_comment( $comment, $args, $depth ) {
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 
-		<article class="post_comment clearfix">
+		<article class="post-comment clearfix">
 
 			<?php echo get_avatar( $comment, 150 ); ?>
 

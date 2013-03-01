@@ -15,11 +15,11 @@
 
 	nav 	{ margin-left: -20px; padding: 20px; width: 100%; display: none; position: absolute; left: 0; top: 94px; z-index: 90; background: #eee; }
 
-	.show_menu 	{ float: right; }
+	.show-menu 	{ float: right; }
 
 }
 		
-.list_primary_nav 	{ margin: 0; font-size: .875em; text-align: center;
+.list-primary-nav 	{ margin: 0; font-size: .875em; text-align: center;
 
 	ul, li 	{ margin: 0; list-style: none; }
 
@@ -36,7 +36,7 @@
 
 .content 	{ margin-bottom: 20px; }
 
-.post_comment 	{
+.post-comment 	{
 
 	> img 	{ margin-right: 20px; max-width: 65px; float: left; }
 
@@ -52,7 +52,7 @@
 .gallery-caption,
 .sticky				{ position: static; }
 
-.list_comments 	{ font-size: 1em;
+.list-comments 	{ font-size: 1em;
 
 	> li 	{ margin-left: -20px; padding: 20px; width: 100%; }
 
@@ -62,7 +62,7 @@
 
 /* ===SIDEBAR START=== */
 
-.list_widgets 	{ margin: 0; font-size: 1em;
+.list-widgets 	{ margin: 0; font-size: 1em;
 
 	> li 	{ margin-top: 1em; padding-top: 1em; border-top: 1px solid #e1e1e1; }
 	> li:first-child 	{ margin: 0; padding: 0; border: 0; } 

@@ -40,11 +40,11 @@
 	<h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo get_bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 	*/ ?>
 
-	<a id="show_menu" class="button icon_menu show_menu" href="#"><span class="ir">Show Menu</span></a>
+	<a id="show-menu" class="button icon-menu show-menu" href="#"><span class="ir">Show Menu</span></a>
 
 	<nav role="navigation">
 
-		<?php wp_nav_menu( array( 'menu' => 'main', 'menu_class' => 'list_primary_nav clearfix', 'container' => '' ) ); ?>
+		<?php wp_nav_menu( array( 'menu' => 'main', 'menu_class' => 'list-primary-nav clearfix', 'container' => '' ) ); ?>
 	
 	</nav><!--/end nav-->
 

@@ -5,13 +5,13 @@
 
 .header 	{
 
-	.show_menu 	{ display: none !important; }
+	.show-menu 	{ display: none !important; }
 
 	nav 	{ width: auto; display: block !important; float: right; position: static; background: none; }
 
 }
 
-.list_primary_nav 	{
+.list-primary-nav 	{
 
 	> li 	{ margin-left: 20px; float: left; }
 
@@ -31,7 +31,7 @@
 
 /* ===CONTENT START=== */
 
-.content_main 	{ width: 526 / 728 * 100%; float: left; }
+.content-main 	{ width: 526 / 728 * 100%; float: left; }
 
 .alignleft 			{ margin: 0 20px 20px 0; float: left; clear: both; }
 .alignright 		{ margin: 0 0 20px 20px; float: right; clear: both; }
@@ -46,7 +46,7 @@
 
 /* ===FOOTER START=== */
 
-.list_footer_nav 	{
+.list-footer-nav 	{
 
 	li 	{ margin-left: 20px; float: left; }
 	li:first-child 	{ margin-left: 0; }

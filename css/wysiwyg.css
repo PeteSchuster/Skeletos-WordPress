@@ -224,7 +224,7 @@ a:active {
 }
 
 /* line 85, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-[class*=ui_message] {
+[class*=ui-message] {
   margin: 0 0 15px -15px;
   padding: 15px 15px 0;
   width: 100%;
@@ -234,19 +234,19 @@ a:active {
 }
 
 /* line 87, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-.ui_error {
+.ui-message-error {
   background-color: #ff9e9e;
   border-color: #cc0000;
 }
 
 /* line 88, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-.ui_alert {
+.ui-message-alert {
   background-color: #fffe88;
   border-color: #ffba00;
 }
 
 /* line 89, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-.ui_success {
+.ui-message-success {
   background-color: #7cc187;
   border-color: #005f10;
 }
@@ -279,12 +279,12 @@ ol ol {
 }
 
 /* line 104, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-[class*=list_] {
+[class*=list-] {
   margin-left: 0;
   list-style: none;
 }
 /* line 106, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-[class*=list_] > li {
+[class*=list-] > li {
   margin-left: 0;
   list-style: none;
 }

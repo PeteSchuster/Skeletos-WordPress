@@ -9,10 +9,10 @@
 
 <footer class="footer" role="contentinfo"><div class="wrapper clearfix">
 
-	<a id="back_to_top" class="icon_top back_to_top" href="#"><span>Back to Top</span></a>
+	<a id="back-to-top" class="icon-top back-to-top" href="#"><span>Back to Top</span></a>
 
 	<nav>
-		<?php wp_nav_menu( array( 'menu' => 'footer', 'menu_class' => 'list_footer_nav clearfix', 'container' => '' ) ); ?>  
+		<?php wp_nav_menu( array( 'menu' => 'footer', 'menu_class' => 'list-footer-nav clearfix', 'container' => '' ) ); ?>  
 	</nav>
 
 	<p>&copy; <?php echo date( 'Y' ) . ' ' . get_bloginfo( 'name' ); ?></p>
