@@ -59,13 +59,13 @@ function ss_comment( $comment, $args, $depth ) {
 		case 'pingback' :
 		case 'trackback' :
 	?>
-	<li class="post pingback">
+	<li class="post pingback visuallyhidden">
 		<p>Pingback: <?php comment_author_link(); ?><?php edit_comment_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 			break;
 		default :
 	?>
-	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 
 		<article class="post-comment clearfix">
 
@@ -75,7 +75,15 @@ function ss_comment( $comment, $args, $depth ) {
 
 				<header>
 
-					<h1 class="heading4"><?php comment_author_link(); ?></h1>
+					<?php
+
+					$author = get_comment_author();
+					$link 	= get_comment_author_url();
+					$author = ( $link == '' ) ? $author : '<a href="' . $link . '" target="_blank">' . $author . '</a>'
+
+					?>
+
+					<h1 class="heading4"><?php echo $author; ?></h1>
 
 					<time datetime="<?php echo get_comment_time( 'c' ); ?>"><?php echo get_comment_time( 'M d, Y' ); ?></time>
 

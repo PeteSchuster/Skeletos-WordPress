@@ -12,11 +12,9 @@ legend 					{ font-size: .875em; line-height: 2em; display: block; cursor: point
 [type=password],
 [type=email],
 [type=search],
-[type=tel],
 [type=url],
-[type=file],
 textarea,
-select 					{ margin-bottom: .75em; padding: .5em 1em; width: 180px; max-width: 100%; border: 1px solid #666; -webkit-appearance: none; background-color: #fff; font-size: .75em; color: #000; }
+select 					{ margin-bottom: .75em; padding: .5em 1em; width: 100%; border: 1px solid #666; -webkit-appearance: none; background-color: #fff; color: #000; border-radius: 0; @include box-sizing; }
 [type=submit],
 [type=button] 			{ padding: .5em 1em; background: #666; border: none; color: #fff; cursor: pointer; -webkit-appearance: none; }
 [type=submit]:hover,
@@ -92,11 +90,10 @@ p,
 ul,
 ol,
 dl,
-address	{ margin-bottom: 21 / 14 * 1em; line-height: 21 / 14 * 1em; font-size: .875em; }
+address	{ margin: 0 0 21 / 14 * 1em; padding: 0; line-height: 21 / 14 * 1em; font-size: .875em; }
 ul,
-ul li,
 ol,
-ol li,
+li,
 dd		{ margin-left: 21 / 14 * 1em; }
 ul ul,
 ol ol 	{ margin: 0; font-size: 1em; }

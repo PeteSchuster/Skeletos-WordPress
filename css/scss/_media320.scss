@@ -46,19 +46,23 @@
 
 }
 
+.list-comments 	{ font-size: 1em;
+
+	li.comment 	{ margin-left: -20px; padding: 20px; width: 100%; background: rgba(0,0,0,.07); }
+
+	li.thread-even 	{ background: rgba(0,0,0,.04); }
+
+	li.bypostauthor { background: #faf7c2; }
+
+	ul.children { margin: 20px 20px 0 40px; }
+
+}
+
 .entry	{ margin-bottom: 1.25em; padding-bottom: 1.25em; }
 
 .bypostauthor,
 .gallery-caption,
 .sticky				{ position: static; }
-
-.list-comments 	{ font-size: 1em;
-
-	> li 	{ margin-left: -20px; padding: 20px; width: 100%; }
-
-	> li.even 	{ background: rgba(0,0,0,.1); }
-
-}
 
 /* ===SIDEBAR START=== */
 
