@@ -26,13 +26,13 @@
 
 <header id="top" class="header" role="banner"><div class="wrapper clearfix">
 
-	<hgroup>
+	<div class="hgroup">
 		
 		<h1 class="heading2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		
 		<h2 class="heading3"><?php bloginfo( 'description' ); ?></h2>
 	
-	</hgroup>
+	</div><!--/end .hgroup-->
 
 	<?php /*
 	To use a logo instead of the site name.

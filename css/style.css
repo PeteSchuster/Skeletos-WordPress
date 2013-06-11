@@ -587,7 +587,7 @@ hgroup .heading6 {
 /* line 67, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
 a {
   text-decoration: none;
-  color: #4b64f5;
+  color: orange;
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
