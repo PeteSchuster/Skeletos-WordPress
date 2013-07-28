@@ -7,7 +7,7 @@
 
 <footer class="footer content-block" role="contentinfo"><div class="wrapper">
 
-	<a id="back-to-top" class="icon-top back-to-top" href="#"><span>Back to Top</span></a>
+	<a id="back-to-top" class="icon-top back-to-top heading6" href="#"><span>Back to Top</span></a>
 
 	<nav>
 		<h1 class="visuallyhidden">Footer Navigation</h1>
