@@ -14,13 +14,15 @@ get_header(); ?>
 
 	<?php 
 	
-	while ( have_posts() ) : the_post();
+	while ( have_posts() ){ 
+
+		the_post();
 	
 		echo '<header><h1>' . get_the_title() . '</h1></header>';
 		
 		the_content();
 		
-	endwhile;
+	} //end while
 	
 	edit_post_link( 'Edit this entry.', '<p>', '</p>' );
 	

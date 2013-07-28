@@ -9,7 +9,13 @@ get_header(); ?>
 
 	<div class="content-block"><div class="wrapper">
 
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php 
+
+	while ( have_posts() ){
+
+		the_post();
+
+	?>
 
 		<article <?php post_class(); ?>>
 		
@@ -27,11 +33,7 @@ get_header(); ?>
 
 		<?php comments_template(); ?>
 
-	<?php endwhile; else: ?>
-
-		<p>Sorry, no posts matched your criteria.</p>
-
-<?php endif; ?>
+	<?php } //end while ?>
 
 	</div></div><!--/end .content-block-->
 

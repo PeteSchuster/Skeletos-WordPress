@@ -14,13 +14,15 @@ get_header(); ?>
 	
 	<?php
 		
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ){
+
+			the_post();
 		
 			echo '<header><h1>' . get_the_title() . '</h1></header>';
 			
 			wp_nav_menu( array( 'menu' => 'sitemap', 'menu_class' => '', 'container' => '' ) );
 
-		endwhile;
+		} //end while
 	
 	edit_post_link('Edit this entry.', '<p>', '</p>');
 	

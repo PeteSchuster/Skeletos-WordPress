@@ -6,12 +6,10 @@
 get_header(); ?>
 
 <main class="content clearfix" role="main">
-
-	<div class="content-block"><div class="wrapper">
 		
 	<?php
 
-	if ( have_posts() ) :
+	if ( have_posts() ){
 
 		$archive_title = 'Archives';
 
@@ -29,17 +27,15 @@ get_header(); ?>
 
 		}
 
+		echo '<h1>' . $archive_title . '</h1>';
+
+		while ( have_posts() ){
+
+			the_post(); 
+
 		?>
 		
-        <header>
-
-			<h1><?php echo $archive_title; ?></h1>
-
-		</header>
-        
-		<?php while ( have_posts() ) : the_post(); ?>
-		
-		<div class="entry">
+		<div class="content-block"><div class="wrapper">
 		
 			<article <?php post_class(); ?>>
 			
@@ -55,27 +51,32 @@ get_header(); ?>
 			
 			<p class="heading6"><?php the_tags( 'Tags: ', ', ', '<br />' ); ?> Posted in <?php the_category( ', ' ) ?> | <?php edit_post_link( 'Edit', '', ' | ' ); ?>  <?php comments_popup_link( 'No Comments &#187;', '1 Comment &#187;', '% Comments &#187;' ); ?></p>
 			
-		</div><!--/end .entry-->
+		</div></div><!--/end .content-block-->
 
-		
-		<?php endwhile; ?>
+		<?php } //end while ?>
 
-		<div class="clearfix">
-			<p class="right"><?php previous_posts_link( 'Newer Entries &raquo;' ) ?></p>
-			<p class="left"><?php next_posts_link( '&laquo; Older Entries' ) ?></p>
-		</div>
+		<div class="content-block"><div class="wrapper">
+
+			<div class="clearfix">
+				<p class="right"><?php previous_posts_link( 'Newer Entries &raquo;' ) ?></p>
+				<p class="left"><?php next_posts_link( '&laquo; Older Entries' ) ?></p>
+			</div>
+
+		</div></div><!--/end .content-block-->
         
-	<?php else : ?>
-	
+	<?php } else { ?>
+		
+		<div class="content-block"><div class="wrapper">
+
     		<header>
     			<h1>Sorry nothing here yet...</h1>
     		</header>
     		
         	<p>Please check back later for future updates.</p>
-        	
-    <?php endif; ?>
 
-	</div></div><!--/end .content-block-->
+        </div></div><!--/end .content-block-->
+        	
+    <?php } ?>
 
 </main><!--/end .content-->
 <?php get_footer(); ?>

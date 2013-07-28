@@ -14,11 +14,13 @@ get_header(); ?>
 
 	<?php
 	
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ){
+
+			the_post();
 
 			the_content();
 
-		endwhile;
+		}
 		
 	edit_post_link( 'Edit this entry.', '<p>', '</p>' ); 
 	
