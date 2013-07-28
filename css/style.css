@@ -1,198 +1,477 @@
+/* ===
+Site Skeleton Boiler Plate
+Pete Schuster http://peteschuster.com
+Version: 2
+Credits:
+320 and Up - URL: http://stuffandnonsense.co.uk/projects/320andup/
+HTML5 Boilerplate - URL: http://h5bp.com/
+=== */
 /* ===MIXINS=== */
-/* normalize.css v2.1.0 | MIT License | git.io/normalize */
-/* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined in IE 8/9.
- */
-/* line 22, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
+/* ===RESETS=== */
+/* line 4, scss/_base.scss */
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 5, scss/_base.scss */
+body {
+  margin: 0;
+  font-family: "Noto Serif", serif;
+  line-height: 1.6;
+  color: #34495e;
+  -ms-word-wrap: break-all;
+  word-wrap: break-all;
+  word-wrap: break-word;
+  background: #fff;
+}
+
+/* HTML5 Reset */
+/* line 10, scss/_base.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, nav, section, summary {
   display: block;
 }
 
-/**
- * Correct `inline-block` display not defined in IE 8/9.
- */
-/* line 32, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-audio,
-canvas,
-video {
+/* line 11, scss/_base.scss */
+audio, canvas, video {
   display: inline-block;
 }
 
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-/* line 41, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
+/* line 12, scss/_base.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/**
- * Address styling not present in IE 8/9.
- */
-/* line 50, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
+/* line 13, scss/_base.scss */
 [hidden] {
   display: none;
 }
 
-/* ==========================================================================
-   Base
-   ========================================================================== */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-/* line 64, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
+/* ===GENERAL FIELDSETS=== */
+/* line 17, scss/_base.scss */
+fieldset {
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
 }
 
-/**
- * Remove default margin.
- */
-/* line 74, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-body {
+/* line 24, scss/_base.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
   margin: 0;
 }
 
-/* ==========================================================================
-   Links
-   ========================================================================== */
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-/* line 86, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
+/* line 27, scss/_base.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/* line 30, scss/_base.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 33, scss/_base.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 35, scss/_base.scss */
+label {
+  display: block;
+  cursor: pointer;
+}
+
+/* line 43, scss/_base.scss */
+[type=text],
+[type=email],
+[type=url],
+[type=password],
+[type=search],
+textarea,
+select {
+  margin-bottom: 0.75em;
+  padding: 0.75em;
+  width: 100%;
+  font-size: 1em;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #95a5a6;
+  background-color: #ecf0f1;
+  border-radius: 0;
+}
+
+/* line 50, scss/_base.scss */
+[type=text],
+[type=email],
+[type=url],
+[type=password],
+[type=search],
+textarea {
+  -webkit-appearance: none;
+}
+
+/* line 53, scss/_base.scss */
+[type=checkbox],
+[type=radio] {
+  margin: 0 0.375em 0.75em 0;
+}
+
+/* line 56, scss/_base.scss */
+[type=submit],
+[type=button] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: 0;
+}
+
+/* line 61, scss/_base.scss */
+textarea {
+  height: 8em;
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/* ===UI MESSAGES=== */
+/* line 65, scss/_base.scss */
+[class*=ui-message] {
+  margin: 0 0 20px -20px;
+  padding: 20px 19px 0;
+  width: 100%;
+  clear: both;
+  background: #eee;
+  border: 1px solid #333;
+}
+
+/* line 66, scss/_base.scss */
+.ui-message-error {
+  background-color: #ff9e9e;
+  border-color: #cc0000;
+}
+
+/* line 67, scss/_base.scss */
+.ui-message-alert {
+  background-color: #fffe88;
+  border-color: #ffba00;
+}
+
+/* line 68, scss/_base.scss */
+.ui-message-success {
+  background-color: #7cc187;
+  border-color: #005f10;
+}
+
+/* ===GENERAL ELEMENT STYLES=== */
+/* line 73, scss/_base.scss */
+h1,
+.heading1 {
+  margin: 0 0 0.55556em;
+  font-size: 2.25em;
+  line-height: 1.16667em;
+  text-transform: none;
+  font-weight: bold;
+  font-style: none;
+  font-family: "Open Sans", sans-serif;
+  color: #34495e;
+}
+
+/* line 75, scss/_base.scss */
+h2,
+.heading2 {
+  margin: 0 0 0.71429em;
+  font-size: 1.75em;
+  line-height: 1.28571em;
+  text-transform: none;
+  font-weight: bold;
+  font-style: none;
+  font-family: "Open Sans", sans-serif;
+  color: #34495e;
+}
+
+/* line 77, scss/_base.scss */
+h3,
+.heading3 {
+  margin: 0 0 0.45455em;
+  font-size: 1.375em;
+  line-height: 1.27273em;
+  text-transform: none;
+  font-weight: bold;
+  font-style: none;
+  font-family: "Open Sans", sans-serif;
+  color: #34495e;
+}
+
+/* line 79, scss/_base.scss */
+h4,
+.heading4 {
+  margin: 0 0 0.45455em;
+  font-size: 1.375em;
+  line-height: 1.55556em;
+  text-transform: none;
+  font-weight: normal;
+  font-style: italic;
+  font-family: "Noto Serif", serif;
+  color: #95a5a6;
+}
+
+/* line 81, scss/_base.scss */
+h5,
+.heading5,
+legend {
+  margin: 0 0 0.625em;
+  font-size: 1em;
+  line-height: 1.6;
+  text-transform: none;
+  font-weight: bold;
+  font-style: none;
+  font-family: "Open Sans", sans-serif;
+  color: #34495e;
+}
+
+/* line 83, scss/_base.scss */
+h6,
+.heading6 {
+  margin: 0 0 1em;
+  font-size: 0.875em;
+  line-height: 1.6;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: none;
+  font-family: "Open Sans", sans-serif;
+  color: #34495e;
+}
+
+/* line 90, scss/_base.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+}
+
+/* line 93, scss/_base.scss */
+.hgroup,
+hgroup {
+  margin-bottom: 1.25em;
+}
+/* line 100, scss/_base.scss */
+.hgroup h1,
+.hgroup h2,
+.hgroup h3,
+.hgroup h4,
+.hgroup h5,
+.hgroup h6,
+.hgroup [class*=heading],
+hgroup h1,
+hgroup h2,
+hgroup h3,
+hgroup h4,
+hgroup h5,
+hgroup h6,
+hgroup [class*=heading] {
+  margin: 0;
+}
+
+/* line 103, scss/_base.scss */
+[class*=heading] {
+  display: block;
+}
+
+/* line 105, scss/_base.scss */
+a {
+  text-decoration: underline;
+  color: #1abc9c;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+/* line 107, scss/_base.scss */
 a:focus {
   outline: thin dotted;
 }
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-/* line 95, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-a:active,
-a:hover {
+/* line 109, scss/_base.scss */
+a:active, a:hover {
   outline: 0;
 }
-
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
- */
-/* line 108, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+/* line 111, scss/_base.scss */
+a:hover, a:focus {
+  color: #2c3e50;
 }
 
-/**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
- */
-/* line 117, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
- */
-/* line 126, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-b,
-strong {
+/* line 115, scss/_base.scss */
+[class*=button], [type=submit],
+[type=button] {
+  margin: 0 .5em 1.25em 0;
+  padding: .5em 1em;
+  display: inline-block;
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+  font-family: "Open Sans", sans-serif;
+  background: #1abc9c;
+  color: #34495e;
   font-weight: bold;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+/* line 118, scss/_base.scss */
+[class*=button]:hover, [type=submit]:hover,
+[type=button]:hover,
+[type=submit]:focus,
+[type=button]:focus, [class*=button]:focus, [type=submit]:focus,
+[type=button]:focus {
+  background: #2c3e50;
+  color: #fff;
 }
 
-/**
- * Address styling not present in Safari 5 and Chrome.
- */
-/* line 134, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-dfn {
-  font-style: italic;
+/* line 122, scss/_base.scss */
+.button-red {
+  background: #FF4629;
 }
 
-/**
- * Address differences between Firefox and other browsers.
- */
-/* line 142, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
+/* line 123, scss/_base.scss */
+.button-gray {
+  background: #ecf0f1;
+  color: #34495e;
 }
 
-/**
- * Address styling not present in IE 8/9.
- */
-/* line 152, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-mark {
-  background: #ff0;
-  color: #000;
+/* line 124, scss/_base.scss */
+.button-small {
+  font-size: 0.75em;
 }
 
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
-/* line 164, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
+/* line 125, scss/_base.scss */
+.button-large {
+  font-size: 1.25em;
+}
+
+/* line 129, scss/_base.scss */
+p,
+ul,
+ol {
+  margin: 0 0 1.5em;
+  padding: 0;
   font-size: 1em;
 }
 
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-/* line 173, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
+/* line 131, scss/_base.scss */
+ul,
+ol {
+  margin-left: 1.5em;
+}
+
+/* line 133, scss/_base.scss */
+ul ul,
+ol ol {
+  margin-bottom: 0;
+}
+
+/* line 134, scss/_base.scss */
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 136, scss/_base.scss */
+[class*=list] {
+  margin-left: 0;
+  list-style: none;
+}
+
+/* line 138, scss/_base.scss */
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border: 0;
+  display: block;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 139, scss/_base.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 140, scss/_base.scss */
+figure {
+  margin: 0;
+}
+
+/* line 142, scss/_base.scss */
+table {
+  margin-bottom: 1.125em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: sans-serif;
+  background: #fff;
+}
+
+/* line 143, scss/_base.scss */
+th, td {
+  padding: 1em;
+  border: 1px solid #95a5a6;
+}
+
+/* line 144, scss/_base.scss */
+th {
+  font-size: .875em;
+  color: #95a5a6;
+  background: #34495e;
+  border-color: #34495e;
+}
+
+/* line 145, scss/_base.scss */
+td {
+  font-size: .75em;
+  vertical-align: top;
+}
+
+/* line 150, scss/_base.scss */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/* line 151, scss/_base.scss */
 pre {
+  margin: 0 1.25em 1.25em;
+  padding: 1.25em;
+  white-space: pre;
   white-space: pre-wrap;
+  word-wrap: break-word;
+  background: #ecf0f1;
 }
 
-/**
- * Set consistent quote types.
- */
-/* line 181, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
-}
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-/* line 189, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
+/* line 152, scss/_base.scss */
 small {
-  font-size: 80%;
+  font-size: 85%;
 }
 
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-/* line 198, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
+/* line 154, scss/_base.scss */
 sub,
 sup {
   font-size: 75%;
@@ -201,668 +480,92 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 205, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
+/* line 155, scss/_base.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 209, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
+/* line 156, scss/_base.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* ==========================================================================
-   Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9.
- */
-/* line 221, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-img {
-  border: 0;
-}
-
-/**
- * Correct overflow displayed oddly in IE 9.
- */
-/* line 229, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* ==========================================================================
-   Figures
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari 5.
- */
-/* line 241, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-figure {
-  margin: 0;
-}
-
-/* ==========================================================================
-   Forms
-   ========================================================================== */
-/**
- * Define consistent border, margin, and padding.
- */
-/* line 253, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-fieldset {
-  border: 1px solid silver;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-/* line 264, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
- */
-/* line 278, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-}
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-/* line 290, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-button,
-input {
-  line-height: normal;
-}
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
- */
-/* line 302, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-button,
-select {
-  text-transform: none;
-}
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-/* line 317, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
-}
-
-/**
- * Re-set default cursor for disabled elements.
- */
-/* line 327, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-/**
- * 1. Address box sizing set to `content-box` in IE 8/9.
- * 2. Remove excess padding in IE 8/9.
- */
-/* line 337, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-/* line 348, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box;
-}
-
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
-/* line 361, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-/* line 370, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- */
-/* line 380, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-textarea {
-  overflow: auto;
-  /* 1 */
-  vertical-align: top;
-  /* 2 */
-}
-
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-/* line 393, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_normalize.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* ===RESETS=== */
-/* line 4, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-html {
-  overflow-y: scroll;
-}
-
-/* line 5, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-body {
-  background: #fff;
-  color: #333;
-  -ms-word-wrap: break-all;
-  word-wrap: break-all;
-  word-wrap: break-word;
-}
-
-/* ===GENERAL FIELDSETS=== */
-/* line 10, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-label,
-legend {
-  font-size: .875em;
-  line-height: 2em;
-  display: block;
-  cursor: pointer;
-}
-
-/* line 17, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-[type=text],
-[type=password],
-[type=email],
-[type=search],
-[type=url],
-textarea,
-select {
-  margin-bottom: .75em;
-  padding: 0.5em 1em;
-  width: 100%;
-  border: 1px solid #666666;
-  -webkit-appearance: none;
-  background-color: #fff;
-  color: #000;
-  border-radius: 0;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 19, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-[type=submit],
-[type=button] {
-  padding: 0.5em 1em;
-  background: #666;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  -webkit-appearance: none;
-}
-
-/* line 23, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-[type=submit]:hover,
-[type=submit]:focus,
-[type=button]:hover,
-[type=button]:focus {
-  background: #333;
-}
-
-/* line 24, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-textarea {
-  width: 220px;
-  height: 8em;
-  max-width: 100%;
-  resize: vertical;
-}
-
-/* line 26, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-fieldset {
-  margin-bottom: 10px;
-}
-/* line 28, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-fieldset em {
-  display: block;
-  font-size: .688em;
-}
-/* line 29, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-fieldset div {
-  margin-bottom: 10px;
-}
-/* line 31, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-fieldset ul,
-fieldset ul li {
-  margin: 0;
-  list-style: none;
-  font-size: 1em;
-}
-
-/* ===GENERAL ELEMENT STYLES=== */
-/* line 38, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-h1,
-.heading1 {
-  margin-bottom: 0.55556em;
-  font-size: 2.25em;
-  line-height: 1.16667em;
-  text-transform: none;
-  font-weight: bold;
-}
-
-/* line 40, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-h2,
-.heading2 {
-  margin-bottom: 0.83333em;
-  font-size: 1.5em;
-  line-height: 1.33333em;
-  text-transform: none;
-  font-weight: bold;
-}
-
-/* line 42, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-h3,
-.heading3 {
-  margin-bottom: 0.55556em;
-  font-size: 1.125em;
-  line-height: 1.33333em;
-  text-transform: none;
-  font-weight: bold;
-}
-
-/* line 44, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-h4,
-.heading4 {
-  margin-bottom: 0.71429em;
-  font-size: 0.875em;
-  line-height: 1.14286em;
-  text-transform: none;
-  font-weight: bold;
-}
-
-/* line 46, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-h5,
-.heading5 {
-  margin-bottom: 0.83333em;
-  font-size: 0.75em;
-  line-height: 1em;
-  text-transform: none;
-  font-weight: bold;
-}
-
-/* line 48, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-h6,
-.heading6 {
-  margin-bottom: 1em;
-  font-size: 0.625em;
-  line-height: 2em;
-  text-transform: uppercase;
-  font-weight: normal;
-}
-
-/* line 50, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-hgroup {
-  margin-bottom: 1.25em;
-}
-/* line 62, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-hgroup h1,
-hgroup .heading1,
-hgroup h2,
-hgroup .heading2,
-hgroup h3,
-hgroup .heading3,
-hgroup h4,
-hgroup .heading4,
-hgroup h5,
-hgroup .heading5,
-hgroup h6,
-hgroup .heading6 {
-  margin: 0;
-}
-
-/* line 65, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-[class*=heading] {
-  display: block;
-}
-
-/* line 67, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-a {
-  text-decoration: none;
-  color: orange;
-  -webkit-transition: color 0.2s ease-in-out;
-  -moz-transition: color 0.2s ease-in-out;
-  -o-transition: color 0.2s ease-in-out;
-  -ms-transition: color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out;
-}
-
-/* line 69, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-a:hover,
-a:focus {
-  text-decoration: underline;
-  color: #3c50c2;
-}
-
-/* line 70, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-a:active {
-  color: #f5644b;
-}
-
-/* line 72, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-[class*=button] {
-  margin-bottom: 1.125em;
-  padding: 0.5em 1em;
-  display: inline-block;
-  font-size: .875em;
-  background: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-/* line 75, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-[class*=button]:hover, [class*=button]:focus {
-  background: #666;
-}
-/* line 77, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-[class*=button] [class*=button] + [class*=button] {
-  margin-left: 1em;
-}
-
-/* line 83, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-[class*=ui-message] {
-  margin: 0 0 15px -15px;
-  padding: 15px 15px 0;
-  width: 100%;
-  clear: both;
-  background: #eee;
-  border: 1px solid #333333;
-}
-
-/* line 85, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-.ui-message-error {
-  background-color: #ff9e9e;
-  border-color: #cc0000;
-}
-
-/* line 86, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-.ui-message-alert {
-  background-color: #fffe88;
-  border-color: #ffba00;
-}
-
-/* line 87, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-.ui-message-success {
-  background-color: #7cc187;
-  border-color: #005f10;
-}
-
-/* line 93, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-p,
-ul,
-ol,
-dl,
-address {
-  margin: 0 0 1.5em;
-  padding: 0;
-  line-height: 1.5em;
-  font-size: .875em;
-}
-
-/* line 97, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-ul,
-ol,
-li,
-dd {
-  margin-left: 1.5em;
-}
-
-/* line 99, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-ul ul,
-ol ol {
-  margin: 0;
-  font-size: 1em;
-}
-
-/* line 101, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-[class*=list-] {
-  margin-left: 0;
-  list-style: none;
-}
-/* line 103, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-[class*=list-] > li {
-  margin-left: 0;
-  list-style: none;
-}
-
-/* line 107, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  -ms-interpolation-mode: bicubic;
-}
-
-/* line 112, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-.alignleft,
-.alignright,
-.aligncenter,
-.gallery-icon img {
-  margin: 0 auto 20px;
-  clear: both;
-}
-
-/* line 113, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-.alignnone {
-  margin-bottom: 20px;
-  clear: both;
-}
-
-/* line 115, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-.wp-caption {
-  padding: 15px 10px 0;
-  max-width: 100% !important;
-  height: auto !important;
-  background: rgba(0, 0, 0, 0.07);
-  overflow: hidden;
-}
-
-/* line 117, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-.gallery {
-  margin: 0 0 20px -20px !important;
-  padding: 20px;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.07);
-}
-/* line 119, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-.gallery dl {
-  font-size: 1em;
-}
-
-/* line 123, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-.wp-caption img {
-  margin: 0 auto 10px;
-}
-
-/* line 124, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-.wp-caption-text {
-  text-align: center;
-  font-size: .75em;
-  line-height: 1.5em;
-}
-
-/* line 126, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-figure {
-  margin-bottom: .625em;
-  padding: 2px;
-  max-width: 100%!important;
-  height: auto!important;
-  background: #eee;
-  border: 1px solid #999999;
-  display: inline-block;
-}
-
-/* line 130, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-figure img,
-figure object,
-figure embed,
-figcaption {
-  margin-bottom: .625em;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* line 131, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-figcaption p {
-  display: block;
-  text-align: center;
-  font-size: .688em;
-  color: #666;
-  font-style: italic;
-}
-
-/* line 133, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-table {
-  margin-bottom: 1.125em;
-  border-top: 1px solid #666666;
-  border-left: 1px solid #666666;
-}
-
-/* line 134, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-th {
-  padding: 1em;
-  font-size: .875em;
-  color: #fff;
-  background: #333;
-  border-right: 1px solid #666666;
-  border-bottom: 1px solid #666666;
-}
-
-/* line 135, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-td {
-  padding: 1em;
-  font-size: .75em;
-  vertical-align: top;
-  border-right: 1px solid #666666;
-  border-bottom: 1px solid #666666;
-}
-
-/* line 137, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
-pre {
-  margin: 0 1.25em 1.25em;
-  padding: 1.25em;
-  word-wrap: break-word;
-  background: #333;
-  color: #fff;
-}
-
-/* line 138, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
+/* line 157, scss/_base.scss */
 blockquote {
-  margin: 0 1.125em 1.125em;
-  padding: 1.125em 1.125em 0;
-  border-left: 0.25em solid #666666;
+  margin: 0 2em 2em;
+  padding: 2em;
+  border-left: 1em solid #95a5a6;
   display: block;
-  background: #eee;
+  background: #ecf0f1;
   font-style: italic;
   overflow: hidden;
 }
 
-/* line 139, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
+/* line 158, scss/_base.scss */
 blockquote p {
   font-size: 1em;
 }
 
-/* line 141, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_base.scss */
+/* line 159, scss/_base.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 161, scss/_base.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 162, scss/_base.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 163, scss/_base.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 164, scss/_base.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 166, scss/_base.scss */
 hr {
   margin: 0 0 1.25em;
   padding: 0;
   height: 1px;
   display: block;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #95a5a6;
   clear: both;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* ===BEGIN STRUCTURE AND CUSTOM ELEMENTS=== */
-/* line 5, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 5, scss/_media320.scss */
 #container,
 .wrapper {
   margin: 0 20px;
 }
 
 /* ===HEADER START=== */
-/* line 10, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 10, scss/_media320.scss */
 .header {
   margin-bottom: 20px;
   padding-top: 20px;
   background: #e1e1e1;
   position: relative;
 }
-/* line 14, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 14, scss/_media320.scss */
 .header hgroup {
   float: left;
 }
-/* line 16, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 16, scss/_media320.scss */
 .header nav {
   margin-left: -20px;
   padding: 20px;
@@ -874,90 +577,90 @@ hr {
   z-index: 90;
   background: #eee;
 }
-/* line 18, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 18, scss/_media320.scss */
 .header .show-menu {
   float: right;
 }
 
-/* line 22, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 22, scss/_media320.scss */
 .list-primary-nav {
   margin: 0;
   font-size: .875em;
   text-align: center;
 }
-/* line 24, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 24, scss/_media320.scss */
 .list-primary-nav ul, .list-primary-nav li {
   margin: 0;
   list-style: none;
 }
-/* line 26, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 26, scss/_media320.scss */
 .list-primary-nav a {
   display: block;
   text-decoration: none;
 }
-/* line 28, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 28, scss/_media320.scss */
 .list-primary-nav li ul {
   display: none;
 }
-/* line 31, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 31, scss/_media320.scss */
 .list-primary-nav li:hover > ul,
 .list-primary-nav li.hover > ul {
   display: block;
 }
 
 /* ===CONTENT START=== */
-/* line 37, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 37, scss/_media320.scss */
 .content {
   margin-bottom: 20px;
 }
 
-/* line 41, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 41, scss/_media320.scss */
 .post-comment > img {
   margin-right: 20px;
   max-width: 65px;
   float: left;
 }
-/* line 43, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 43, scss/_media320.scss */
 .post-comment > div {
   padding-top: 10px;
   overflow: hidden;
 }
-/* line 45, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 45, scss/_media320.scss */
 .post-comment p.right {
   margin: 0;
 }
 
-/* line 49, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 49, scss/_media320.scss */
 .list-comments {
   font-size: 1em;
 }
-/* line 51, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 51, scss/_media320.scss */
 .list-comments li.comment {
   margin-left: -20px;
   padding: 20px;
   width: 100%;
   background: rgba(0, 0, 0, 0.07);
 }
-/* line 53, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 53, scss/_media320.scss */
 .list-comments li.thread-even {
   background: rgba(0, 0, 0, 0.04);
 }
-/* line 55, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 55, scss/_media320.scss */
 .list-comments li.bypostauthor {
   background: #faf7c2;
 }
-/* line 57, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 57, scss/_media320.scss */
 .list-comments ul.children {
   margin: 20px 20px 0 40px;
 }
 
-/* line 61, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 61, scss/_media320.scss */
 .entry {
   margin-bottom: 1.25em;
   padding-bottom: 1.25em;
 }
 
-/* line 65, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 65, scss/_media320.scss */
 .bypostauthor,
 .gallery-caption,
 .sticky {
@@ -965,163 +668,155 @@ hr {
 }
 
 /* ===SIDEBAR START=== */
-/* line 69, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 69, scss/_media320.scss */
 .list-widgets {
   margin: 0;
   font-size: 1em;
 }
-/* line 71, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 71, scss/_media320.scss */
 .list-widgets > li {
   margin-top: 1em;
   padding-top: 1em;
   border-top: 1px solid #e1e1e1;
 }
-/* line 72, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 72, scss/_media320.scss */
 .list-widgets > li:first-child {
   margin: 0;
   padding: 0;
   border: 0;
 }
-/* line 74, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 74, scss/_media320.scss */
 .list-widgets ul {
   margin-bottom: 1.42857em;
   font-size: .875em;
 }
-/* line 75, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 75, scss/_media320.scss */
 .list-widgets ul ul {
   margin: 0;
   font-size: 1em;
 }
 
 /* ===FOOTER START=== */
-/* line 82, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 82, scss/_media320.scss */
 .footer {
   padding: 1.25em 0;
   background: #333;
   color: #fff;
 }
 
-/* line 83, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media320.scss */
+/* line 83, scss/_media320.scss */
 .footer a {
   color: #fff;
 }
 
 /* ===MEDIA QUERIES START=== */
 @media only screen and (min-width: 768px) {
-  /* line 2, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
-  #container,
+  /* line 1, scss/_media768.scss */
   .wrapper {
     margin: 0 auto;
-    width: 80%;
+    width: 728px;
   }
 
   /* ===HEADER START=== */
-  /* line 8, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
-  .header .show-menu {
-    display: none !important;
-  }
-  /* line 10, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
-  .header nav {
-    width: auto;
-    display: block !important;
-    float: right;
-    position: static;
-    background: none;
-  }
-
-  /* line 14, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
-  .list-primary-nav {
-    /* for dropdowns */
-    /* level 3 */
-  }
-  /* line 16, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
-  .list-primary-nav > li {
-    margin-left: 20px;
+  /* line 7, scss/_media768.scss */
+  .header .logo {
     float: left;
   }
-  /* line 19, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
+  /* line 9, scss/_media768.scss */
+  .header .nav {
+    width: auto;
+    display: block !important;
+    position: static;
+    float: right;
+  }
+  /* line 11, scss/_media768.scss */
+  .header .show-nav {
+    display: none;
+  }
+
+  /* line 15, scss/_media768.scss */
+  .list-primary-nav {
+    /* for dropdowns */
+  }
+  /* line 17, scss/_media768.scss */
+  .list-primary-nav > li {
+    display: inline-block;
+  }
+  /* line 19, scss/_media768.scss */
+  .list-primary-nav > li > a {
+    background: none;
+    border: 0;
+    color: #fff;
+  }
+  /* line 22, scss/_media768.scss */
   .list-primary-nav li {
     position: relative;
     z-index: 999;
   }
-  /* line 21, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
+  /* line 24, scss/_media768.scss */
   .list-primary-nav li ul {
     position: absolute;
     display: none;
     z-index: 999;
     left: 0;
   }
-  /* line 23, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
+  /* line 26, scss/_media768.scss */
+  .list-primary-nav li:hover ul,
+  .list-primary-nav li:focus ul {
+    display: block;
+  }
+  /* line 28, scss/_media768.scss */
   .list-primary-nav li li a {
     padding: .75em;
     width: 150px;
-    border-bottom: 1px solid #666666;
-    background: #333;
-    color: #ccc;
+    text-decoration: none;
   }
-  /* line 25, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
+  /* line 31, scss/_media768.scss */
+  .list-primary-nav li.active li a,
   .list-primary-nav li li a:hover,
   .list-primary-nav li li a:focus {
     background: #666;
   }
-  /* line 28, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
-  .list-primary-nav li li ul {
-    top: 0;
-    left: 170px;
-  }
 
-  /* ===CONTENT START=== */
-  /* line 34, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
-  .content-main {
-    width: 72.25275%;
+  /* ===FOOTER START=== */
+  /* line 39, scss/_media768.scss */
+  .list-footer-nav li {
+    margin-left: 20px;
     float: left;
   }
+  /* line 40, scss/_media768.scss */
+  .list-footer-nav li:first-child {
+    margin-left: 0;
+  }
 
-  /* line 36, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
+  /* ===WORDPRESS START=== */
+  /* line 46, scss/_media768.scss */
   .alignleft {
     margin: 0 20px 20px 0;
     float: left;
     clear: both;
   }
 
-  /* line 37, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
+  /* line 47, scss/_media768.scss */
   .alignright {
     margin: 0 0 20px 20px;
     float: right;
     clear: both;
   }
 
-  /* line 40, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
+  /* line 50, scss/_media768.scss */
   .wp-caption.alignnone,
   .wp-caption.alignleft {
     margin-left: -15px;
   }
 
-  /* line 41, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
+  /* line 51, scss/_media768.scss */
   .wp-caption.alignright {
     margin-right: -15px;
   }
-
-  /* ===SIDEBAR START=== */
-  /* line 45, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
-  .sidebar {
-    width: 22.25275%;
-    float: right;
-  }
-
-  /* ===FOOTER START=== */
-  /* line 51, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
-  .list-footer-nav li {
-    margin-left: 20px;
-    float: left;
-  }
-  /* line 52, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_media768.scss */
-  .list-footer-nav li:first-child {
-    margin-left: 0;
-  }
 }
 @media only print {
-  /* line 32, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/style.scss */
+  /* line 31, scss/style.scss */
   * {
     background: transparent !important;
     color: black !important;
@@ -1130,56 +825,56 @@ hr {
     -ms-filter: none !important;
   }
 
-  /* line 33, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/style.scss */
+  /* line 32, scss/style.scss */
   .header, .footer, .sidebar, img, form {
     display: none !important;
   }
 
-  /* line 34, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/style.scss */
+  /* line 33, scss/style.scss */
   #container, .content, .content-main {
     width: 100%;
     padding: 0;
     margin: 0;
   }
 
-  /* line 35, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/style.scss */
+  /* line 34, scss/style.scss */
   a {
     text-decoration: underline;
   }
 
-  /* line 36, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/style.scss */
+  /* line 35, scss/style.scss */
   pre, blockquote, tr, h2, h3 {
     page-break-inside: avoid;
   }
 
-  /* line 37, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/style.scss */
+  /* line 36, scss/style.scss */
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
 }
 /* ===NON-SEMANTIC HELPER CLASES=== */
-/* line 3, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_utility.scss */
+/* line 3, scss/_utility.scss */
 .right {
   float: right;
 }
 
-/* line 4, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_utility.scss */
+/* line 4, scss/_utility.scss */
 .left {
   float: left;
 }
 
-/* line 5, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_utility.scss */
+/* line 5, scss/_utility.scss */
 .clear {
   clear: both;
 }
 
-/* line 6, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_utility.scss */
+/* line 6, scss/_utility.scss */
 .hide {
   display: none;
 }
 
-/* line 7, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_utility.scss */
+/* line 7, scss/_utility.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1191,7 +886,7 @@ hr {
   width: 1px;
 }
 
-/* line 9, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_utility.scss */
+/* line 9, scss/_utility.scss */
 .ir {
   display: block;
   text-indent: -999px;
@@ -1199,7 +894,7 @@ hr {
 }
 
 /* ===CLEAR FIX=== */
-/* line 13, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_utility.scss */
+/* line 13, scss/_utility.scss */
 .clearfix:after {
   height: 0;
   content: ".";
@@ -1208,13 +903,13 @@ hr {
   visibility: hidden;
 }
 
-/* line 14, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_utility.scss */
+/* line 14, scss/_utility.scss */
 .clearfix {
   display: inline-block;
   zoom: 1;
 }
 
-/* line 15, /sites/wordpress/trunk/wp-content/themes/WordPress-Site-Skeleton/css/scss/_utility.scss */
+/* line 15, scss/_utility.scss */
 .clearfix {
   display: block;
 }

@@ -2,7 +2,7 @@
 /* ===RESETS=== */
 
 html	{ font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-body 	{ margin: 0; font-family: "ff-meta-serif-web-pro", serif; line-height: 1.6; color: #333; @include wordBreak(); }
+body 	{ margin: 0; font-family: $fontFamily; line-height: 1.6; color: $textColor; @include wordBreak(); background: #fff; }
 
 /* HTML5 Reset */
 
@@ -13,6 +13,10 @@ audio:not([controls]) { display: none; height: 0; }
 [hidden] { display: none; }
 
 /* ===GENERAL FIELDSETS=== */
+
+fieldset { margin: 0 0 20px; padding: 0; border: 0; }
+
+legend { @extend .heading5; }
 
 button,
 input,
@@ -28,39 +32,55 @@ select { text-transform: none; }
 button::-moz-focus-inner,
 input::-moz-focus-inner { border: 0; padding: 0; }
 
-label 	{ margin-bottom: .5em; display: block; cursor: pointer; }
+label 	{ display: block; cursor: pointer; }
 
 [type=text],
 [type=email],
+[type=url],
+[type=password],
+[type=search],
 textarea,
-select 				{ margin-bottom: .5em; padding: .5em 1em; width: 100%; font-size: 1em; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #666; background-color: #fff; color: #222; border-radius: 0; }
+select 				{ margin-bottom: 12 / 16 * 1em; padding: 12 / 16 * 1em; width: 100%; font-size: 1em; @include box-sizing; border: 1px solid $borderColor; background-color: $objectColor; border-radius: 0; }
 
-[type=submit] 				{ @extend a.button; cursor: pointer; -webkit-appearance: none; border: 0; }
+[type=text],
+[type=email],
+[type=url],
+[type=password],
+[type=search],
+textarea 				{ -webkit-appearance: none; }
+
+[type=checkbox],
+[type=radio] 			{ margin: 0 6 / 16 * 1em 12 / 16 * 1em 0; }
+
+[type=submit],
+[type=button] 				{ @extend [class*=button]; cursor: pointer; -webkit-appearance: none; border: 0; }
 [type=submit]:hover,
-[type=submit]:focus 	{ background: #333; }
+[type=submit]:focus,
+[type=button]:hover,
+[type=button]:focus 	{ @extend [class*=button]:hover; }
 textarea 							{ height: 8em; overflow: auto; vertical-align: top; resize: vertical; }
 
-.validation_message 	{ margin-top: -8px; text-transform: uppercase; color: #ff0000; font-size: 12 / 16 * 1em; }
+/* ===UI MESSAGES=== */
 
-.validation_error,
-#gforms_confirmation_message 	{ margin: 0 0 1em -1em; padding: 1em; width: 100%; overflow: hidden; color: #fff; clear: both; background: #eee; border: 1px solid #333; }
-.validation_error 						{ background-color: #ff9e9e; border-color: #cc0000; }
-#gforms_confirmation_message	{ background-color: #7cc187; border-color: #005f10; }
+[class*=ui-message] 	{ margin: 0 0 20px -20px; padding: 20px 19px 0; width: 100%; clear: both; background: #eee; border: 1px solid #333; }
+.ui-message-error 		{ background-color: #ff9e9e; border-color: #cc0000; }
+.ui-message-alert 		{ background-color: #fffe88; border-color: #ffba00; }
+.ui-message-success 	{ background-color: #7cc187; border-color: #005f10; }
 
 /* ===GENERAL ELEMENT STYLES=== */
 
 h1,
-.heading1 	{ margin: 0 0 20 / 36 * 1em; font-size: 36 / 16 * 1em; line-height: 42 / 36 * 1em; text-transform: none; font-weight: bold; font-family: "ff-meta-web-pro", sans-serif; }
+.heading1 	{ margin: 0 0 20 / 36 * 1em; font-size: 36 / 16 * 1em; line-height: 42 / 36 * 1em; text-transform: none; font-weight: bold; font-style: none; font-family: $fontFamilyAlt; color: $textColor; }
 h2,
-.heading2 	{ margin: 0 0 20 / 24 * 1em; font-size: 24 / 16 * 1em; line-height: 32 / 24 * 1em; text-transform: none; font-weight: bold; font-family: "ff-meta-web-pro", sans-serif; }
+.heading2 	{ margin: 0 0 20 / 28 * 1em; font-size: 28 / 16 * 1em; line-height: 36 / 28 * 1em; text-transform: none; font-weight: bold; font-style: none; font-family: $fontFamilyAlt; color: $textColor; }
 h3,
-.heading3 	{ margin: 0 0 10 / 18 * 1em; font-size: 18 / 16 * 1em; line-height: 24 / 18 * 1em; text-transform: none; font-weight: bold; font-family: "ff-meta-web-pro", sans-serif; }
+.heading3 	{ margin: 0 0 10 / 22 * 1em; font-size: 22 / 16 * 1em; line-height: 28 / 22 * 1em; text-transform: none; font-weight: bold; font-style: none; font-family: $fontFamilyAlt; color: $textColor; }
 h4,
-.heading4 	{ margin: 0 0 10 / 16 * 1em; font-size: 1em; line-height: 18 / 16 * 1em; text-transform: none; font-weight: bold; font-family: "ff-meta-web-pro", sans-serif; }
+.heading4 	{ margin: 0 0 10 / 22 * 1em; font-size: 22 / 16 * 1em; line-height: 28 / 18 * 1em; text-transform: none; font-weight: normal; font-style: italic; font-family: $fontFamily; color: $textColorAlt; }
 h5,
-.heading5 	{ margin: 0 0 10 / 12 * 1em; font-size: 14 / 16 * 1em; line-height: 1em; text-transform: none; font-weight: bold; font-family: "ff-meta-web-pro", sans-serif; }
+.heading5 	{ margin: 0 0 10 / 16 * 1em; font-size: 1em; line-height: 1.6; text-transform: none; font-weight: bold; font-style: none; font-family: $fontFamilyAlt; color: $textColor; }
 h6,
-.heading6 	{ margin: 0 0 1em; font-size: 12 / 16 * 1em; line-height: 1em; text-transform: uppercase; font-weight: normal; font-family: "ff-meta-web-pro", sans-serif; }
+.heading6 	{ margin: 0 0 1em; font-size: 14 / 16 * 1em; line-height: 1.6; text-transform: uppercase; font-weight: normal; font-style: none; font-family: $fontFamilyAlt; color: $textColor; }
 
 h1,
 h2,
@@ -69,35 +89,40 @@ h4,
 h5,
 h6 { padding: 0; }
 
+.hgroup,
 hgroup { margin-bottom: 20 / 16 * 1em;
 	h1,
-	.heading1,
 	h2,
-	.heading2,
 	h3,
-	.heading3,
 	h4,
-	.heading4,
 	h5,
-	.heading5,
 	h6,
-	.heading6	{ margin: 0; }
+	[class*=heading] { margin: 0; }
 }
 
 [class*=heading] { display: block; }
 
-a 				{ text-decoration: none; color: #FF4629; @include transition( color, .2 ); }
-a:focus 	{ outline: thin dotted; }
-a:active,
-a:hover 	{ outline: 0; }
-a:hover,
-a:focus 	{ text-decoration: underline; }
+a	{ text-decoration: underline; color: $accent; @include transition( color, .2 );
 
-a.button + a.button	{ margin-left: 1em; }
+	&:focus 	{ outline: thin dotted; }
+	&:active,
+	&:hover 	{ outline: 0; }
+	&:hover,
+	&:focus 	{ color: $accentAlt; }
 
-a.button 					{ display: inline-block; padding: .5em 1em; font-size: 1em; @include transition( background, .2 ); font-family: "ff-meta-web-pro", sans-serif; background: #4a8bf5; color: #fff; text-transform: lowercase; text-decoration: none; }
-a.button:hover,
-a.button:focus		{ background: #FF4629; }
+}
+
+[class*=button] 	{ margin: 0 .5em 1.25em 0; padding: .5em 1em; display: inline-block; @include transition( background, .2 ); font-family: $fontFamilyAlt; background: $accent; color: $textColor; font-weight: bold; text-transform: lowercase; text-decoration: none;
+	
+	&:hover,
+	&:focus		{ background: $accentAlt; color: #fff; }
+
+}
+
+.button-red 		{ background: #FF4629; }
+.button-gray 		{ background: $objectColor; color: $objectColorAlt; }
+.button-small 	{ font-size: 12 / 16 * 1em; }
+.button-large 	{ font-size: 20 / 16 * 1em; }
 
 p,
 ul,
@@ -108,25 +133,28 @@ ul ul,
 ol ol 	{ margin-bottom: 0; }
 li 			{ margin: 0; padding: 0; }
 
+[class*=list] { margin-left: 0; list-style: none; }
+
 img 						{ max-width: 100%; width: auto; height: auto; border: 0; display: block; -ms-interpolation-mode: bicubic; }
 svg:not(:root) 	{ overflow: hidden; }
 figure 					{ margin: 0; }
 
-table 	{ margin-bottom: 1.125em; border-collapse: collapse; border-spacing: 0; border-top: 1px solid #666; border-left: 1px solid #666; }
-th		{ padding: 1em; font-size: .875em; color: #fff; background: #333; border-right: 1px solid #666; border-bottom: 1px solid #666; }
-td 		{ padding: 1em; font-size: .75em; vertical-align: top; border-right: 1px solid #666; border-bottom: 1px solid #666; }
+table 	{ margin-bottom: 1.125em; border-collapse: collapse; border-spacing: 0; font-family: sans-serif; background: #fff; }
+th,td 	{ padding: 1em; border: 1px solid $borderColor; }
+th		{ font-size: .875em; color: $textColorAlt; background: $objectColorAlt; border-color: $borderColorAlt; }
+td 		{ font-size: .75em; vertical-align: top; }
 
 pre,
 code,
 kbd,
 samp 			{ font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
-pre 			{ margin: 0 1.25em 1.25em; padding: 1.25em; white-space: pre; white-space: pre-wrap; word-wrap: break-word; background: #eee; }
+pre 			{ margin: 0 1.25em 1.25em; padding: 1.25em; white-space: pre; white-space: pre-wrap; word-wrap: break-word; background: $objectColor; }
 small 		{ font-size: 85%; }
 sub,
 sup 			{ font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
 sup 			{ top: -0.5em; }
 sub 			{ bottom: -0.25em; }
-blockquote 		{ margin: 0 1.125em 1.125em; padding: 1.125em 1.125em 0; border-left: .25em solid #666; display: block; background: #eee; font-style: italic; overflow: hidden; }
+blockquote 		{ margin: 0 2em 2em; padding: 2em; border-left: 1em solid $borderColor; display: block; background: $objectColor; font-style: italic; overflow: hidden; }
 blockquote p	{ font-size: 1em; }
 abbr[title] 	{ border-bottom: 1px dotted; }
 b,
@@ -135,4 +163,4 @@ dfn 		{ font-style: italic; }
 mark 		{ background: #ff0; color: #000; }
 q 			{ quotes: "\201C" "\201D" "\2018" "\2019"; }
 
-hr 	{ margin: 0 0 1.25em; padding: 0; height: 1px; display: block; border: 0; border-top: 1px solid #ccc; clear: both; -moz-box-sizing: content-box; box-sizing: content-box; }
+hr 	{ margin: 0 0 1.25em; padding: 0; height: 1px; display: block; border: 0; border-top: 1px solid $borderColor; clear: both; @include box-sizing(content-box); }

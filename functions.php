@@ -151,7 +151,9 @@ add_action( 'widgets_init', 'ss_widgets_init' );
 //Enqueues CSS and JS for the Theme
 function ss_scripts_styles(){
 
-	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr-2.6.1.min.js' );
+	wp_enqueue_style( 'google_fonts', '//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic|Open+Sans:700' );
+
+	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.min.js' );
 
 	if( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 

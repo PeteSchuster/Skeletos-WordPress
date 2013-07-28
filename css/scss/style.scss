@@ -1,4 +1,16 @@
+/* ===
+Site Skeleton Boiler Plate
+Pete Schuster http://peteschuster.com
+Version: 2
+Credits:
+320 and Up - URL: http://stuffandnonsense.co.uk/projects/320andup/
+HTML5 Boilerplate - URL: http://h5bp.com/
+=== */
 
+//variables
+@import 'variables';
+
+//custom mixins
 @import	'mixins';
 
 //Base Styles
@@ -12,18 +24,6 @@
 @media only screen and (min-width: 768px) { 
 
 	@import	'media768';
-
-}
-
-@media only screen and (min-width: 1024px) { 
-
-	@import	'media1024';
-
-}
-
-@media only screen and (min-width: 1200px) { 
-
-	@import	'media1200';
 
 }
 

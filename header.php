@@ -24,7 +24,7 @@
 
 <body <?php body_class(); ?> role="application">
 
-<header id="top" class="header" role="banner"><div class="wrapper clearfix">
+<header class="header content-block clearfix" role="banner"><div class="wrapper">
 
 	<div class="hgroup">
 		
@@ -34,20 +34,15 @@
 	
 	</div><!--/end .hgroup-->
 
-	<?php /*
-	To use a logo instead of the site name.
-	Styles are already in place in CSS. 
-	<h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo get_bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-	*/ ?>
+	<a id="show-nav" class="button icon-menu show-nav" href="#"><span>Menu</span></a>
 
-	<a id="show-menu" class="button icon-menu show-menu" href="#"><span class="ir">Show Menu</span></a>
-
-	<nav role="navigation">
+	<nav id="nav" class="nav" role="navigation">
+		<h1 class="visuallyhidden">Main Navigation</h1>
 
 		<?php wp_nav_menu( array( 'menu' => 'main', 'menu_class' => 'list-primary-nav clearfix', 'container' => '' ) ); ?>
 	
 	</nav><!--/end nav-->
 
-</div></header><!--/end .header-->
+	<?php echo get_search_form( true ); ?>
 
-<div id="container">
+</div></header><!--/end .header-->

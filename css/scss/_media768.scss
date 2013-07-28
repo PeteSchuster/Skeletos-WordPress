@@ -1,48 +1,36 @@
-#container,
-.wrapper 		{ margin: 0 auto; width: 80%; }
+.wrapper 		{ margin: 0 auto; width: 728px; }
 
 /* ===HEADER START=== */
 
-.header 	{
+.header {
 
-	.show-menu 	{ display: none !important; }
+	.logo { float: left; }
 
-	nav 	{ width: auto; display: block !important; float: right; position: static; background: none; }
+	.nav { width: auto; display: block!important; position: static; float: right; }
+
+	.show-nav { display: none; }
 
 }
 
 .list-primary-nav 	{
 
-	> li 	{ margin-left: 20px; float: left; }
+	> li 	{ display: inline-block }
+
+	> li > a { background: none; border: 0; color: #fff; }
 
 	/* for dropdowns */
-	li 				{ position: relative; z-index: 999; }
+	li	{ position: relative; z-index: 999; }
 
-	li ul 			{ position: absolute; display: none; z-index: 999; left: 0; }
+	li ul 				{ position: absolute; display: none; z-index: 999; left: 0; }
+	li:hover ul,
+	li:focus ul		{ display: block; }
 
-	li li a 		{ padding: .75em; width: 150px; border-bottom: 1px solid #666; background: #333; color: #ccc; }
+	li li a 				{ padding: .75em; width: 150px; text-decoration: none; }
+	li.active li a,
 	li li a:hover,
 	li li a:focus 	{ background: #666; }
 
-	/* level 3 */
-	li li ul { top: 0; left: 170px; }
-
 }
-
-/* ===CONTENT START=== */
-
-.content-main 	{ width: 526 / 728 * 100%; float: left; }
-
-.alignleft 			{ margin: 0 20px 20px 0; float: left; clear: both; }
-.alignright 		{ margin: 0 0 20px 20px; float: right; clear: both; }
-
-.wp-caption.alignnone,
-.wp-caption.alignleft 	{ margin-left: -15px; }
-.wp-caption.alignright 	{ margin-right: -15px; }
-
-/* ===SIDEBAR START=== */
-
-.sidebar { width: 162 / 728 * 100%; float: right; }
 
 /* ===FOOTER START=== */
 
@@ -52,3 +40,12 @@
 	li:first-child 	{ margin-left: 0; }
 
 }
+
+/* ===WORDPRESS START=== */
+
+.alignleft 			{ margin: 0 20px 20px 0; float: left; clear: both; }
+.alignright 		{ margin: 0 0 20px 20px; float: right; clear: both; }
+
+.wp-caption.alignnone,
+.wp-caption.alignleft 	{ margin-left: -15px; }
+.wp-caption.alignright 	{ margin-right: -15px; }
