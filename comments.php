@@ -21,21 +21,13 @@
 <?php if ( have_comments() ) : ?>
     <strong class="heading2"><?php comments_number( 'No Comments', '1 Comment', '% Comments' );?></strong>
 
-    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-    <nav class="clearfix">
-        <strong class="heading4">Comment navigation</strong>
-        <p class="right"><?php next_comments_link( 'Newer Comments &rarr;' ); ?></p>
-        <p class="left"><?php previous_comments_link('&larr; Older Comments' ); ?></p>
-    </nav>
-    <?php endif; // check for comment navigation ?>
-
-    <ul class="list-comments">
+    <ol class="list-comments">
         <?php wp_list_comments( array( 'callback' => 'ss_comment' ) ); ?>
-    </ul>
+    </ol>
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
     <nav class="clearfix">
-        <strong class="heading4">Comment navigation</strong>
+        <h1 class="heading4">Comment navigation</h1>
         <p class="right"><?php next_comments_link( 'Newer Comments &rarr;' ); ?></p>
         <p class="left"><?php previous_comments_link('&larr; Older Comments' ); ?></p>
     </nav>
