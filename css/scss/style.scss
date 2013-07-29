@@ -21,13 +21,13 @@ HTML5 Boilerplate - URL: http://h5bp.com/
 
 /* ===MEDIA QUERIES START=== */
 
-@media only screen and (min-width: 768px) { 
+@media only screen and (min-width: 768px) {
 
 	@import	'media768';
 
 }
 
-@media only print { 
+@media only print {
   * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
   .header, .footer, .sidebar, img, form { display: none !important; }
   #container, .content, .content-main { width:100%; padding: 0; margin: 0; }

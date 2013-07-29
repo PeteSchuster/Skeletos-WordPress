@@ -13,7 +13,7 @@ get_header(); ?>
 	<div class="content-block"><div class="wrapper">
 
 	<?php
-	
+
 		while ( have_posts() ){
 
 			the_post();
@@ -21,11 +21,11 @@ get_header(); ?>
 			the_content();
 
 		}
-		
-	edit_post_link( 'Edit this entry.', '<p>', '</p>' ); 
-	
+
+	edit_post_link( 'Edit this entry.', '<p>', '</p>' );
+
 	?>
-	
+
 	</div></div><!--/end .content-block-->
 
 </main><!--/end .content-->

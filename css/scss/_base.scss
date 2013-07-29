@@ -113,7 +113,7 @@ a	{ text-decoration: underline; color: $accent; @include transition( color, .2 )
 }
 
 [class*=button] 	{ margin: 0 .5em 1.25em 0; padding: .5em 1em; display: inline-block; @include transition( background, .2 ); font-family: $fontFamilyAlt; background: $accent; color: $textColor; font-weight: bold; text-transform: lowercase; text-decoration: none;
-	
+
 	&:hover,
 	&:focus		{ background: $accentAlt; color: #fff; }
 

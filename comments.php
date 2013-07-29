@@ -73,7 +73,7 @@ $defaults = array(
     'cancel_reply_link' => 'Cancel reply',
     'label_submit' => 'Post Comment'
 
-); 
+);
 
 comment_form( $defaults );
 

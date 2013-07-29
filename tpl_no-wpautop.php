@@ -12,22 +12,22 @@ get_header(); ?>
 
 	<div class="content-block"><div class="wrapper">
 
-	<?php 
-	
+	<?php
+
 		while ( have_posts() ){
 
 			the_post();
 
-			remove_filter( 'the_content', 'wpautop' ); 
-			
-			the_content(); 
-			
+			remove_filter( 'the_content', 'wpautop' );
+
+			the_content();
+
 		}
-	
-	edit_post_link( 'Edit this entry.', '<p>', '</p>' ); 
-	
+
+	edit_post_link( 'Edit this entry.', '<p>', '</p>' );
+
 	?>
-	
+
 	</div></div><!--/end .content-block-->
 
 </main><!--/end .content-->

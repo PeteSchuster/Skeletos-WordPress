@@ -404,7 +404,7 @@
 
 ///DOC READY FUNCTIONS
 jQuery( document ).ready( function(){
-	
+
 	MBP.scaleFix();
 	MBP.hideUrlBarOnLoad();
 	MBP.preventZoom();

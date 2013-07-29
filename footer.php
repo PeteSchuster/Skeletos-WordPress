@@ -11,7 +11,7 @@
 
 	<nav>
 		<h1 class="visuallyhidden">Footer Navigation</h1>
-		<?php wp_nav_menu( array( 'menu' => 'footer', 'menu_class' => 'list-footer-nav clearfix', 'container' => '' ) ); ?>  
+		<?php wp_nav_menu( array( 'menu' => 'footer', 'menu_class' => 'list-footer-nav clearfix', 'container' => '' ) ); ?>
 	</nav>
 
 	<p>&copy; <?php echo date( 'Y' ) . ' ' . get_bloginfo( 'name' ); ?></p>

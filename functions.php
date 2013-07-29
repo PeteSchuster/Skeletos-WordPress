@@ -8,7 +8,7 @@
 add_editor_style( 'css/wysiwyg.css' );
 
 //remove admin bar
-add_filter('show_admin_bar', '__return_false');  
+add_filter('show_admin_bar', '__return_false');
 
 //adds menu support
 add_theme_support( 'menus' );
@@ -88,11 +88,11 @@ function ss_comment( $comment, $args, $depth ) {
 					<time datetime="<?php echo get_comment_time( 'c' ); ?>"><?php echo get_comment_time( 'M d, Y' ); ?></time>
 
 				</header>
-				
-				<?php 
+
+				<?php
 
 				edit_comment_link( 'Edit', '<span class="edit-link">', '</span>' );
-	
+
 				if ( $comment->comment_approved == '0' ){ ?>
 
 					<i>Your comment is awaiting moderation</i>
@@ -100,7 +100,7 @@ function ss_comment( $comment, $args, $depth ) {
 				<?php } ?>
 
 				<?php comment_text(); ?>
-	
+
 				<p class="right">
 					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => 'Reply', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 				</p><!-- .reply -->
@@ -164,7 +164,7 @@ function ss_scripts_styles(){
 
 		wp_enqueue_script( 'functionality', get_template_directory_uri() . '/js/functionality.min.js', array( 'jquery' ), '1.0', true );
 		wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.min.css', '', '1.0' );
-	
+
 	}
 
 	if ( is_singular( 'post' ) ){
@@ -182,7 +182,7 @@ add_action( 'wp_enqueue_scripts', 'ss_scripts_styles' );
 
 //adds iOS icons and favicon
 function ss_header_icons(){
-	
+
 	echo '
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-144x144-precomposed.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-114x114-precomposed.png" />
@@ -220,7 +220,7 @@ function propertyGallery() {
 	}
 }
 function cmpMenuOrder( $a, $b ) {
-	if( $a->menu_order ==  $b->menu_order ){ return 0 ; } 
+	if( $a->menu_order ==  $b->menu_order ){ return 0 ; }
 	return ( $a->menu_order < $b->menu_order ) ? -1 : 1;
 }
 

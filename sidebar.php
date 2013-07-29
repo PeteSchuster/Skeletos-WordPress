@@ -10,7 +10,7 @@
 	<ul class="list-widgets">
 
 		<?php dynamic_sidebar( 'ss_widgets' ); ?>
-		
+
 	</ul>
 
 </div><!--end .sidebar-->
