@@ -19,7 +19,15 @@
 ?>
 
 <?php if ( have_comments() ) : ?>
-    <strong class="heading2"><?php comments_number( 'No Comments', '1 Comment', '% Comments' );?></strong>
+    <h6 class="heading2"><?php comments_number( 'No Comments', '1 Comment', '% Comments' );?></h6>
+
+    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+    <nav class="clearfix">
+        <h6 class="heading4">Comment navigation</h6>
+        <p class="right"><?php next_comments_link( 'Newer Comments &rarr;' ); ?></p>
+        <p class="left"><?php previous_comments_link('&larr; Older Comments' ); ?></p>
+    </nav>
+    <?php endif; // check for comment navigation ?>
 
     <ol class="list-comments">
         <?php wp_list_comments( array( 'callback' => 'ss_comment' ) ); ?>
@@ -27,7 +35,7 @@
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
     <nav class="clearfix">
-        <h1 class="heading4">Comment navigation</h1>
+        <h6 class="heading4">Comment navigation</h6>
         <p class="right"><?php next_comments_link( 'Newer Comments &rarr;' ); ?></p>
         <p class="left"><?php previous_comments_link('&larr; Older Comments' ); ?></p>
     </nav>

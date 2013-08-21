@@ -8,7 +8,7 @@
 add_editor_style( 'css/wysiwyg.css' );
 
 //remove admin bar
-add_filter('show_admin_bar', '__return_false');
+//add_filter('show_admin_bar', '__return_false');  
 
 //adds menu support
 add_theme_support( 'menus' );
@@ -20,6 +20,7 @@ add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-thumbnails' );
 
 //Removes the default anchor link from images
+//disabling this might cause issues with plugins
 //update_option( 'image_default_link_type', 'none' );
 
 //sets content width for embeded media

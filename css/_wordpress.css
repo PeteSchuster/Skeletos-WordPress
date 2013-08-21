@@ -1,0 +1,115 @@
+/* line 1, scss/_wordpress.scss */
+.validation_message {
+  margin-top: -8px;
+  text-transform: uppercase;
+  color: #ff0000;
+  font-size: 0.75em;
+}
+
+/* line 4, scss/_wordpress.scss */
+.validation_error,
+#gforms_confirmation_message {
+  margin: 0 0 1em -1em;
+  padding: 1em;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+  clear: both;
+  background: #eee;
+  border: 1px solid #333;
+}
+
+/* line 5, scss/_wordpress.scss */
+.validation_error {
+  background-color: #ff9e9e;
+  border-color: #cc0000;
+}
+
+/* line 6, scss/_wordpress.scss */
+#gforms_confirmation_message {
+  background-color: #7cc187;
+  border-color: #005f10;
+}
+
+/* ===CONTENT START=== */
+/* line 12, scss/_wordpress.scss */
+.post-comment > img {
+  margin-right: 20px;
+  max-width: 65px;
+  float: left;
+}
+/* line 14, scss/_wordpress.scss */
+.post-comment > div {
+  padding-top: 10px;
+  overflow: hidden;
+}
+/* line 16, scss/_wordpress.scss */
+.post-comment p.right {
+  margin: 0;
+}
+
+/* line 20, scss/_wordpress.scss */
+.list-comments {
+  font-size: 1em;
+}
+/* line 22, scss/_wordpress.scss */
+.list-comments li.comment {
+  margin-left: -20px;
+  padding: 20px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.07);
+}
+/* line 24, scss/_wordpress.scss */
+.list-comments li.thread-even {
+  background: rgba(0, 0, 0, 0.04);
+}
+/* line 26, scss/_wordpress.scss */
+.list-comments li.bypostauthor {
+  background: #faf7c2;
+}
+/* line 28, scss/_wordpress.scss */
+.list-comments ul.children {
+  margin: 20px 20px 0 40px;
+}
+
+/* line 32, scss/_wordpress.scss */
+.entry {
+  margin-bottom: 1.25em;
+  padding-bottom: 1.25em;
+}
+
+/* line 36, scss/_wordpress.scss */
+.bypostauthor,
+.gallery-caption,
+.sticky {
+  position: static;
+}
+
+/* ===SIDEBAR START=== */
+/* line 40, scss/_wordpress.scss */
+.list-widgets {
+  margin: 0;
+  font-size: 1em;
+}
+/* line 42, scss/_wordpress.scss */
+.list-widgets > li {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid #e1e1e1;
+}
+/* line 43, scss/_wordpress.scss */
+.list-widgets > li:first-child {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/* line 45, scss/_wordpress.scss */
+.list-widgets ul {
+  margin-bottom: 1.42857em;
+  font-size: .875em;
+}
+/* line 46, scss/_wordpress.scss */
+.list-widgets ul ul {
+  margin: 0;
+  font-size: 1em;
+}

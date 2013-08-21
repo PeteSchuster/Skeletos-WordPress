@@ -23,9 +23,9 @@ get_header(); ?>
 			wp_nav_menu( array( 'menu' => 'sitemap', 'menu_class' => '', 'container' => '' ) );
 
 		} //end while
-
-	edit_post_link('Edit this entry.', '<p>', '</p>');
-
+	
+	edit_post_link( 'Edit this entry.', '<p class="clear">', '</p>' );
+	
 	?>
 
 	</div></div><!--/end .content-block-->

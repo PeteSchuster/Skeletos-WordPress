@@ -21,9 +21,9 @@ get_header(); ?>
 			the_content();
 
 		}
-
-	edit_post_link( 'Edit this entry.', '<p>', '</p>' );
-
+		
+	edit_post_link( 'Edit this entry.', '<p class="clear">', '</p>' ); 
+	
 	?>
 
 	</div></div><!--/end .content-block-->

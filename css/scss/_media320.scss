@@ -41,18 +41,16 @@
 
 .search { position: relative; clear: both;
 
-  [type=submit] { margin: 0; width: 44px; height: 44px; @extend .ir; position: absolute; top: 0; right: 0; }
+  [type=search],
+  [type=text] { margin: 0; }
+
+  [type=submit] { margin: 0; position: absolute; top: 0; right: 0; bottom: 0; }
 
 }
 
 /* ===CONTENT START=== */
 
 .content 	{ margin-bottom: 1.25em; }
-
-
-/* ===SIDEBAR START=== */
-
-// .sidebar { }
 
 
 /* ===FOOTER START=== */

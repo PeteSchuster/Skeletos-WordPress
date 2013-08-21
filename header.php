@@ -22,7 +22,7 @@
 
 </head>
 
-<body <?php body_class(); ?> role="application">
+<body <?php body_class(); ?>>
 
 <header class="header content-block clearfix" role="banner"><div class="wrapper">
 
