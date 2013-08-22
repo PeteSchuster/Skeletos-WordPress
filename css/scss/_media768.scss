@@ -43,9 +43,5 @@
 
 /* ===WORDPRESS START=== */
 
-.alignleft 			{ margin: 0 20px 20px 0; float: left; clear: both; }
-.alignright 		{ margin: 0 0 20px 20px; float: right; clear: both; }
-
-.wp-caption.alignnone,
-.wp-caption.alignleft 	{ margin-left: -15px; }
-.wp-caption.alignright 	{ margin-right: -15px; }
+.alignleft 			{ margin: 0 1.5em 1.5em 0; float: left; clear: both; }
+.alignright 		{ margin: 0 0 1.5em 1.5em; float: right; clear: both; }

@@ -49,3 +49,11 @@
 	ul ul	{ margin: 0; font-size: 1em; }
 
 }
+
+.alignleft,
+.alignright,
+.aligncenter,
+.gallery-icon img	{ margin: 0 auto 1.5em; clear: both; }
+.alignnone			{ margin-bottom: 1.5em; clear: both; }
+
+.wp-caption { max-width: 100%; }

@@ -79,25 +79,14 @@
 /* ===WORDPRESS START=== */
 /* line 46, scss/_media768.scss */
 .alignleft {
-  margin: 0 20px 20px 0;
+  margin: 0 1.5em 1.5em 0;
   float: left;
   clear: both;
 }
 
 /* line 47, scss/_media768.scss */
 .alignright {
-  margin: 0 0 20px 20px;
+  margin: 0 0 1.5em 1.5em;
   float: right;
   clear: both;
-}
-
-/* line 50, scss/_media768.scss */
-.wp-caption.alignnone,
-.wp-caption.alignleft {
-  margin-left: -15px;
-}
-
-/* line 51, scss/_media768.scss */
-.wp-caption.alignright {
-  margin-right: -15px;
 }

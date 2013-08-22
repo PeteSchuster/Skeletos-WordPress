@@ -129,8 +129,8 @@ ul,
 ol 			{ margin: 0 0 24 / 16 * 1em; padding: 0; font-size: 1em; }
 ul,
 ol 			{ margin-left: 24 / 16 * 1em; }
-ul ul,
-ol ol 	{ margin-bottom: 0; }
+li ul,
+li ol 		{ margin-bottom: 0; }
 li 			{ margin: 0; padding: 0; }
 
 [class*=list] { margin-left: 0; list-style: none; }
@@ -138,6 +138,8 @@ li 			{ margin: 0; padding: 0; }
 img 						{ max-width: 100%; width: auto; height: auto; border: 0; display: block; -ms-interpolation-mode: bicubic; }
 svg:not(:root) 	{ overflow: hidden; }
 figure 					{ margin: 0; }
+
+iframe { max-width: 100%; }
 
 table 	{ margin-bottom: 1.125em; border-collapse: collapse; border-spacing: 0; font-family: sans-serif; background: #fff; }
 th,td 	{ padding: 1em; border: 1px solid $borderColor; }

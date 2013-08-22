@@ -381,8 +381,8 @@ ol {
 }
 
 /* line 133, scss/_base.scss */
-ul ul,
-ol ol {
+li ul,
+li ol {
   margin-bottom: 0;
 }
 
@@ -419,6 +419,11 @@ figure {
 }
 
 /* line 142, scss/_base.scss */
+iframe {
+  max-width: 100%;
+}
+
+/* line 144, scss/_base.scss */
 table {
   margin-bottom: 1.125em;
   border-collapse: collapse;
@@ -427,13 +432,13 @@ table {
   background: #fff;
 }
 
-/* line 143, scss/_base.scss */
+/* line 145, scss/_base.scss */
 th, td {
   padding: 1em;
   border: 1px solid #95a5a6;
 }
 
-/* line 144, scss/_base.scss */
+/* line 146, scss/_base.scss */
 th {
   font-size: .875em;
   color: #95a5a6;
@@ -441,13 +446,13 @@ th {
   border-color: #34495e;
 }
 
-/* line 145, scss/_base.scss */
+/* line 147, scss/_base.scss */
 td {
   font-size: .75em;
   vertical-align: top;
 }
 
-/* line 150, scss/_base.scss */
+/* line 152, scss/_base.scss */
 pre,
 code,
 kbd,
@@ -457,7 +462,7 @@ samp {
   font-size: 1em;
 }
 
-/* line 151, scss/_base.scss */
+/* line 153, scss/_base.scss */
 pre {
   margin: 0 1.25em 1.25em;
   padding: 1.25em;
@@ -467,12 +472,12 @@ pre {
   background: #ecf0f1;
 }
 
-/* line 152, scss/_base.scss */
+/* line 154, scss/_base.scss */
 small {
   font-size: 85%;
 }
 
-/* line 154, scss/_base.scss */
+/* line 156, scss/_base.scss */
 sub,
 sup {
   font-size: 75%;
@@ -481,17 +486,17 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 155, scss/_base.scss */
+/* line 157, scss/_base.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 156, scss/_base.scss */
+/* line 158, scss/_base.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 157, scss/_base.scss */
+/* line 159, scss/_base.scss */
 blockquote {
   margin: 0 2em 2em;
   padding: 2em;
@@ -502,39 +507,39 @@ blockquote {
   overflow: hidden;
 }
 
-/* line 158, scss/_base.scss */
+/* line 160, scss/_base.scss */
 blockquote p {
   font-size: 1em;
 }
 
-/* line 159, scss/_base.scss */
+/* line 161, scss/_base.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 161, scss/_base.scss */
+/* line 163, scss/_base.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 162, scss/_base.scss */
+/* line 164, scss/_base.scss */
 dfn {
   font-style: italic;
 }
 
-/* line 163, scss/_base.scss */
+/* line 165, scss/_base.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 164, scss/_base.scss */
+/* line 166, scss/_base.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
-/* line 166, scss/_base.scss */
+/* line 168, scss/_base.scss */
 hr {
   margin: 0 0 1.25em;
   padding: 0;
@@ -795,6 +800,26 @@ hr {
   font-size: 1em;
 }
 
+/* line 56, scss/_wordpress.scss */
+.alignleft,
+.alignright,
+.aligncenter,
+.gallery-icon img {
+  margin: 0 auto 1.5em;
+  clear: both;
+}
+
+/* line 57, scss/_wordpress.scss */
+.alignnone {
+  margin-bottom: 1.5em;
+  clear: both;
+}
+
+/* line 59, scss/_wordpress.scss */
+.wp-caption {
+  max-width: 100%;
+}
+
 /* ===MEDIA QUERIES START=== */
 @media only screen and (min-width: 768px) {
   /* line 1, scss/_media768.scss */
@@ -877,27 +902,16 @@ hr {
   /* ===WORDPRESS START=== */
   /* line 46, scss/_media768.scss */
   .alignleft {
-    margin: 0 20px 20px 0;
+    margin: 0 1.5em 1.5em 0;
     float: left;
     clear: both;
   }
 
   /* line 47, scss/_media768.scss */
   .alignright {
-    margin: 0 0 20px 20px;
+    margin: 0 0 1.5em 1.5em;
     float: right;
     clear: both;
-  }
-
-  /* line 50, scss/_media768.scss */
-  .wp-caption.alignnone,
-  .wp-caption.alignleft {
-    margin-left: -15px;
-  }
-
-  /* line 51, scss/_media768.scss */
-  .wp-caption.alignright {
-    margin-right: -15px;
   }
 }
 @media only print {
