@@ -1,47 +1,93 @@
-.wrapper        { margin: 0 auto; width: 728px; }
+.wrapper {
+    margin: 0 auto;
+    width: 728px;
+}
 
 /* ===HEADER START=== */
 
 .header {
 
-    .logo { float: left; }
+    .logo {
+        float: left;
+    }
 
-    .nav { position: static; display: block!important; width: auto; }
+    .nav {
+        position: static;
+        display: block !important;
+        width: auto;
+    }
 
-    .show-nav { display: none; }
+    .show-nav {
+        display: none;
+    }
 
 }
 
-.list-primary-nav   {
+.list-primary-nav {
 
-    > li    { display: inline-block; }
+    > li {
+        display: inline-block;
+    }
 
-    > li > a { border: 0; background: none; color: #fff; }
+    > li > a {
+        border: 0;
+        background: none;
+        color: #fff;
+    }
 
     /* for dropdowns */
-    li  { position: relative; z-index: 999; }
+    li {
+        position: relative;
+        z-index: 999;
+    }
 
-    li ul               { position: absolute; left: 0; z-index: 999; display: none; }
+    li ul {
+        position: absolute;
+        left: 0;
+        z-index: 999;
+        display: none;
+    }
     li:hover ul,
-    li:focus ul     { display: block; }
+    li:focus ul {
+        display: block;
+    }
 
-    li li a                 { padding: .75em; width: 150px; text-decoration: none; }
+    li li a {
+        padding: .75em;
+        width: 150px;
+        text-decoration: none;
+    }
     li.active li a,
     li li a:hover,
-    li li a:focus   { background: #666; }
+    li li a:focus {
+        background: #666;
+    }
 
 }
 
 /* ===FOOTER START=== */
 
-.list-footer-nav    {
+.list-footer-nav {
 
-    li  { float: left; margin-left: 20px; }
-    li:first-child  { margin-left: 0; }
+    li {
+        float: left;
+        margin-left: 20px;
+    }
+    li:first-child {
+        margin-left: 0;
+    }
 
 }
 
 /* ===WORDPRESS START=== */
 
-.alignleft          { float: left; clear: both; margin: 0 1.5em 1.5em 0; }
-.alignright         { float: right; clear: both; margin: 0 0 1.5em 1.5em; }
+.alignleft {
+    float: left;
+    clear: both;
+    margin: 0 1.5em 1.5em 0;
+}
+.alignright {
+    float: right;
+    clear: both;
+    margin: 0 0 1.5em 1.5em;
+}
