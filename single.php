@@ -19,6 +19,12 @@ get_header(); ?>
 
 		<article <?php post_class(); ?>>
 
+            <?php if ( has_post_thumbnail() ){
+
+                the_post_thumbnail( 'full', array( 'class' => 'aligncenter' ) );
+
+            } ?>
+
 			<header>
 				<h1><?php the_title(); ?></h1>
 

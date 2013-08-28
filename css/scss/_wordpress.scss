@@ -35,7 +35,8 @@
 
 .sticky { background: $objectColor; }
 
-.gallery-caption { max-height: 3.2em; overflow: hidden; }
+.gallery-caption,
+.wp-caption-text { max-height: 3.2em; overflow: hidden; }
 .gallery-icon img { margin: 0 auto 10px; }
 
 /* ===SIDEBAR START=== */

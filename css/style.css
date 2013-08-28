@@ -365,40 +365,42 @@ a:hover, a:focus {
   font-size: 1.25em;
 }
 
-/* line 129, scss/_base.scss */
+/* line 131, scss/_base.scss */
 p,
 ul,
-ol {
+ol,
+dl,
+address {
   margin: 0 0 1.5em;
   padding: 0;
-  font-size: 1em;
 }
 
-/* line 131, scss/_base.scss */
+/* line 134, scss/_base.scss */
 ul,
-ol {
+ol,
+dd {
   margin-left: 1.5em;
 }
 
-/* line 133, scss/_base.scss */
+/* line 136, scss/_base.scss */
 li ul,
 li ol {
   margin-bottom: 0;
 }
 
-/* line 134, scss/_base.scss */
+/* line 137, scss/_base.scss */
 li {
   margin: 0;
   padding: 0;
 }
 
-/* line 136, scss/_base.scss */
+/* line 139, scss/_base.scss */
 [class*=list] {
   margin-left: 0;
   list-style: none;
 }
 
-/* line 138, scss/_base.scss */
+/* line 141, scss/_base.scss */
 img {
   max-width: 100%;
   width: auto;
@@ -408,22 +410,22 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 139, scss/_base.scss */
+/* line 142, scss/_base.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 140, scss/_base.scss */
+/* line 143, scss/_base.scss */
 figure {
   margin: 0;
 }
 
-/* line 142, scss/_base.scss */
+/* line 145, scss/_base.scss */
 iframe {
   max-width: 100%;
 }
 
-/* line 144, scss/_base.scss */
+/* line 147, scss/_base.scss */
 table {
   margin-bottom: 1.125em;
   border-collapse: collapse;
@@ -432,13 +434,13 @@ table {
   background: #fff;
 }
 
-/* line 145, scss/_base.scss */
+/* line 148, scss/_base.scss */
 th, td {
   padding: 1em;
   border: 1px solid #95a5a6;
 }
 
-/* line 146, scss/_base.scss */
+/* line 149, scss/_base.scss */
 th {
   font-size: .875em;
   color: #95a5a6;
@@ -446,13 +448,13 @@ th {
   border-color: #34495e;
 }
 
-/* line 147, scss/_base.scss */
+/* line 150, scss/_base.scss */
 td {
   font-size: .75em;
   vertical-align: top;
 }
 
-/* line 152, scss/_base.scss */
+/* line 155, scss/_base.scss */
 pre,
 code,
 kbd,
@@ -462,7 +464,7 @@ samp {
   font-size: 1em;
 }
 
-/* line 153, scss/_base.scss */
+/* line 156, scss/_base.scss */
 pre {
   margin: 0 1.25em 1.25em;
   padding: 1.25em;
@@ -472,12 +474,12 @@ pre {
   background: #ecf0f1;
 }
 
-/* line 154, scss/_base.scss */
+/* line 157, scss/_base.scss */
 small {
   font-size: 85%;
 }
 
-/* line 156, scss/_base.scss */
+/* line 159, scss/_base.scss */
 sub,
 sup {
   font-size: 75%;
@@ -486,17 +488,17 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 157, scss/_base.scss */
+/* line 160, scss/_base.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 158, scss/_base.scss */
+/* line 161, scss/_base.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 159, scss/_base.scss */
+/* line 162, scss/_base.scss */
 blockquote {
   margin: 0 2em 2em;
   padding: 2em;
@@ -507,39 +509,39 @@ blockquote {
   overflow: hidden;
 }
 
-/* line 160, scss/_base.scss */
+/* line 163, scss/_base.scss */
 blockquote p {
   font-size: 1em;
 }
 
-/* line 161, scss/_base.scss */
+/* line 164, scss/_base.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 163, scss/_base.scss */
+/* line 166, scss/_base.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 164, scss/_base.scss */
+/* line 167, scss/_base.scss */
 dfn {
   font-style: italic;
 }
 
-/* line 165, scss/_base.scss */
+/* line 168, scss/_base.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 166, scss/_base.scss */
+/* line 169, scss/_base.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
-/* line 168, scss/_base.scss */
+/* line 171, scss/_base.scss */
 hr {
   margin: 0 0 1.25em;
   padding: 0;
@@ -560,14 +562,13 @@ hr {
 
 /* line 6, scss/_media320.scss */
 .content-block {
-  padding: 40px 0;
+  padding: 2em 0;
 }
 
 /* ===HEADER START=== */
 /* line 10, scss/_media320.scss */
 .header {
-  margin-bottom: 20px;
-  padding: 20px 0;
+  padding: 1.5em 0;
   background: #1abc9c;
   text-align: center;
 }
@@ -760,47 +761,48 @@ hr {
   background: #ecf0f1;
 }
 
-/* line 38, scss/_wordpress.scss */
-.gallery-caption {
+/* line 39, scss/_wordpress.scss */
+.gallery-caption,
+.wp-caption-text {
   max-height: 3.2em;
   overflow: hidden;
 }
 
-/* line 39, scss/_wordpress.scss */
+/* line 40, scss/_wordpress.scss */
 .gallery-icon img {
   margin: 0 auto 10px;
 }
 
 /* ===SIDEBAR START=== */
-/* line 43, scss/_wordpress.scss */
+/* line 44, scss/_wordpress.scss */
 .list-widgets {
   margin: 0;
   font-size: 1em;
 }
-/* line 45, scss/_wordpress.scss */
+/* line 46, scss/_wordpress.scss */
 .list-widgets > li {
   margin-top: 1em;
   padding-top: 1em;
   border-top: 1px solid #e1e1e1;
 }
-/* line 46, scss/_wordpress.scss */
+/* line 47, scss/_wordpress.scss */
 .list-widgets > li:first-child {
   margin: 0;
   padding: 0;
   border: 0;
 }
-/* line 48, scss/_wordpress.scss */
+/* line 49, scss/_wordpress.scss */
 .list-widgets ul {
   margin-bottom: 1.42857em;
   font-size: .875em;
 }
-/* line 49, scss/_wordpress.scss */
+/* line 50, scss/_wordpress.scss */
 .list-widgets ul ul {
   margin: 0;
   font-size: 1em;
 }
 
-/* line 56, scss/_wordpress.scss */
+/* line 57, scss/_wordpress.scss */
 .alignleft,
 .alignright,
 .aligncenter,
@@ -809,13 +811,13 @@ hr {
   clear: both;
 }
 
-/* line 57, scss/_wordpress.scss */
+/* line 58, scss/_wordpress.scss */
 .alignnone {
   margin-bottom: 1.5em;
   clear: both;
 }
 
-/* line 59, scss/_wordpress.scss */
+/* line 60, scss/_wordpress.scss */
 .wp-caption {
   max-width: 100%;
 }

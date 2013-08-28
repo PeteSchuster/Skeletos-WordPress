@@ -7,7 +7,7 @@ get_header(); ?>
 
 <main class="content clearfix" role="main">
 
-	<?php 
+	<?php
 
 	if ( have_posts() ){
 
@@ -16,11 +16,17 @@ get_header(); ?>
 			the_post();
 
 	?>
-			
+
 			<div <?php post_class( 'content-block entry' ); ?>><div class="wrapper">
-			
+
 				<article>
-				
+
+                    <?php if ( has_post_thumbnail() ){
+
+                        the_post_thumbnail( 'full', array( 'class' => 'aligncenter' ) );
+
+                    } ?>
+
 					<header>
 						<h1><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
