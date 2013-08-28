@@ -405,16 +405,16 @@
 ///DOC READY FUNCTIONS
 jQuery( document ).ready( function(){
 
-	MBP.scaleFix();
-	MBP.hideUrlBarOnLoad();
-	MBP.preventZoom();
+    MBP.scaleFix();
+    MBP.hideUrlBarOnLoad();
+    MBP.preventZoom();
 
-	jQuery( '#show-nav' ).on( 'click', function( e ){
+    jQuery( '#show-nav' ).on( 'click', function( e ){
 
-		jQuery(this).next().slideToggle( 'fast' );
+        jQuery(this).next().slideToggle( 'fast' );
 
-		e.preventDefault();
+        e.preventDefault();
 
-	} );
+    } );
 
 } );

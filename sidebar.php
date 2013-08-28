@@ -1,17 +1,16 @@
 <?php
 /*
-	@package WordPress
-	@subpackage SiteSkeleton
+    @package WordPress
+    @subpackage SiteSkeleton
 */
 ?>
 
 <div class="sidebar" role="complementary">
 
-	<ul class="list-widgets">
+    <ul class="list-widgets">
 
-		<?php dynamic_sidebar( 'ss_widgets' ); ?>
+        <?php dynamic_sidebar( 'ss_widgets' ); ?>
 
-	</ul>
+    </ul>
 
 </div><!--end .sidebar-->
-

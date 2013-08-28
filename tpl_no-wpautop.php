@@ -1,7 +1,7 @@
 <?php
 /*
-	@package WordPress
-	@subpackage SiteSkeleton
+    @package WordPress
+    @subpackage SiteSkeleton
 */
 
 /* TEMPLATE NAME: NO Auto P */
@@ -10,25 +10,25 @@ get_header(); ?>
 
 <main class="content clearfix" role="main">
 
-	<div class="content-block"><div class="wrapper">
+    <div class="content-block"><div class="wrapper">
 
-	<?php
+    <?php
 
-		while ( have_posts() ){
+        while ( have_posts() ){
 
-			the_post();
+            the_post();
 
-			remove_filter( 'the_content', 'wpautop' );
+            remove_filter( 'the_content', 'wpautop' );
 
-			the_content();
+            the_content();
 
-		}
-	
-	edit_post_link( 'Edit this entry.', '<p class="clear">', '</p>' );
-	
-	?>
+        }
 
-	</div></div><!--/end .content-block-->
+    edit_post_link( 'Edit this entry.', '<p class="clear">', '</p>' );
+
+    ?>
+
+    </div></div><!--/end .content-block-->
 
 </main><!--/end .content-->
 <?php get_footer(); ?>

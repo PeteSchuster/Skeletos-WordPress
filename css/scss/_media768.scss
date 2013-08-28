@@ -1,47 +1,47 @@
-.wrapper 		{ margin: 0 auto; width: 728px; }
+.wrapper        { margin: 0 auto; width: 728px; }
 
 /* ===HEADER START=== */
 
 .header {
 
-	.logo { float: left; }
+    .logo { float: left; }
 
-	.nav { width: auto; display: block!important; position: static; }
+    .nav { width: auto; display: block!important; position: static; }
 
-	.show-nav { display: none; }
+    .show-nav { display: none; }
 
 }
 
-.list-primary-nav 	{
+.list-primary-nav   {
 
-	> li 	{ display: inline-block }
+    > li    { display: inline-block }
 
-	> li > a { background: none; border: 0; color: #fff; }
+    > li > a { background: none; border: 0; color: #fff; }
 
-	/* for dropdowns */
-	li	{ position: relative; z-index: 999; }
+    /* for dropdowns */
+    li  { position: relative; z-index: 999; }
 
-	li ul 				{ position: absolute; display: none; z-index: 999; left: 0; }
-	li:hover ul,
-	li:focus ul		{ display: block; }
+    li ul               { position: absolute; display: none; z-index: 999; left: 0; }
+    li:hover ul,
+    li:focus ul     { display: block; }
 
-	li li a 				{ padding: .75em; width: 150px; text-decoration: none; }
-	li.active li a,
-	li li a:hover,
-	li li a:focus 	{ background: #666; }
+    li li a                 { padding: .75em; width: 150px; text-decoration: none; }
+    li.active li a,
+    li li a:hover,
+    li li a:focus   { background: #666; }
 
 }
 
 /* ===FOOTER START=== */
 
-.list-footer-nav 	{
+.list-footer-nav    {
 
-	li 	{ margin-left: 20px; float: left; }
-	li:first-child 	{ margin-left: 0; }
+    li  { margin-left: 20px; float: left; }
+    li:first-child  { margin-left: 0; }
 
 }
 
 /* ===WORDPRESS START=== */
 
-.alignleft 			{ margin: 0 1.5em 1.5em 0; float: left; clear: both; }
-.alignright 		{ margin: 0 0 1.5em 1.5em; float: right; clear: both; }
+.alignleft          { margin: 0 1.5em 1.5em 0; float: left; clear: both; }
+.alignright         { margin: 0 0 1.5em 1.5em; float: right; clear: both; }

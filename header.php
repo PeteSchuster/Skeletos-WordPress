@@ -1,7 +1,7 @@
 <?php
 /*
-	@package WordPress
-	@subpackage SiteSkeleton
+    @package WordPress
+    @subpackage SiteSkeleton
 */
 ?>
 
@@ -26,23 +26,23 @@
 
 <header class="header content-block clearfix" role="banner"><div class="wrapper">
 
-	<div class="hgroup">
+    <div class="hgroup">
 
-		<h1 class="heading2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+        <h1 class="heading2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
-		<h2 class="heading3"><?php bloginfo( 'description' ); ?></h2>
+        <h2 class="heading3"><?php bloginfo( 'description' ); ?></h2>
 
-	</div><!--/end .hgroup-->
+    </div><!--/end .hgroup-->
 
-	<a id="show-nav" class="button icon-menu show-nav" href="#"><span>Menu</span></a>
+    <a id="show-nav" class="button icon-menu show-nav" href="#"><span>Menu</span></a>
 
-	<nav id="nav" class="nav" role="navigation">
-		<h1 class="visuallyhidden">Main Navigation</h1>
+    <nav id="nav" class="nav" role="navigation">
+        <h1 class="visuallyhidden">Main Navigation</h1>
 
-		<?php wp_nav_menu( array( 'menu' => 'main', 'menu_class' => 'list-primary-nav clearfix', 'container' => '' ) ); ?>
+        <?php wp_nav_menu( array( 'menu' => 'main', 'menu_class' => 'list-primary-nav clearfix', 'container' => '' ) ); ?>
 
-	</nav><!--/end nav-->
+    </nav><!--/end nav-->
 
-	<?php echo get_search_form( true ); ?>
+    <?php echo get_search_form( true ); ?>
 
 </div></header><!--/end .header-->

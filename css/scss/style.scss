@@ -11,22 +11,22 @@ HTML5 Boilerplate - URL: http://h5bp.com/
 @import 'variables';
 
 //custom mixins
-@import	'mixins';
+@import 'mixins';
 
 //Base Styles
-@import	'base';
+@import 'base';
 
 //Mobile First CSS
-@import	'media320';
+@import 'media320';
 
 //WordPress styles
-@import	'wordpress';
+@import 'wordpress';
 
 /* ===MEDIA QUERIES START=== */
 
 @media only screen and (min-width: 768px) {
 
-	@import	'media768';
+    @import 'media768';
 
 }
 
@@ -40,4 +40,4 @@ HTML5 Boilerplate - URL: http://h5bp.com/
 }
 
 //Helper classes
-@import	'utility';
+@import 'utility';

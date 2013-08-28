@@ -62,7 +62,7 @@ $fields = array(
 
 $defaults = array(
 
-	'fields' => apply_filters( 'comment_form_default_fields', $fields ),
+    'fields' => apply_filters( 'comment_form_default_fields', $fields ),
     'comment_field' =>  '<label for="comment">Comment</label>' .
                         '<textarea id="comment" name="comment" tabindex="4" aria-required="true"></textarea>',
     'comment_notes_after' => '',
