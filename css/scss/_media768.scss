@@ -6,7 +6,7 @@
 
     .logo { float: left; }
 
-    .nav { width: auto; display: block!important; position: static; }
+    .nav { position: static; display: block!important; width: auto; }
 
     .show-nav { display: none; }
 
@@ -14,14 +14,14 @@
 
 .list-primary-nav   {
 
-    > li    { display: inline-block }
+    > li    { display: inline-block; }
 
-    > li > a { background: none; border: 0; color: #fff; }
+    > li > a { border: 0; background: none; color: #fff; }
 
     /* for dropdowns */
     li  { position: relative; z-index: 999; }
 
-    li ul               { position: absolute; display: none; z-index: 999; left: 0; }
+    li ul               { position: absolute; left: 0; z-index: 999; display: none; }
     li:hover ul,
     li:focus ul     { display: block; }
 
@@ -36,12 +36,12 @@
 
 .list-footer-nav    {
 
-    li  { margin-left: 20px; float: left; }
+    li  { float: left; margin-left: 20px; }
     li:first-child  { margin-left: 0; }
 
 }
 
 /* ===WORDPRESS START=== */
 
-.alignleft          { margin: 0 1.5em 1.5em 0; float: left; clear: both; }
-.alignright         { margin: 0 0 1.5em 1.5em; float: right; clear: both; }
+.alignleft          { float: left; clear: both; margin: 0 1.5em 1.5em 0; }
+.alignright         { float: right; clear: both; margin: 0 0 1.5em 1.5em; }

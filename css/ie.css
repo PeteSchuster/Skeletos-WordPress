@@ -12,9 +12,9 @@
 }
 /* line 9, scss/_media768.scss */
 .header .nav {
-  width: auto;
-  display: block !important;
   position: static;
+  display: block !important;
+  width: auto;
 }
 /* line 11, scss/_media768.scss */
 .header .show-nav {
@@ -31,8 +31,8 @@
 }
 /* line 19, scss/_media768.scss */
 .list-primary-nav > li > a {
-  background: none;
   border: 0;
+  background: none;
   color: #fff;
 }
 /* line 22, scss/_media768.scss */
@@ -43,9 +43,9 @@
 /* line 24, scss/_media768.scss */
 .list-primary-nav li ul {
   position: absolute;
-  display: none;
-  z-index: 999;
   left: 0;
+  z-index: 999;
+  display: none;
 }
 /* line 26, scss/_media768.scss */
 .list-primary-nav li:hover ul,
@@ -68,8 +68,8 @@
 /* ===FOOTER START=== */
 /* line 39, scss/_media768.scss */
 .list-footer-nav li {
-  margin-left: 20px;
   float: left;
+  margin-left: 20px;
 }
 /* line 40, scss/_media768.scss */
 .list-footer-nav li:first-child {
@@ -79,14 +79,14 @@
 /* ===WORDPRESS START=== */
 /* line 46, scss/_media768.scss */
 .alignleft {
-  margin: 0 1.5em 1.5em 0;
   float: left;
   clear: both;
+  margin: 0 1.5em 1.5em 0;
 }
 
 /* line 47, scss/_media768.scss */
 .alignright {
-  margin: 0 0 1.5em 1.5em;
   float: right;
   clear: both;
+  margin: 0 0 1.5em 1.5em;
 }

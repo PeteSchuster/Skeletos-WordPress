@@ -1,8 +1,8 @@
 
 /* ===RESETS=== */
 
-html    { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-body    { margin: 0; font-family: $fontFamily; line-height: 1.6; color: $textColor; @include wordBreak(); background: #fff; }
+html    { overflow-y: scroll; font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body    { @include wordBreak(); margin: 0; background: #fff; color: $textColor; font-family: $fontFamily; line-height: 1.6; }
 
 /* HTML5 Reset */
 
@@ -21,7 +21,7 @@ legend { @extend .heading5; }
 button,
 input,
 select,
-textarea { font-family: inherit; font-size: 100%; margin: 0; }
+textarea { margin: 0; font-size: 100%; font-family: inherit; }
 
 button,
 input { line-height: normal; }
@@ -30,7 +30,7 @@ button,
 select { text-transform: none; }
 
 button::-moz-focus-inner,
-input::-moz-focus-inner { border: 0; padding: 0; }
+input::-moz-focus-inner { padding: 0; border: 0; }
 
 label   { display: block; cursor: pointer; }
 
@@ -40,7 +40,7 @@ label   { display: block; cursor: pointer; }
 [type=password],
 [type=search],
 textarea,
-select              { margin-bottom: 12 / 16 * 1em; padding: 12 / 16 * 1em; width: 100%; font-size: 1em; @include box-sizing; border: 1px solid $borderColor; background-color: $objectColor; border-radius: 0; }
+select              { @include box-sizing; margin-bottom: 12 / 16 * 1em; padding: 12 / 16 * 1em; width: 100%; border: 1px solid $borderColor; border-radius: 0; background-color: $objectColor; font-size: 1em; }
 
 [type=text],
 [type=email],
@@ -53,34 +53,34 @@ textarea                { -webkit-appearance: none; }
 [type=radio]            { margin: 0 6 / 16 * 1em 12 / 16 * 1em 0; }
 
 [type=submit],
-[type=button]           { @extend [class*=button]; cursor: pointer; -webkit-appearance: none; border: 0; }
+[type=button]           { @extend [class*=button]; border: 0; cursor: pointer; -webkit-appearance: none; }
 [type=submit]:hover,
 [type=submit]:focus,
 [type=button]:hover,
 [type=button]:focus     { @extend [class*=button]:hover; }
-textarea                            { height: 8em; overflow: auto; vertical-align: top; resize: vertical; }
+textarea                            { overflow: auto; height: 8em; vertical-align: top; resize: vertical; }
 
 /* ===UI MESSAGES=== */
 
-[class*=ui-message]     { margin: 0 0 20px -20px; padding: 20px 19px 0; width: 100%; clear: both; background: #eee; border: 1px solid #333; }
-.ui-message-error       { background-color: #ff9e9e; border-color: #cc0000; }
-.ui-message-alert       { background-color: #fffe88; border-color: #ffba00; }
-.ui-message-success     { background-color: #7cc187; border-color: #005f10; }
+[class*=ui-message]     { clear: both; margin: 0 0 20px -20px; padding: 20px 19px 0; width: 100%; border: 1px solid #333; background: #eee; }
+.ui-message-error       { border-color: #cc0000; background-color: #ff9e9e; }
+.ui-message-alert       { border-color: #ffba00; background-color: #fffe88; }
+.ui-message-success     { border-color: #005f10; background-color: #7cc187; }
 
 /* ===GENERAL ELEMENT STYLES=== */
 
 h1,
-.heading1   { margin: 0 0 20 / 36 * 1em; font-size: 36 / 16 * 1em; line-height: 42 / 36 * 1em; text-transform: none; font-weight: bold; font-style: none; font-family: $fontFamilyAlt; color: $textColor; }
+.heading1   { margin: 0 0 20 / 36 * 1em; color: $textColor; text-transform: none; font-weight: bold; font-style: none; font-size: 36 / 16 * 1em; font-family: $fontFamilyAlt; line-height: 42 / 36 * 1em; }
 h2,
-.heading2   { margin: 0 0 20 / 28 * 1em; font-size: 28 / 16 * 1em; line-height: 36 / 28 * 1em; text-transform: none; font-weight: bold; font-style: none; font-family: $fontFamilyAlt; color: $textColor; }
+.heading2   { margin: 0 0 20 / 28 * 1em; color: $textColor; text-transform: none; font-weight: bold; font-style: none; font-size: 28 / 16 * 1em; font-family: $fontFamilyAlt; line-height: 36 / 28 * 1em; }
 h3,
-.heading3   { margin: 0 0 10 / 22 * 1em; font-size: 22 / 16 * 1em; line-height: 28 / 22 * 1em; text-transform: none; font-weight: bold; font-style: none; font-family: $fontFamilyAlt; color: $textColor; }
+.heading3   { margin: 0 0 10 / 22 * 1em; color: $textColor; text-transform: none; font-weight: bold; font-style: none; font-size: 22 / 16 * 1em; font-family: $fontFamilyAlt; line-height: 28 / 22 * 1em; }
 h4,
-.heading4   { margin: 0 0 10 / 22 * 1em; font-size: 22 / 16 * 1em; line-height: 28 / 18 * 1em; text-transform: none; font-weight: normal; font-style: italic; font-family: $fontFamily; color: $textColorAlt; }
+.heading4   { margin: 0 0 10 / 22 * 1em; color: $textColorAlt; text-transform: none; font-weight: normal; font-style: italic; font-size: 22 / 16 * 1em; font-family: $fontFamily; line-height: 28 / 18 * 1em; }
 h5,
-.heading5   { margin: 0 0 10 / 16 * 1em; font-size: 1em; line-height: 1.6; text-transform: none; font-weight: bold; font-style: none; font-family: $fontFamilyAlt; color: $textColor; }
+.heading5   { margin: 0 0 10 / 16 * 1em; color: $textColor; text-transform: none; font-weight: bold; font-style: none; font-size: 1em; font-family: $fontFamilyAlt; line-height: 1.6; }
 h6,
-.heading6   { margin: 0 0 1em; font-size: 14 / 16 * 1em; line-height: 1.6; text-transform: uppercase; font-weight: normal; font-style: none; font-family: $fontFamilyAlt; color: $textColor; }
+.heading6   { margin: 0 0 1em; color: $textColor; text-transform: uppercase; font-weight: normal; font-style: none; font-size: 14 / 16 * 1em; font-family: $fontFamilyAlt; line-height: 1.6; }
 
 h1,
 h2,
@@ -102,7 +102,7 @@ hgroup { margin-bottom: 20 / 16 * 1em;
 
 [class*=heading] { display: block; }
 
-a   { text-decoration: underline; color: $accent; @include transition( color, .2 );
+a   { @include transition( color, .2 ); color: $accent; text-decoration: underline;
 
     &:focus     { outline: thin dotted; }
     &:active,
@@ -112,7 +112,7 @@ a   { text-decoration: underline; color: $accent; @include transition( color, .2
 
 }
 
-[class*=button]     { margin: 0 .5em 1.25em 0; padding: .5em 1em; display: inline-block; @include transition( background, .2 ); font-family: $fontFamilyAlt; background: $accent; color: $textColor; font-weight: bold; text-transform: lowercase; text-decoration: none;
+[class*=button]     { @include transition( background, .2 ); display: inline-block; margin: 0 .5em 1.25em 0; padding: .5em 1em; background: $accent; color: $textColor; text-decoration: none; text-transform: lowercase; font-weight: bold; font-family: $fontFamilyAlt;
 
     &:hover,
     &:focus     { background: $accentAlt; color: #fff; }
@@ -138,28 +138,28 @@ li          { margin: 0; padding: 0; }
 
 [class*=list] { margin-left: 0; list-style: none; }
 
-img                         { max-width: 100%; width: auto; height: auto; border: 0; display: block; -ms-interpolation-mode: bicubic; }
+img                         { display: block; max-width: 100%; width: auto; height: auto; border: 0; -ms-interpolation-mode: bicubic; }
 svg:not(:root)  { overflow: hidden; }
 figure                  { margin: 0; }
 
 iframe { max-width: 100%; }
 
-table   { margin-bottom: 1.125em; border-collapse: collapse; border-spacing: 0; font-family: sans-serif; background: #fff; }
+table   { margin-bottom: 1.125em; border-spacing: 0; border-collapse: collapse; background: #fff; font-family: sans-serif; }
 th,td   { padding: 1em; border: 1px solid $borderColor; }
-th      { font-size: .875em; color: $textColorAlt; background: $objectColorAlt; border-color: $borderColorAlt; }
-td      { font-size: .75em; vertical-align: top; }
+th      { border-color: $borderColorAlt; background: $objectColorAlt; color: $textColorAlt; font-size: .875em; }
+td      { vertical-align: top; font-size: .75em; }
 
 pre,
 code,
 kbd,
-samp            { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
-pre             { margin: 0 1.25em 1.25em; padding: 1.25em; white-space: pre; white-space: pre-wrap; word-wrap: break-word; background: $objectColor; }
+samp            { font-size: 1em; font-family: monospace, monospace; _font-family: 'courier new', monospace; }
+pre             { margin: 0 1.25em 1.25em; padding: 1.25em; background: $objectColor; white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
 small       { font-size: 85%; }
 sub,
-sup             { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup             { position: relative; vertical-align: baseline; font-size: 75%; line-height: 0; }
 sup             { top: -0.5em; }
 sub             { bottom: -0.25em; }
-blockquote      { margin: 0 2em 2em; padding: 2em; border-left: 1em solid $borderColor; display: block; background: $objectColor; font-style: italic; overflow: hidden; }
+blockquote      { display: block; overflow: hidden; margin: 0 2em 2em; padding: 2em; border-left: 1em solid $borderColor; background: $objectColor; font-style: italic; }
 blockquote p    { font-size: 1em; }
 abbr[title]     { border-bottom: 1px dotted; }
 b,
@@ -168,4 +168,4 @@ dfn         { font-style: italic; }
 mark        { background: #ff0; color: #000; }
 q           { quotes: "\201C" "\201D" "\2018" "\2019"; }
 
-hr  { margin: 0 0 1.25em; padding: 0; height: 1px; display: block; border: 0; border-top: 1px solid $borderColor; clear: both; @include box-sizing(content-box); }
+hr  { @include box-sizing(content-box); display: block; clear: both; margin: 0 0 1.25em; padding: 0; height: 1px; border: 0; border-top: 1px solid $borderColor; }

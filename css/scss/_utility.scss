@@ -1,15 +1,15 @@
 /* ===NON-SEMANTIC HELPER CLASES=== */
 
-.right  { float: right}
+.right  { float: right;}
 .left   { float: left; }
 .clear  { clear: both; }
 .hide   { display: none; }
-.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden { position: absolute; overflow: hidden; clip: rect(0 0 0 0); margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; }
 
-.ir     { display: block; text-indent: -999px; overflow: hidden; }
+.ir     { display: block; overflow: hidden; text-indent: -999px; }
 
 /* ===CLEAR FIX=== */
 
-.clearfix:after { height: 0; content: "."; display: block; clear: both; visibility: hidden; }
+.clearfix:after { display: block; visibility: hidden; clear: both; height: 0; content: "."; }
 .clearfix       { display: inline-block; zoom: 1; }
 .clearfix       { display: block; }

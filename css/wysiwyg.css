@@ -2,22 +2,22 @@
 /* ===RESETS=== */
 /* line 4, scss/_base.scss */
 html {
-  font-size: 100%;
   overflow-y: scroll;
+  font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
 /* line 5, scss/_base.scss */
 body {
-  margin: 0;
-  font-family: "Noto Serif", serif;
-  line-height: 1.6;
-  color: #34495e;
   -ms-word-wrap: break-all;
   word-wrap: break-all;
   word-wrap: break-word;
+  margin: 0;
   background: #fff;
+  color: #34495e;
+  font-family: "Noto Serif", serif;
+  line-height: 1.6;
 }
 
 /* HTML5 Reset */
@@ -56,9 +56,9 @@ button,
 input,
 select,
 textarea {
-  font-family: inherit;
-  font-size: 100%;
   margin: 0;
+  font-size: 100%;
+  font-family: inherit;
 }
 
 /* line 27, scss/_base.scss */
@@ -76,8 +76,8 @@ select {
 /* line 33, scss/_base.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  border: 0;
   padding: 0;
+  border: 0;
 }
 
 /* line 35, scss/_base.scss */
@@ -94,15 +94,15 @@ label {
 [type=search],
 textarea,
 select {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   margin-bottom: 0.75em;
   padding: 0.75em;
   width: 100%;
-  font-size: 1em;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   border: 1px solid #95a5a6;
-  background-color: #ecf0f1;
   border-radius: 0;
+  background-color: #ecf0f1;
+  font-size: 1em;
 }
 
 /* line 50, scss/_base.scss */
@@ -124,15 +124,15 @@ textarea {
 /* line 56, scss/_base.scss */
 [type=submit],
 [type=button] {
+  border: 0;
   cursor: pointer;
   -webkit-appearance: none;
-  border: 0;
 }
 
 /* line 61, scss/_base.scss */
 textarea {
-  height: 8em;
   overflow: auto;
+  height: 8em;
   vertical-align: top;
   resize: vertical;
 }
@@ -140,30 +140,30 @@ textarea {
 /* ===UI MESSAGES=== */
 /* line 65, scss/_base.scss */
 [class*=ui-message] {
+  clear: both;
   margin: 0 0 20px -20px;
   padding: 20px 19px 0;
   width: 100%;
-  clear: both;
-  background: #eee;
   border: 1px solid #333;
+  background: #eee;
 }
 
 /* line 66, scss/_base.scss */
 .ui-message-error {
-  background-color: #ff9e9e;
   border-color: #cc0000;
+  background-color: #ff9e9e;
 }
 
 /* line 67, scss/_base.scss */
 .ui-message-alert {
-  background-color: #fffe88;
   border-color: #ffba00;
+  background-color: #fffe88;
 }
 
 /* line 68, scss/_base.scss */
 .ui-message-success {
-  background-color: #7cc187;
   border-color: #005f10;
+  background-color: #7cc187;
 }
 
 /* ===GENERAL ELEMENT STYLES=== */
@@ -171,52 +171,52 @@ textarea {
 h1,
 .heading1 {
   margin: 0 0 0.55556em;
-  font-size: 2.25em;
-  line-height: 1.16667em;
+  color: #34495e;
   text-transform: none;
   font-weight: bold;
   font-style: none;
+  font-size: 2.25em;
   font-family: "Open Sans", sans-serif;
-  color: #34495e;
+  line-height: 1.16667em;
 }
 
 /* line 75, scss/_base.scss */
 h2,
 .heading2 {
   margin: 0 0 0.71429em;
-  font-size: 1.75em;
-  line-height: 1.28571em;
+  color: #34495e;
   text-transform: none;
   font-weight: bold;
   font-style: none;
+  font-size: 1.75em;
   font-family: "Open Sans", sans-serif;
-  color: #34495e;
+  line-height: 1.28571em;
 }
 
 /* line 77, scss/_base.scss */
 h3,
 .heading3 {
   margin: 0 0 0.45455em;
-  font-size: 1.375em;
-  line-height: 1.27273em;
+  color: #34495e;
   text-transform: none;
   font-weight: bold;
   font-style: none;
+  font-size: 1.375em;
   font-family: "Open Sans", sans-serif;
-  color: #34495e;
+  line-height: 1.27273em;
 }
 
 /* line 79, scss/_base.scss */
 h4,
 .heading4 {
   margin: 0 0 0.45455em;
-  font-size: 1.375em;
-  line-height: 1.55556em;
+  color: #95a5a6;
   text-transform: none;
   font-weight: normal;
   font-style: italic;
+  font-size: 1.375em;
   font-family: "Noto Serif", serif;
-  color: #95a5a6;
+  line-height: 1.55556em;
 }
 
 /* line 81, scss/_base.scss */
@@ -224,26 +224,26 @@ h5,
 .heading5,
 legend {
   margin: 0 0 0.625em;
-  font-size: 1em;
-  line-height: 1.6;
+  color: #34495e;
   text-transform: none;
   font-weight: bold;
   font-style: none;
+  font-size: 1em;
   font-family: "Open Sans", sans-serif;
-  color: #34495e;
+  line-height: 1.6;
 }
 
 /* line 83, scss/_base.scss */
 h6,
 .heading6 {
   margin: 0 0 1em;
-  font-size: 0.875em;
-  line-height: 1.6;
+  color: #34495e;
   text-transform: uppercase;
   font-weight: normal;
   font-style: none;
+  font-size: 0.875em;
   font-family: "Open Sans", sans-serif;
-  color: #34495e;
+  line-height: 1.6;
 }
 
 /* line 90, scss/_base.scss */
@@ -286,13 +286,13 @@ hgroup [class*=heading] {
 
 /* line 105, scss/_base.scss */
 a {
-  text-decoration: underline;
-  color: #1abc9c;
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
+  color: #1abc9c;
+  text-decoration: underline;
 }
 /* line 107, scss/_base.scss */
 a:focus {
@@ -310,20 +310,20 @@ a:hover, a:focus {
 /* line 115, scss/_base.scss */
 [class*=button], [type=submit],
 [type=button] {
-  margin: 0 .5em 1.25em 0;
-  padding: .5em 1em;
-  display: inline-block;
   -webkit-transition: background 0.2s ease-in-out;
   -moz-transition: background 0.2s ease-in-out;
   -o-transition: background 0.2s ease-in-out;
   -ms-transition: background 0.2s ease-in-out;
   transition: background 0.2s ease-in-out;
-  font-family: "Open Sans", sans-serif;
+  display: inline-block;
+  margin: 0 .5em 1.25em 0;
+  padding: .5em 1em;
   background: #1abc9c;
   color: #34495e;
-  font-weight: bold;
-  text-transform: lowercase;
   text-decoration: none;
+  text-transform: lowercase;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
 }
 /* line 118, scss/_base.scss */
 [class*=button]:hover, [type=submit]:hover,
@@ -394,11 +394,11 @@ li {
 
 /* line 141, scss/_base.scss */
 img {
+  display: block;
   max-width: 100%;
   width: auto;
   height: auto;
   border: 0;
-  display: block;
   -ms-interpolation-mode: bicubic;
 }
 
@@ -420,10 +420,10 @@ iframe {
 /* line 147, scss/_base.scss */
 table {
   margin-bottom: 1.125em;
-  border-collapse: collapse;
   border-spacing: 0;
-  font-family: sans-serif;
+  border-collapse: collapse;
   background: #fff;
+  font-family: sans-serif;
 }
 
 /* line 148, scss/_base.scss */
@@ -434,16 +434,16 @@ th, td {
 
 /* line 149, scss/_base.scss */
 th {
-  font-size: .875em;
-  color: #95a5a6;
-  background: #34495e;
   border-color: #34495e;
+  background: #34495e;
+  color: #95a5a6;
+  font-size: .875em;
 }
 
 /* line 150, scss/_base.scss */
 td {
-  font-size: .75em;
   vertical-align: top;
+  font-size: .75em;
 }
 
 /* line 155, scss/_base.scss */
@@ -451,19 +451,19 @@ pre,
 code,
 kbd,
 samp {
+  font-size: 1em;
   font-family: monospace, monospace;
   _font-family: 'courier new', monospace;
-  font-size: 1em;
 }
 
 /* line 156, scss/_base.scss */
 pre {
   margin: 0 1.25em 1.25em;
   padding: 1.25em;
+  background: #ecf0f1;
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
-  background: #ecf0f1;
 }
 
 /* line 157, scss/_base.scss */
@@ -474,10 +474,10 @@ small {
 /* line 159, scss/_base.scss */
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
   position: relative;
   vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
 }
 
 /* line 160, scss/_base.scss */
@@ -492,13 +492,13 @@ sub {
 
 /* line 162, scss/_base.scss */
 blockquote {
+  display: block;
+  overflow: hidden;
   margin: 0 2em 2em;
   padding: 2em;
   border-left: 1em solid #95a5a6;
-  display: block;
   background: #ecf0f1;
   font-style: italic;
-  overflow: hidden;
 }
 
 /* line 163, scss/_base.scss */
@@ -535,15 +535,15 @@ q {
 
 /* line 171, scss/_base.scss */
 hr {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  clear: both;
   margin: 0 0 1.25em;
   padding: 0;
   height: 1px;
-  display: block;
   border: 0;
   border-top: 1px solid #95a5a6;
-  clear: both;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 /* ===BEGIN STRUCTURE AND CUSTOM ELEMENTS=== */
@@ -570,11 +570,11 @@ hr {
 }
 /* line 14, scss/_media320.scss */
 .header .nav {
-  width: 100%;
-  display: none;
   position: absolute;
   left: 0;
   z-index: 10;
+  display: none;
+  width: 100%;
 }
 
 /* line 20, scss/_media320.scss */
@@ -590,9 +590,9 @@ hr {
 /* line 26, scss/_media320.scss */
 .list-primary-nav a {
   display: block;
-  color: #fff;
   border-bottom: 1px solid #95a5a6;
   background: #34495e;
+  color: #fff;
 }
 /* line 28, scss/_media320.scss */
 .list-primary-nav a:active {
@@ -626,11 +626,11 @@ hr {
 }
 /* line 47, scss/_media320.scss */
 .search [type=submit] {
-  margin: 0;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
+  margin: 0;
 }
 
 /* ===CONTENT START=== */
@@ -654,9 +654,9 @@ hr {
 
 /* line 61, scss/_media320.scss */
 .back-to-top {
+  display: block;
   margin-bottom: 20px;
   text-align: center;
-  display: block;
 }
 
 /* line 65, scss/_media320.scss */
@@ -667,47 +667,47 @@ hr {
 /* line 1, scss/_wordpress.scss */
 .validation_message {
   margin-top: -8px;
-  text-transform: uppercase;
   color: #ff0000;
+  text-transform: uppercase;
   font-size: 0.75em;
 }
 
 /* line 4, scss/_wordpress.scss */
 .validation_error,
 #gforms_confirmation_message {
+  clear: both;
+  overflow: hidden;
   margin: 0 0 1em -1em;
   padding: 1em;
   width: 100%;
-  overflow: hidden;
-  color: #fff;
-  clear: both;
-  background: #eee;
   border: 1px solid #333;
+  background: #eee;
+  color: #fff;
 }
 
 /* line 5, scss/_wordpress.scss */
 .validation_error {
-  background-color: #ff9e9e;
   border-color: #cc0000;
+  background-color: #ff9e9e;
 }
 
 /* line 6, scss/_wordpress.scss */
 #gforms_confirmation_message {
-  background-color: #7cc187;
   border-color: #005f10;
+  background-color: #7cc187;
 }
 
 /* ===CONTENT START=== */
 /* line 12, scss/_wordpress.scss */
 .post-comment > img {
+  float: left;
   margin-right: 20px;
   max-width: 65px;
-  float: left;
 }
 /* line 14, scss/_wordpress.scss */
 .post-comment > div {
-  padding-top: 10px;
   overflow: hidden;
+  padding-top: 10px;
 }
 /* line 16, scss/_wordpress.scss */
 .post-comment p.right {
@@ -756,8 +756,8 @@ hr {
 /* line 39, scss/_wordpress.scss */
 .gallery-caption,
 .wp-caption-text {
-  max-height: 3.2em;
   overflow: hidden;
+  max-height: 3.2em;
 }
 
 /* line 40, scss/_wordpress.scss */
@@ -799,14 +799,14 @@ hr {
 .alignright,
 .aligncenter,
 .gallery-icon img {
-  margin: 0 auto 1.5em;
   clear: both;
+  margin: 0 auto 1.5em;
 }
 
 /* line 58, scss/_wordpress.scss */
 .alignnone {
-  margin-bottom: 1.5em;
   clear: both;
+  margin-bottom: 1.5em;
 }
 
 /* line 60, scss/_wordpress.scss */
