@@ -1,11 +1,14 @@
-/* ===
-Site Skeleton Boiler Plate
-Pete Schuster http://peteschuster.com
-Version: 2
-Credits:
-320 and Up - URL: http://stuffandnonsense.co.uk/projects/320andup/
-HTML5 Boilerplate - URL: http://h5bp.com/
-=== */
+/*
+Theme Name: Site Skeleton Boilerplate Theme
+Theme URI: https://github.com/PeteSchuster/WordPress-Site-Skeleton
+Description: This is a Boiler Plate Theme created by Pete Schuster.
+Author: Pete Schuster
+Author URI: http://peteschuster.com
+Version: 3.0
+License: GNU General Public License
+License URI: license.txt
+Tags: light, flexible-width
+*/
 /* ===MIXINS=== */
 /* ===RESETS=== */
 /* line 4, scss/_base.scss */
@@ -917,7 +920,7 @@ hr {
   }
 }
 @media only print {
-  /* line 34, scss/style.scss */
+  /* line 37, scss/style.scss */
   * {
     background: transparent !important;
     color: black !important;
@@ -926,29 +929,29 @@ hr {
     -ms-filter: none !important;
   }
 
-  /* line 35, scss/style.scss */
+  /* line 38, scss/style.scss */
   .header, .footer, .sidebar, img, form {
     display: none !important;
   }
 
-  /* line 36, scss/style.scss */
+  /* line 39, scss/style.scss */
   #container, .content, .content-main {
     width: 100%;
     padding: 0;
     margin: 0;
   }
 
-  /* line 37, scss/style.scss */
+  /* line 40, scss/style.scss */
   a {
     text-decoration: underline;
   }
 
-  /* line 38, scss/style.scss */
+  /* line 41, scss/style.scss */
   pre, blockquote, tr, h2, h3 {
     page-break-inside: avoid;
   }
 
-  /* line 39, scss/style.scss */
+  /* line 42, scss/style.scss */
   p, h2, h3 {
     orphans: 3;
     widows: 3;
