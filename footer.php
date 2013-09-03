@@ -11,7 +11,7 @@
 
     <nav>
         <h1 class="visuallyhidden">Footer Navigation</h1>
-        <?php wp_nav_menu( array( 'menu' => 'footer', 'menu_class' => 'list-footer-nav clearfix', 'container' => '' ) ); ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => 'list-footer-nav clearfix', 'container' => '' ) ); ?>
     </nav>
 
     <p>Skeletos WordPress theme, Copyright &copy; <?php echo date( 'Y' ); ?> <a href="#" target="_blank">Pete Schuster.</a><br />

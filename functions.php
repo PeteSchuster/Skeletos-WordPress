@@ -48,6 +48,12 @@ function skeletos_setup() {
 
     }
 
+    // This registers the nav in the header
+    register_nav_menu( 'main', 'Main Navigation' );
+
+    // This registers the nav in the footer
+    register_nav_menu( 'footer', 'Footer Menu' );
+
     // Remove the version number of WP
     // Warning - this info is also available in the readme.html file in your root directory - delete this file!
     //remove_action( 'wp_head', 'wp_generator' );
