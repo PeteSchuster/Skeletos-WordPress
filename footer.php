@@ -1,7 +1,7 @@
 <?php
 /*
     @package WordPress
-    @subpackage SiteSkeleton
+    @subpackage Skeletos
 */
 ?>
 
@@ -14,9 +14,8 @@
         <?php wp_nav_menu( array( 'menu' => 'footer', 'menu_class' => 'list-footer-nav clearfix', 'container' => '' ) ); ?>
     </nav>
 
-    <p>&copy; <?php echo date( 'Y' ) . ' ' . get_bloginfo( 'name' ); ?></p>
-
-    <p>Built with <a href="http://peteschuster.com/site-skeleton/" target="_blank">Site Skeleton</a> | Powered by <a href="http://wordpress.org/" target="_blank">WordPress</a></p>
+    <p>Skeletos WordPress theme, Copyright &copy; <?php echo date( 'Y' ); ?> <a href="#" target="_blank">Pete Schuster.</a><br />
+    Skeletos WordPress theme is licenced under the GPL.</p>
 
 </div></footer><!--/end .footer-->
 

@@ -1,38 +1,59 @@
 <?php
 /*
     @package WordPress
-    @subpackage SiteSkeleton
+    @subpackage Skeletos
 */
 
-//adds wysiwyg style
-add_editor_style( 'css/wysiwyg.css' );
 
-//remove admin bar
-//add_filter('show_admin_bar', '__return_false');
+/**
+ * Sets up theme defaults and registers the various WordPress features that
+ * Twenty Thirteen supports.
+ *
+ * @uses load_theme_textdomain() For translation/localization support.
+ * @uses add_editor_style() To add Visual Editor stylesheets.
+ * @uses add_theme_support() To add support for automatic feed links, post
+ * formats, and post thumbnails.
+ * @uses register_nav_menu() To add support for a navigation menu.
+ * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
+ *
+ * @since Twenty Thirteen 1.0
+ *
+ * @return void
+ */
+function skeletos_setup() {
 
-//adds menu support
-add_theme_support( 'menus' );
+    //adds wysiwyg style
+    add_editor_style( 'css/wysiwyg.css' );
 
-//adds RSS feed links to header
-add_theme_support( 'automatic-feed-links' );
+    //remove admin bar
+    //add_filter('show_admin_bar', '__return_false');
 
-//adds post thumbnail support
-add_theme_support( 'post-thumbnails' );
+    //adds menu support
+    add_theme_support( 'menus' );
 
-//Removes the default anchor link from images
-//disabling this might cause issues with plugins
-//update_option( 'image_default_link_type', 'none' );
+    //adds RSS feed links to header
+    add_theme_support( 'automatic-feed-links' );
 
-//sets content width for embeded media
-if ( !isset( $content_width ) ){
+    //adds post thumbnail support
+    add_theme_support( 'post-thumbnails' );
 
-    $content_width = 960;
+    //Removes the default anchor link from images
+    //disabling this might cause issues with plugins
+    //update_option( 'image_default_link_type', 'none' );
+
+    //sets content width for embeded media
+    if ( !isset( $content_width ) ){
+
+        $content_width = 728;
+
+    }
+
+    // Remove the version number of WP
+    // Warning - this info is also available in the readme.html file in your root directory - delete this file!
+    //remove_action( 'wp_head', 'wp_generator' );
 
 }
-
-// Remove the version number of WP
-// Warning - this info is also available in the readme.html file in your root directory - delete this file!
-remove_action( 'wp_head', 'wp_generator' );
+add_action( 'after_setup_theme', 'skeletos_setup' );
 
 // Obscure login screen error messages
 function ss_login_obscure(){
@@ -131,23 +152,23 @@ add_filter( 'excerpt_length', 'ss_excerpt_length' );
 add_filter( 'excerpt_more', '__return_null' );
 
 //Registers Widgetized Sidebars
-function ss_widgets_init() {
+// function ss_widgets_init() {
 
-    //Register Another Sidebar for Widgets Like Twitter
-    register_sidebar( array(
+//     //Register Another Sidebar for Widgets Like Twitter
+//     register_sidebar( array(
 
-        'name' => 'Widgets Right',
-        'id' => 'ss_widgets',
-        'description' => 'Widgets in this area will be shown on the right-hand side.',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</li>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
+//         'name' => 'Widgets Right',
+//         'id' => 'ss_widgets',
+//         'description' => 'Widgets in this area will be shown on the right-hand side.',
+//         'before_widget' => '<li id="%1$s" class="widget %2$s">',
+//         'after_widget'  => '</li>',
+//         'before_title' => '<h3>',
+//         'after_title' => '</h3>'
 
-    ) );
+//     ) );
 
-}
-add_action( 'widgets_init', 'ss_widgets_init' );
+// }
+// add_action( 'widgets_init', 'ss_widgets_init' );
 
 //Enqueues CSS and JS for the Theme
 function ss_scripts_styles(){
@@ -182,47 +203,50 @@ function ss_scripts_styles(){
 add_action( 'wp_enqueue_scripts', 'ss_scripts_styles' );
 
 //adds iOS icons and favicon
-function ss_header_icons(){
+// function ss_header_icons(){
 
-    echo '
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-144x144-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-114x114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-72x72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-57x57-precomposed.png" />
-    <link rel="shortcut icon" href="' . get_template_directory_uri() . '/images/ui/favicon.ico" />
-    ';
+//     echo '
+//     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-144x144-precomposed.png" />
+//     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-114x114-precomposed.png" />
+//     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-72x72-precomposed.png" />
+//     <link rel="apple-touch-icon-precomposed" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-57x57-precomposed.png" />
+//     <link rel="shortcut icon" href="' . get_template_directory_uri() . '/images/ui/favicon.ico" />
+//     ';
 
-}
-add_action( 'wp_head', 'ss_header_icons' );
+// }
+// add_action( 'wp_head', 'ss_header_icons' );
 
-//Direct Gallery from Upload
-/*
-function propertyGallery() {
-    global $post;
-    $args = array(
-        'post_type' => 'attachment',
-        'post_mime_type' => 'image',
-        'post_parent' => $post->ID
-    );
-    $arrImages =& get_children( $args );
-    if( $arrImages ) {
-        usort( $arrImages, 'cmpMenuOrder' );
-        echo "<ul class=\"gallery\">\n";
-        $style_classes = array( 'odd', 'even' );
-        $style_index = 0;
-        foreach ( $arrImages as $key => $data ) {
-            $k = $style_index%2;
-            $imagelarge = wp_get_attachment_image_src( $data->ID, "full" );
-            $imagesmall = wp_get_attachment_image_src( $data->ID, "thumbnail" );
-            echo "<li class=\"".$style_classes[$k]."\"><a rel=\"prettyPhoto[gallery]\" href=\"".$imagelarge[0]."\"><img src=\"".$imagesmall[0]."\" /></a></li>\n";
-            $style_index++;
-        }
-        echo "</ul>";
-    }
-}
-function cmpMenuOrder( $a, $b ) {
-    if( $a->menu_order ==  $b->menu_order ){ return 0 ; }
-    return ( $a->menu_order < $b->menu_order ) ? -1 : 1;
-}
 
-*/
+//Child Image Gallery
+
+//The function below will output all
+//images attached to a given
+//post object sorted via the menu order
+
+// function ss_child_images() {
+//     global $post;
+//     $args = array(
+//         'post_type' => 'attachment',
+//         'post_mime_type' => 'image',
+//         'post_parent' => $post->ID
+//     );
+//     $arrImages =& get_children( $args );
+//     if( $arrImages ) {
+//         usort( $arrImages, 'ss_child_image_sort' );
+//         echo "<ul class=\"gallery\">\n";
+//         $style_classes = array( 'odd', 'even' );
+//         $style_index = 0;
+//         foreach ( $arrImages as $key => $data ) {
+//             $k = $style_index%2;
+//             $imagelarge = wp_get_attachment_image_src( $data->ID, "full" );
+//             $imagesmall = wp_get_attachment_image_src( $data->ID, "thumbnail" );
+//             echo "<li class=\"".$style_classes[$k]."\"><a rel=\"prettyPhoto[gallery]\" href=\"".$imagelarge[0]."\"><img src=\"".$imagesmall[0]."\" /></a></li>\n";
+//             $style_index++;
+//         }
+//         echo "</ul>";
+//     }
+// }
+// function ss_child_image_sort( $a, $b ) {
+//     if( $a->menu_order ==  $b->menu_order ){ return 0 ; }
+//     return ( $a->menu_order < $b->menu_order ) ? -1 : 1;
+// }

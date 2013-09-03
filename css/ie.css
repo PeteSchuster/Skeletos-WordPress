@@ -38,14 +38,14 @@
 /* line 39, scss/_media768.scss */
 .list-primary-nav li {
   position: relative;
-  z-index: 999;
 }
-/* line 44, scss/_media768.scss */
+/* line 43, scss/_media768.scss */
 .list-primary-nav li ul {
   position: absolute;
   left: 0;
-  z-index: 999;
+  z-index: 10;
   display: none;
+  text-align: left;
 }
 /* line 51, scss/_media768.scss */
 .list-primary-nav li:hover ul,

@@ -1,7 +1,7 @@
 <?php
 /*
     @package WordPress
-    @subpackage SiteSkeleton
+    @subpackage Skeletos
 */
 
 /* TEMPLATE NAME: No Title */

@@ -1,7 +1,7 @@
 <?php
 /*
     @package WordPress
-    @subpackage SiteSkeleton
+    @subpackage Skeletos
 */
 get_header(); ?>
 
@@ -23,6 +23,9 @@ get_header(); ?>
 
         edit_post_link( 'Edit this entry.', '<p class="clear">', '</p>' );
         wp_link_pages();
+
+        comments_template();
+
         ?>
 
     </div></div><!--/end .content-block-->
