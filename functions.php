@@ -4,22 +4,9 @@
     @subpackage Skeletos
 */
 
-
-/**
- * Sets up theme defaults and registers the various WordPress features that
- * Twenty Thirteen supports.
- *
- * @uses load_theme_textdomain() For translation/localization support.
- * @uses add_editor_style() To add Visual Editor stylesheets.
- * @uses add_theme_support() To add support for automatic feed links, post
- * formats, and post thumbnails.
- * @uses register_nav_menu() To add support for a navigation menu.
- * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
- *
- * @since Twenty Thirteen 1.0
- *
- * @return void
- */
+//sets up the theme
+//some options are commented
+//out to meet WordPress standards
 function skeletos_setup() {
 
     //adds wysiwyg style
@@ -55,7 +42,8 @@ function skeletos_setup() {
     register_nav_menu( 'footer', 'Footer Menu' );
 
     // Remove the version number of WP
-    // Warning - this info is also available in the readme.html file in your root directory - delete this file!
+    // Warning - this info is also available in the
+    //readme.html file in your root directory - delete this file!
     //remove_action( 'wp_head', 'wp_generator' );
 
 }
