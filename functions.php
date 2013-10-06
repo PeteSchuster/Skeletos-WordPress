@@ -12,9 +12,6 @@ function skeletos_setup() {
     //adds wysiwyg style
     add_editor_style( 'css/wysiwyg.css' );
 
-    //remove admin bar
-    //add_filter('show_admin_bar', '__return_false');
-
     //adds menu support
     add_theme_support( 'menus' );
 
@@ -23,10 +20,6 @@ function skeletos_setup() {
 
     //adds post thumbnail support
     add_theme_support( 'post-thumbnails' );
-
-    //Removes the default anchor link from images
-    //disabling this might cause issues with plugins
-    //update_option( 'image_default_link_type', 'none' );
 
     //sets content width for embeded media
     if ( !isset( $content_width ) ){
@@ -41,28 +34,8 @@ function skeletos_setup() {
     // This registers the nav in the footer
     register_nav_menu( 'footer', 'Footer Menu' );
 
-    // Remove the version number of WP
-    // Warning - this info is also available in the
-    //readme.html file in your root directory - delete this file!
-    //remove_action( 'wp_head', 'wp_generator' );
-
 }
 add_action( 'after_setup_theme', 'skeletos_setup' );
-
-// Obscure login screen error messages
-function ss_login_obscure(){
-
-    return '<strong>Sorry</strong>: Think you have gone wrong somwhere!';
-
-}
-add_filter( 'login_errors', 'ss_login_obscure' );
-
-// Disable the theme / plugin text editor in Admin
-if( ! defined( 'DISALLOW_FILE_EDIT' ) ){
-
-    define( 'DISALLOW_FILE_EDIT', true );
-
-}
 
 //Custom Comments List
 if ( !function_exists( 'ss_comment' ) ){
@@ -146,23 +119,23 @@ add_filter( 'excerpt_length', 'ss_excerpt_length' );
 add_filter( 'excerpt_more', '__return_null' );
 
 //Registers Widgetized Sidebars
-// function ss_widgets_init() {
+function ss_widgets_init() {
 
-//     //Register Another Sidebar for Widgets Like Twitter
-//     register_sidebar( array(
+    //Register Another Sidebar for Widgets Like Twitter
+    register_sidebar( array(
 
-//         'name' => 'Widgets Right',
-//         'id' => 'ss_widgets',
-//         'description' => 'Widgets in this area will be shown on the right-hand side.',
-//         'before_widget' => '<li id="%1$s" class="widget %2$s">',
-//         'after_widget'  => '</li>',
-//         'before_title' => '<h3>',
-//         'after_title' => '</h3>'
+        'name' => 'Footer Widgets',
+        'id' => 'ss_widgets',
+        'description' => 'Widgets in this area will be shown on the right-hand side.',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title' => '<h6 class="heading3">',
+        'after_title' => '</h6>'
 
-//     ) );
+    ) );
 
-// }
-// add_action( 'widgets_init', 'ss_widgets_init' );
+}
+add_action( 'widgets_init', 'ss_widgets_init' );
 
 //Enqueues CSS and JS for the Theme
 function ss_scripts_styles(){
@@ -196,51 +169,21 @@ function ss_scripts_styles(){
 }
 add_action( 'wp_enqueue_scripts', 'ss_scripts_styles' );
 
-//adds iOS icons and favicon
-// function ss_header_icons(){
+function ss_custom_widget_counter($params) {
 
-//     echo '
-//     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-144x144-precomposed.png" />
-//     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-114x114-precomposed.png" />
-//     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-72x72-precomposed.png" />
-//     <link rel="apple-touch-icon-precomposed" href="' . get_template_directory_uri() . '/images/ui/apple-touch-icon-57x57-precomposed.png" />
-//     <link rel="shortcut icon" href="' . get_template_directory_uri() . '/images/ui/favicon.ico" />
-//     ';
+    global $my_widget_num;
 
-// }
-// add_action( 'wp_head', 'ss_header_icons' );
+    $my_widget_num++;
+    $class = 'class="widget-' . $my_widget_num . ' ';
 
+    if($my_widget_num % 2) :
+        $class .= 'widget-odd ';
+    else :
+        $class .= 'widget-even ';
+    endif;
 
-//Child Image Gallery
+    $params[0]['before_widget'] = str_replace('class="', $class, $params[0]['before_widget']);
 
-//The function below will output all
-//images attached to a given
-//post object sorted via the menu order
-
-// function ss_child_images() {
-//     global $post;
-//     $args = array(
-//         'post_type' => 'attachment',
-//         'post_mime_type' => 'image',
-//         'post_parent' => $post->ID
-//     );
-//     $arrImages =& get_children( $args );
-//     if( $arrImages ) {
-//         usort( $arrImages, 'ss_child_image_sort' );
-//         echo "<ul class=\"gallery\">\n";
-//         $style_classes = array( 'odd', 'even' );
-//         $style_index = 0;
-//         foreach ( $arrImages as $key => $data ) {
-//             $k = $style_index%2;
-//             $imagelarge = wp_get_attachment_image_src( $data->ID, "full" );
-//             $imagesmall = wp_get_attachment_image_src( $data->ID, "thumbnail" );
-//             echo "<li class=\"".$style_classes[$k]."\"><a rel=\"prettyPhoto[gallery]\" href=\"".$imagelarge[0]."\"><img src=\"".$imagesmall[0]."\" /></a></li>\n";
-//             $style_index++;
-//         }
-//         echo "</ul>";
-//     }
-// }
-// function ss_child_image_sort( $a, $b ) {
-//     if( $a->menu_order ==  $b->menu_order ){ return 0 ; }
-//     return ( $a->menu_order < $b->menu_order ) ? -1 : 1;
-// }
+    return $params;
+}
+add_filter('dynamic_sidebar_params','ss_custom_widget_counter');

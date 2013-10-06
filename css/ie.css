@@ -90,3 +90,26 @@
   clear: both;
   margin: 0 0 1.5em 1.5em;
 }
+
+/* line 96, scss/_media768.scss */
+.list-widgets > li {
+  width: 50%;
+  float: left;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 101, scss/_media768.scss */
+.list-widgets > li.widget-2 {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: 0;
+}
+/* line 106, scss/_media768.scss */
+.list-widgets > li.widget-odd {
+  clear: left;
+  padding-right: 10px;
+}
+/* line 110, scss/_media768.scss */
+.list-widgets > li.widget-even {
+  padding-left: 10px;
+}

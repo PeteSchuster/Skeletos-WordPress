@@ -91,3 +91,23 @@
     clear: both;
     margin: 0 0 1.5em 1.5em;
 }
+
+.list-widgets {
+    > li {
+        width: 50%;
+        float: left;
+        @include box-sizing;
+    }
+    > li.widget-2 {
+        padding-top: 0;
+        margin-top: 0;
+        border-top: 0;
+    }
+    > li.widget-odd {
+        clear: left;
+        padding-right: 10px;
+    }
+    > li.widget-even {
+        padding-left: 10px;
+    }
+}

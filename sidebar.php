@@ -5,12 +5,12 @@
 */
 ?>
 
-<div class="sidebar" role="complementary">
+<div class="sidebar content-block" role="complementary"><div class="wrapper">
 
-    <ul class="list-widgets">
+    <ul class="list-widgets clearfix">
 
-        <?php //dynamic_sidebar( 'ss_widgets' ); ?>
+        <?php dynamic_sidebar( 'ss_widgets' ); ?>
 
     </ul>
 
-</div><!--end .sidebar-->
+</div></div><!--end .sidebar-->

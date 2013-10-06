@@ -88,7 +88,7 @@ select {
     width: 100%;
     border: 1px solid $borderColor;
     border-radius: 0;
-    background-color: $objectColor;
+    background-color: #fff;
     font-size: 1em;
 }
 
@@ -133,8 +133,8 @@ textarea {
     margin: 0 0 20px -20px;
     padding: 20px 19px 0;
     width: 100%;
-    border: 1px solid #333;
-    background: #eee;
+    border: 1px solid $baseDark;
+    background: $objectColor;
 }
 .ui-message-error {
     border-color: #cc0000;
@@ -267,7 +267,7 @@ a {
 [class*=button] {
     @include transition( background, .2 );
     display: inline-block;
-    margin: 0 .5em 1.25em 0;
+    margin: 0 .5em 1.5em 0;
     padding: .5em 1em;
     background: $accent;
     color: $textColor;
@@ -278,14 +278,19 @@ a {
 
     &:hover,
     &:focus {
+        background: $accentAlt;
+        color: #fff;
+    }
+
+}
+
+.button-alt {
     background: $accentAlt;
     color: #fff;
-}
-
-}
-
-.button-red {
-    background: #FF4629;
+    &:hover,
+    &:focus {
+        background: $baseDark;
+    }
 }
 .button-gray {
     background: $objectColor;

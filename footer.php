@@ -5,6 +5,8 @@
 */
 ?>
 
+<?php get_sidebar(); ?>
+
 <footer class="footer content-block" role="contentinfo"><div class="wrapper">
 
     <a id="back-to-top" class="icon-top back-to-top heading6" href="#"><span>Back to Top</span></a>
