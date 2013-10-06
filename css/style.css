@@ -34,7 +34,7 @@ body {
 /* HTML5 Reset */
 /* line 22, scss/_base.scss */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, main, nav, section, summary {
+footer, header, main, nav, section, summary {
   display: block;
 }
 
@@ -267,35 +267,27 @@ h6 {
   padding: 0;
 }
 
-/* line 231, scss/_base.scss */
-.hgroup,
-hgroup {
+/* line 230, scss/_base.scss */
+.hgroup {
   margin-bottom: 1.25em;
 }
-/* line 239, scss/_base.scss */
+/* line 238, scss/_base.scss */
 .hgroup h1,
 .hgroup h2,
 .hgroup h3,
 .hgroup h4,
 .hgroup h5,
 .hgroup h6,
-.hgroup [class*=heading],
-hgroup h1,
-hgroup h2,
-hgroup h3,
-hgroup h4,
-hgroup h5,
-hgroup h6,
-hgroup [class*=heading] {
+.hgroup [class*=heading] {
   margin: 0;
 }
 
-/* line 244, scss/_base.scss */
+/* line 243, scss/_base.scss */
 [class*=heading] {
   display: block;
 }
 
-/* line 248, scss/_base.scss */
+/* line 247, scss/_base.scss */
 a {
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
@@ -305,20 +297,20 @@ a {
   color: #1abc9c;
   text-decoration: underline;
 }
-/* line 253, scss/_base.scss */
+/* line 252, scss/_base.scss */
 a:focus {
   outline: thin dotted;
 }
-/* line 257, scss/_base.scss */
+/* line 256, scss/_base.scss */
 a:active, a:hover {
   outline: 0;
 }
-/* line 261, scss/_base.scss */
+/* line 260, scss/_base.scss */
 a:hover, a:focus {
   color: #c0392b;
 }
 
-/* line 267, scss/_base.scss */
+/* line 265, scss/_base.scss */
 [class*=button], [type=submit],
 [type=button] {
   -webkit-transition: background 0.2s ease-in-out;
@@ -336,7 +328,7 @@ a:hover, a:focus {
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
 }
-/* line 280, scss/_base.scss */
+/* line 278, scss/_base.scss */
 [class*=button]:hover, [type=submit]:hover,
 [type=button]:hover,
 [type=submit]:focus,
@@ -346,33 +338,33 @@ a:hover, a:focus {
   color: #fff;
 }
 
-/* line 287, scss/_base.scss */
+/* line 284, scss/_base.scss */
 .button-alt {
   background: #c0392b;
   color: #fff;
 }
-/* line 291, scss/_base.scss */
+/* line 288, scss/_base.scss */
 .button-alt:hover, .button-alt:focus {
   background: #34495e;
 }
 
-/* line 295, scss/_base.scss */
+/* line 292, scss/_base.scss */
 .button-gray {
   background: #ecf0f1;
   color: #34495e;
 }
 
-/* line 299, scss/_base.scss */
+/* line 296, scss/_base.scss */
 .button-small {
   font-size: 0.75em;
 }
 
-/* line 302, scss/_base.scss */
+/* line 299, scss/_base.scss */
 .button-large {
   font-size: 1.25em;
 }
 
-/* line 310, scss/_base.scss */
+/* line 307, scss/_base.scss */
 p,
 ul,
 ol,
@@ -382,32 +374,32 @@ address {
   padding: 0;
 }
 
-/* line 316, scss/_base.scss */
+/* line 313, scss/_base.scss */
 ul,
 ol,
 dd {
   margin-left: 1.5em;
 }
 
-/* line 320, scss/_base.scss */
+/* line 317, scss/_base.scss */
 li ul,
 li ol {
   margin-bottom: 0;
 }
 
-/* line 323, scss/_base.scss */
+/* line 320, scss/_base.scss */
 li {
   margin: 0;
   padding: 0;
 }
 
-/* line 328, scss/_base.scss */
+/* line 325, scss/_base.scss */
 [class*=list] {
   margin-left: 0;
   list-style: none;
 }
 
-/* line 333, scss/_base.scss */
+/* line 330, scss/_base.scss */
 img {
   display: block;
   max-width: 100%;
@@ -417,22 +409,22 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 341, scss/_base.scss */
+/* line 338, scss/_base.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 344, scss/_base.scss */
+/* line 341, scss/_base.scss */
 figure {
   margin: 0;
 }
 
-/* line 348, scss/_base.scss */
+/* line 345, scss/_base.scss */
 iframe {
   max-width: 100%;
 }
 
-/* line 352, scss/_base.scss */
+/* line 349, scss/_base.scss */
 table {
   margin-bottom: 1.125em;
   border-spacing: 0;
@@ -441,13 +433,13 @@ table {
   font-family: sans-serif;
 }
 
-/* line 359, scss/_base.scss */
+/* line 356, scss/_base.scss */
 th, td {
   padding: 1em;
   border: 1px solid #95a5a6;
 }
 
-/* line 363, scss/_base.scss */
+/* line 360, scss/_base.scss */
 th {
   border-color: #34495e;
   background: #34495e;
@@ -455,13 +447,13 @@ th {
   font-size: .875em;
 }
 
-/* line 369, scss/_base.scss */
+/* line 366, scss/_base.scss */
 td {
   vertical-align: top;
   font-size: .75em;
 }
 
-/* line 377, scss/_base.scss */
+/* line 374, scss/_base.scss */
 pre,
 code,
 kbd,
@@ -471,7 +463,7 @@ samp {
   _font-family: 'courier new', monospace;
 }
 
-/* line 382, scss/_base.scss */
+/* line 379, scss/_base.scss */
 pre {
   margin: 0 1.25em 1.25em;
   padding: 1.25em;
@@ -481,12 +473,12 @@ pre {
   word-wrap: break-word;
 }
 
-/* line 390, scss/_base.scss */
+/* line 387, scss/_base.scss */
 small {
   font-size: 85%;
 }
 
-/* line 394, scss/_base.scss */
+/* line 391, scss/_base.scss */
 sub,
 sup {
   position: relative;
@@ -495,17 +487,17 @@ sup {
   line-height: 0;
 }
 
-/* line 400, scss/_base.scss */
+/* line 397, scss/_base.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 403, scss/_base.scss */
+/* line 400, scss/_base.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 406, scss/_base.scss */
+/* line 403, scss/_base.scss */
 blockquote {
   display: block;
   overflow: hidden;
@@ -516,39 +508,39 @@ blockquote {
   font-style: italic;
 }
 
-/* line 415, scss/_base.scss */
+/* line 412, scss/_base.scss */
 blockquote p {
   font-size: 1em;
 }
 
-/* line 418, scss/_base.scss */
+/* line 415, scss/_base.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 422, scss/_base.scss */
+/* line 419, scss/_base.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 425, scss/_base.scss */
+/* line 422, scss/_base.scss */
 dfn {
   font-style: italic;
 }
 
-/* line 428, scss/_base.scss */
+/* line 425, scss/_base.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 432, scss/_base.scss */
+/* line 429, scss/_base.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
-/* line 436, scss/_base.scss */
+/* line 433, scss/_base.scss */
 hr {
   -moz-box-sizing: border-box;
   box-sizing: border-box;

@@ -19,7 +19,7 @@ body {
 /* HTML5 Reset */
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, main, nav, section, summary {
+footer, header, main, nav, section, summary {
     display: block;
 }
 audio, canvas, video {
@@ -227,8 +227,7 @@ h6 {
     padding: 0;
 }
 
-.hgroup,
-hgroup {
+.hgroup {
     margin-bottom: 20 / 16 * 1em;
     h1,
     h2,
@@ -237,8 +236,8 @@ hgroup {
     h5,
     h6,
     [class*=heading] {
-    margin: 0;
-}
+        margin: 0;
+    }
 }
 
 [class*=heading] {
@@ -251,17 +250,16 @@ a {
     text-decoration: underline;
 
     &:focus {
-    outline: thin dotted;
-}
+        outline: thin dotted;
+    }
     &:active,
     &:hover {
-    outline: 0;
-}
+        outline: 0;
+    }
     &:hover,
     &:focus {
-    color: $accentAlt;
-}
-
+        color: $accentAlt;
+    }
 }
 
 [class*=button] {
@@ -281,7 +279,6 @@ a {
         background: $accentAlt;
         color: #fff;
     }
-
 }
 
 .button-alt {
