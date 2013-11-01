@@ -16,8 +16,8 @@
         <?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => 'list-footer-nav clearfix', 'container' => '' ) ); ?>
     </nav>
 
-    <p>Skeletos WordPress theme, Copyright &copy; <?php echo date( 'Y' ); ?> <a href="http://peteschuster.com" target="_blank">Pete Schuster.</a><br />
-    Skeletos WordPress theme is licenced under the GPL.</p>
+    <p>Skeletos WordPress theme, Copyright &copy; <?php echo date( 'Y' ); ?> Pete Schuster<br />
+    Skeletos WordPress theme is licensed under the GPL.</p>
 
 </div></footer><!--/end .footer-->
 

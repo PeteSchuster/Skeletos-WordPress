@@ -7,7 +7,7 @@
 //sets up the theme
 //some options are commented
 //out to meet WordPress standards
-function skeletos_setup() {
+function ss_skeletos_setup() {
 
     //adds wysiwyg style
     add_editor_style( 'css/wysiwyg.css' );
@@ -35,7 +35,7 @@ function skeletos_setup() {
     register_nav_menu( 'footer', 'Footer Menu' );
 
 }
-add_action( 'after_setup_theme', 'skeletos_setup' );
+add_action( 'after_setup_theme', 'ss_skeletos_setup' );
 
 //Custom Comments List
 if ( !function_exists( 'ss_comment' ) ){
@@ -147,12 +147,12 @@ function ss_scripts_styles(){
     if( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 
         wp_enqueue_script( 'functionalityDev', get_template_directory_uri() . '/js/functionality.js', array( 'jquery' ), '1.0', true );
-        wp_enqueue_style( 'styleDev', get_template_directory_uri() . '/css/style.css', '', '1.0' );
+        wp_enqueue_style( 'styleDev', get_stylesheet_directory_uri() . '/css/style.css', '', '1.0' );
 
     } else {
 
         wp_enqueue_script( 'functionality', get_template_directory_uri() . '/js/functionality.min.js', array( 'jquery' ), '1.0', true );
-        wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.min.css', '', '1.0' );
+        wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/css/style.min.css', '', '1.0' );
 
     }
 
@@ -162,7 +162,7 @@ function ss_scripts_styles(){
 
     }
 
-    wp_enqueue_style( 'ps_lte_ie8', get_template_directory_uri().'/css/ie.css' );
+    wp_enqueue_style( 'ps_lte_ie8', get_stylesheet_directory_uri().'/css/ie.css' );
 
     $GLOBALS[ 'wp_styles' ]->add_data( 'ps_lte_ie8', 'conditional', 'lte IE 8' );
 
