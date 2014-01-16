@@ -1,7 +1,6 @@
 <?php
 /*
-    @package WordPress
-    @subpackage Skeletos
+    @package Skeletos
 */
 
 //sets up the theme
@@ -48,7 +47,7 @@ function ss_comment( $comment, $args, $depth ) {
         case 'pingback' :
         case 'trackback' :
     ?>
-    <li class="post pingback visuallyhidden">
+    <li class="post pingback">
         <p>Pingback: <?php comment_author_link(); ?><?php edit_comment_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p>
     <?php
             break;
@@ -171,12 +170,12 @@ add_action( 'wp_enqueue_scripts', 'ss_scripts_styles' );
 
 function ss_custom_widget_counter($params) {
 
-    global $my_widget_num;
+    global $ss_widget_counter;
 
-    $my_widget_num++;
-    $class = 'class="widget-' . $my_widget_num . ' ';
+    $ss_widget_counter++;
+    $class = 'class="widget-' . $ss_widget_counter . ' ';
 
-    if($my_widget_num % 2) :
+    if($ss_widget_counter % 2) :
         $class .= 'widget-odd ';
     else :
         $class .= 'widget-even ';

@@ -1,7 +1,6 @@
 <?php
 /*
-    @package WordPress
-    @subpackage Skeletos
+    @package Skeletos
 */
 
 /* TEMPLATE NAME: No Title */

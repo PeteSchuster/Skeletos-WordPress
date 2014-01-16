@@ -1,5 +1,8 @@
 /**
  * MBP - Mobile boilerplate helper functions
+ * Copyright (c) HTML5 Boilerplate
+ * Licensed under the MIT license
+ * https://github.com/h5bp/mobile-boilerplate/blob/master/LICENSE.md
  */
 
 (function(document) {

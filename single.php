@@ -1,7 +1,6 @@
 <?php
 /*
-    @package WordPress
-    @subpackage Skeletos
+    @package Skeletos
 */
 get_header(); ?>
 

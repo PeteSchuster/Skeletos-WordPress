@@ -1,7 +1,6 @@
 <?php
 /*
-    @package WordPress
-    @subpackage Skeletos
+    @package Skeletos
 */
 get_header(); ?>
 
@@ -30,7 +29,7 @@ get_header(); ?>
                     <header>
                         <h1><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
-                        <b class="heading6">Posted by <?php the_author_link(); ?> on <time datetime="<?php the_time( 'c' ); ?>"><?php the_time( get_option( 'date_format' ) ) ?></time></b>
+                        <h6>Posted by <?php the_author_link(); ?> on <a href="<?php the_permalink() ?>"><time datetime="<?php the_time( 'c' ); ?>"><?php the_time( get_option( 'date_format' ) ) ?></time></a></h6>
                     </header>
 
                     <?php the_content(); ?>
