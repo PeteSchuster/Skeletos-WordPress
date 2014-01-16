@@ -1,0 +1,106 @@
+fieldset {
+    margin: 0 0 20px;
+    padding: 0;
+    border: 0;
+}
+
+legend {
+    @extend .heading5;
+}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    font-size: 100%;
+    font-family: inherit;
+}
+
+button,
+input {
+    line-height: normal;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+    margin-bottom: calc-target(5,14);
+    @extend .ss-heading5;
+    .required-true {
+        color: $error-color;
+    }
+}
+
+[type=text],
+[type=email],
+[type=url],
+[type=tel],
+[type=password],
+[type=search],
+textarea,
+select {
+    margin-bottom: calc-target(12);
+    max-width: 100%;
+    padding: calc-target(10) calc-target(5);
+    border: 1px solid $greyLight;
+    border-radius: 0;
+    font-size: 1em;
+    background: #fafafa;
+    @include box-sizing;
+}
+
+[type=text],
+[type=email],
+[type=url],
+[type=tel],
+[type=password],
+[type=search],
+textarea {
+    width: 100%;
+    max-width: 480px;
+    -webkit-appearance: none;
+}
+
+[type=checkbox],
+[type=radio] {
+    margin: 0 calc-target(10) calc-target(10) 0;
+}
+
+[type=submit],
+[type=button] {
+    @extend [class*="ss-button"];
+    border: 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+[type=submit]:hover,
+[type=submit]:focus,
+[type=button]:hover,
+[type=button]:focus {
+    @extend [class*="ss-button"]:hover;
+}
+[type=submit]:active,
+[type=submit]:active,
+[type=button]:active,
+[type=button]:active {
+    @extend [class*="ss-button"]:active;
+}
+textarea {
+    overflow: auto;
+    height: 8em;
+    max-width: 600px;
+    vertical-align: top;
+    resize: vertical;
+}

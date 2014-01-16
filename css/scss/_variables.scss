@@ -1,23 +1,98 @@
-// Flat UI
-// http://flatuicolors.com/
+// ==========================================================================
+// complete color palette
+// ==========================================================================
 
-$base:              #95a5a6; //concrete
-$baseLight:         #ECF0F1; //clouds
-$baseDark:          #34495e; //wet asphalt
-$accent:            #1abc9c; //turquoise
-$accentAlt:         #c0392b; //belize hole
+//greys
+$greyWhite:         #fff !default;
+$greyLightest:      #fafafa !default;
+$greyLighter:       #f2f2f2 !default;
+$greyLight:         #ddd !default;
+$grey:              #ccc !default;
+$greyDark:          #666 !default;
+$greyDarker:        #444 !default;
+$greyBlack:         #222 !default;
 
+// system colors
+$ui-yellow:         #c09853 !default;
+$ui-yellowLight:    #fcf8e3 !default;
+$ui-red:            #b94a48 !default;
+$ui-redLight:       #f2dede !default;
+$ui-green:          #468847 !default;
+$ui-greenLight:     #dff0d8 !default;
+$ui-blue:           #3a87ad !default;
+$ui-blueLight:      #d9edf7 !default;
 
-// Base Color Rules
-$textColor:         $baseDark;
-$textColorAlt:      $base;
+// ==========================================================================
+// functional color palette
+// ==========================================================================
 
-$borderColor:       $base;
-$borderColorAlt:    $baseDark;
+// general
+$text-color:                 $greyBlack !default;
+$light-text-color:           $grey !default;
+$reversed-text-color:        $greyWhite !default;
+$link-color:                 null !default;
+$link-hover-color:           null !default;
 
-$objectColor:       $baseLight;
-$objectColorAlt:    $baseDark;
+// color degrees
+$primary:                           null !default;
+$secondary:                         null !default;
+$alt:                               null !default;
 
-//font
-$fontFamily:        'Noto Serif', serif;
-$fontFamilyAlt:     'Open Sans', sans-serif;
+// buttons
+$button-text-color:                 null !default;
+$button-border-color:               null !default;
+$button-background-color:           null !default;
+//Primary
+$buttonPrimary-text-color:          null !default;
+$buttonPrimary-border-color:        null !default;
+$buttonPrimary-background-color:    null !default;
+//Secondary
+$buttonSecondary-text-color:        null !default;
+$buttonSecondary-border-color:      null !default;
+$buttonSecondary-background-color:  null !default;
+//Alt
+$buttonAlt-text-color:              null !default;
+$buttonAlt-border-color:            null !default;
+$buttonAlt-background-color:        null !default;
+
+// headings
+$heading-color-1:          null !default;
+$heading-color-2:          null !default;
+$heading-color-3:          null !default;
+$heading-color-4:          null !default;
+$heading-color-5:          null !default;
+$heading-color-6:          null !default;
+
+// messages
+$warning-color:             $ui-yellow !default;
+$warning-bg-color:          $ui-yellowLight !default;
+$error-color:               $ui-red !default;
+$error-bg-color:            $ui-redLight !default;
+$success-color:             $ui-green !default;
+$success-bg-color:          $ui-greenLight !default;
+$info-color:                $ui-blue !default;
+$info-bg-color:             $ui-blueLight !default;
+
+// ==========================================================================
+// font stacks
+// ==========================================================================
+
+$base-font-size:            16 !default;
+$primary-font-stack:        'Noto Serif', serif;
+$secondary-font-stack:      'Open Sans', sans-serif;
+
+// ==========================================================================
+// logos
+// ==========================================================================
+
+$logo-width:            260 !default;
+$logo-height:           57 !default;
+$logo-desktop-width:    355 !default;
+$logo-desktop-height:   78 !default;
+
+// ==========================================================================
+// System
+// ==========================================================================
+
+$imagePath:     '../images' !default;
+$fontPath:      '../fonts' !default;

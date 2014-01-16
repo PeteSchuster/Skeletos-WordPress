@@ -1,11 +1,10 @@
 @import 'variables';
 @import 'mixins';
 @import 'base';
-@import 'media320';
+@import 'layout';
 @import 'wordpress';
 
 body {
     padding: 15px;
-    font-size: 16px;
     background: none;
 }

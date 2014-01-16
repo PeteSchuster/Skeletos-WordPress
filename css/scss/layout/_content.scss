@@ -1,0 +1,19 @@
+.content {
+    position: relative;
+    clear: both;
+}
+
+@include respond-to(1024) {
+    .content-main {
+        padding-right: 10px;
+        width: 67%;
+        float: left;
+        @include box-sizing;
+    }
+    .sidebar {
+        padding-left: 10px;
+        width: 33%;
+        float: right;
+        @include box-sizing;
+    }
+}

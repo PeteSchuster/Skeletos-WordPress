@@ -1,0 +1,20 @@
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:focus {
+        outline: thin dotted;
+    }
+    &:active,
+    &:hover {
+        outline: 0;
+    }
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: underline;
+    }
+}
+
+button {
+    cursor: pointer;
+}

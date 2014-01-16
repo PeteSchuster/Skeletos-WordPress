@@ -1,0 +1,22 @@
+.header {
+    text-align: center;
+    @include respond-to(768) {
+        text-align: left;
+    }
+}
+
+.search {
+    position: relative;
+    clear: both;
+    [type=search],
+    [type=text] {
+        margin: 0;
+    }
+    [type=submit] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+    }
+}

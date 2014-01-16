@@ -1,0 +1,104 @@
+[class*="ss-button"] {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5em;
+    padding: .5em 1em;
+    line-height: 1em;
+    border: 1px solid $button-border-color;
+    background: $button-background-color;
+    color: $button-text-color;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    @include font-size(14);
+    &:hover,
+    &:focus {
+        background: $buttonAlt-background-color;
+        text-decoration: none;
+        color: $button-text-color;
+    }
+    &:active {
+        border-color: $buttonAlt-border-color;
+    }
+    + [class*="ss-button"],
+    + [class*="ss-text-button"] {
+        margin-left: .5em;
+    }
+}
+.ss-button-primary {
+    color: $buttonPrimary-text-color;
+    background: $buttonPrimary-background-color;
+    border-color: $buttonPrimary-border-color;
+    &:hover,
+    &:focus {
+        background: $buttonSecondary-background-color;
+    }
+    &:active {
+        border-color: $buttonSecondary-border-color;
+    }
+}
+.ss-button-secondary {
+    color: $buttonSecondary-text-color;
+    background: $buttonSecondary-background-color;
+    border-color: $buttonSecondary-border-color;
+    &:hover,
+    &:focus {
+        background: $button-background-color;
+    }
+    &:active {
+        border-color: $button-border-color;
+    }
+}
+.ss-button-alt {
+    color: $buttonAlt-text-color;
+    background: $buttonAlt-background-color;
+    border-color: $buttonAlt-border-color;
+    &:hover,
+    &:focus {
+        background: $buttonSecondary-background-color;
+    }
+    &:active {
+        border-color: $buttonSecondary-border-color;
+    }
+}
+.ss-button-small {
+    @include font-size(12);
+}
+.ss-button-large {
+    @include font-size(18);
+}
+
+
+[class*="ss-text-button"] {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5em;
+    padding: .5em 0;
+    line-height: 1em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    color: $link-color;
+    @include font-size(14);
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
+    + [class*="ss-button"],
+    + [class*="ss-text-button"] {
+        margin-left: .5em;
+    }
+}
+.ss-text-button-small {
+    @include font-size(12);
+}
+.ss-text-button-large {
+    @include font-size(18);
+}

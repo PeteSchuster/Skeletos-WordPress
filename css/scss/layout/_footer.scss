@@ -1,0 +1,29 @@
+.footer {
+    padding: 1.25em 0;
+    background: $text-color;
+    color: #fff;
+}
+.footer a {
+    color: #fff;
+}
+
+.back-to-top {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.list-footer-nav {
+    ul {
+        display: none;
+    }
+    @include respond-to(768) {
+        li {
+            float: left;
+            margin-left: 20px;
+        }
+        li:first-child {
+            margin-left: 0;
+        }
+    }
+}

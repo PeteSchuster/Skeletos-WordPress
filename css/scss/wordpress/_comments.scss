@@ -1,0 +1,32 @@
+.list-comments {
+    li.comment {
+        margin-left: -20px;
+        padding: 20px;
+        width: 100%;
+        background: rgba(0,0,0,.07);
+    }
+    li.thread-even {
+        background: rgba(0,0,0,.04);
+    }
+    li.bypostauthor {
+        background: #faf7c2;
+    }
+    ul.children {
+        margin: 20px 20px 0 40px;
+    }
+}
+
+.post-comment {
+    > img {
+        float: left;
+        margin-right: 20px;
+        max-width: 65px;
+    }
+    > div {
+        overflow: hidden;
+        padding-top: 10px;
+    }
+    p.right {
+        margin: 0;
+    }
+}

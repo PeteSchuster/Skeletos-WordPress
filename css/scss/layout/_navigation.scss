@@ -1,0 +1,86 @@
+.nav {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: none;
+    width: 100%;
+    @include respond-to(768) {
+        position: static;
+        display: block !important;
+        width: auto;
+    }
+}
+
+.show-nav {
+    margin-right: 0;
+    @include respond-to(768) {
+        display: none;
+    }
+}
+
+.list-primary-nav {
+    ul, li {
+        margin: 0;
+        list-style: none;
+    }
+    a {
+        display: block;
+        border-bottom: 1px solid $greyLight;
+        background: $greyDarker;
+        color: #fff;
+        &:active {
+            background: $greyDark;
+        }
+    }
+    ul {
+        display: none;
+    }
+    > li > a {
+        padding: .75em 1em;
+        text-decoration: none;
+    }
+    > li > a:hover,
+    > li > a:focus,
+    li.active a {
+        text-decoration: underline;
+    }
+}
+
+@include respond-to(768) {
+    .list-primary-nav {
+        > li {
+            display: inline-block;
+        }
+        > li > a {
+            border: 0;
+            background: none;
+            color: #fff;
+        }
+        /* for dropdowns */
+        li {
+            position: relative;
+        }
+        li ul {
+            position: absolute;
+            left: 0;
+            z-index: 10;
+            display: none;
+            text-align: left;
+        }
+        li:hover ul,
+        li:focus ul {
+            display: block;
+        }
+
+        li li a {
+            padding: .75em;
+            width: 150px;
+            text-decoration: none;
+        }
+        li.active li a,
+        li li a:hover,
+        li li a:focus {
+            background: #666;
+        }
+    }
+}

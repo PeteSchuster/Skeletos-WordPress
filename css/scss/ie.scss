@@ -1,3 +1,12 @@
+$media-query-support: false;
+
 @import 'variables';
 @import 'mixins';
-@import 'media768';
+@import 'base';
+@import 'layout';
+@import 'wordpress';
+
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}

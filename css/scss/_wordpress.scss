@@ -1,136 +1,21 @@
-.validation_message {
-    margin-top: -8px;
-    color: #ff0000;
-    text-transform: uppercase;
-    font-size: 12 / 16 * 1em;
-}
+//SCSS START
 
-.validation_error,
-#gforms_confirmation_message {
-    clear: both;
-    overflow: hidden;
-    margin: 0 0 1em -1em;
-    padding: 1em;
-    width: 100%;
-    border: 1px solid #333;
-    background: #eee;
-    color: #fff;
-}
-.validation_error {
-    border-color: #cc0000;
-    background-color: #ff9e9e;
-}
-#gforms_confirmation_message {
-    border-color: #005f10;
-    background-color: #7cc187;
-}
+//Base
+//this file contains the styles
+//for base classes in WordPress
+@import "wordpress/base";
 
-/* ===CONTENT START=== */
+//Comments
+//this file contains the styles
+//for the comments
+@import "wordpress/comments";
 
-.post-comment {
+//Widgets
+//this file contains the styles
+//for the widgets
+@import "wordpress/widgets";
 
-    > img {
-        float: left;
-        margin-right: 20px;
-        max-width: 65px;
-    }
-
-    > div {
-        overflow: hidden;
-        padding-top: 10px;
-    }
-
-    p.right {
-        margin: 0;
-    }
-
-}
-
-.list-comments {
-    font-size: 1em;
-
-    li.comment {
-        margin-left: -20px;
-        padding: 20px;
-        width: 100%;
-        background: rgba(0,0,0,.07);
-    }
-
-    li.thread-even {
-        background: rgba(0,0,0,.04);
-    }
-
-    li.bypostauthor {
-        background: #faf7c2;
-    }
-
-    ul.children {
-        margin: 20px 20px 0 40px;
-    }
-
-}
-
-.entry {
-    border-bottom: 1px solid $borderColor;
-}
-
-.bypostauthor {
-    background: $accent;
-}
-
-.sticky {
-    background: $objectColor;
-}
-
-.wp-caption {
-    max-width: 100%;
-}
-
-.gallery-caption,
-.wp-caption-text {
-    overflow: hidden;
-    max-height: 3.2em;
-}
-.gallery-icon img {
-    margin: 0 auto 10px;
-}
-
-.alignleft,
-.alignright,
-.aligncenter,
-.gallery-icon img {
-    clear: both;
-    margin: 0 auto 1.5em;
-}
-.alignnone {
-    clear: both;
-    margin-bottom: 1.5em;
-}
-
-/* ===SIDEBAR START=== */
-
-.list-widgets {
-    margin: 0;
-    font-size: 1em;
-
-    > li {
-        margin-top: 1em;
-        padding-top: 1em;
-        border-top: 1px solid #e1e1e1;
-        &:first-child {
-            margin: 0;
-            padding: 0;
-            border: 0;
-        }
-    }
-
-    ul {
-        margin-bottom: 20 / 14 * 1em;
-        font-size: .875em;
-        ul {
-            margin: 0;
-            font-size: 1em;
-        }
-    }
-
-}
+//Gravity Forms
+//this file contains the styles
+//for the Gravity Forms
+@import "wordpress/gforms";

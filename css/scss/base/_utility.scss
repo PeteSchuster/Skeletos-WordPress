@@ -1,0 +1,45 @@
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.screenreaderonly,
+.visually-hidden {
+    @include visually-hidden;
+}
+
+@media (max-width: 767px) {
+    .desktop {
+        display: none;
+    }
+}
+@include respond-to(768) {
+    .mobile {
+        display: none;
+    }
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+.clear {
+    clear: both;
+}
+.hide {
+    display: none;
+}
+.ir {
+    display: block;
+    overflow: hidden;
+    text-indent: -999px;
+}

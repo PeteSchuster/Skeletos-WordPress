@@ -1,0 +1,15 @@
+html {
+    overflow-y: scroll;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+    background: #fff;
+    color: $text-color;
+    font-family: $primary-font-stack;
+    line-height: 1.6;
+    @include wordBreak();
+    @include font-size($base-font-size);
+}
