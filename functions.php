@@ -8,58 +8,56 @@
 //out to meet WordPress standards
 function ss_skeletos_setup() {
 
+    //remove admin bar
+    //add_filter('show_admin_bar', '__return_false');
+
     //adds wysiwyg style
-    add_editor_style( 'css/wysiwyg.css' );
+    add_editor_style('css/wysiwyg.css');
 
     //adds menu support
-    add_theme_support( 'menus' );
+    add_theme_support('menus');
 
     //adds RSS feed links to header
-    add_theme_support( 'automatic-feed-links' );
+    add_theme_support('automatic-feed-links');
 
     //adds post thumbnail support
-    add_theme_support( 'post-thumbnails' );
+    add_theme_support('post-thumbnails');
 
     //sets content width for embeded media
-    if ( !isset( $content_width ) ){
+    if (!isset($content_width)) {
 
         $content_width = 728;
 
     }
 
     // This registers the nav in the header
-    register_nav_menu( 'main', 'Main Navigation' );
-
-    // This registers the nav in the footer
-    register_nav_menu( 'footer', 'Footer Menu' );
+    register_nav_menu('main', 'Main Navigation');
+    register_nav_menu('footer', 'Footer Navigation');
 
 }
-add_action( 'after_setup_theme', 'ss_skeletos_setup' );
+add_action('after_setup_theme', 'ss_skeletos_setup');
 
 //Custom Comments List
-if ( !function_exists( 'ss_comment' ) ){
+if (!function_exists('ss_comment')){
+    function ss_comment($comment, $args, $depth) {
 
-function ss_comment( $comment, $args, $depth ) {
+        $GLOBALS[ 'comment' ] = $comment;
 
-    $GLOBALS[ 'comment' ] = $comment;
+        switch ($comment->comment_type) :
+            case 'pingback' :
+            case 'trackback' :
+        ?>
+        <li class="post pingback">
+            <p>Pingback: <?php comment_author_link(); ?><?php edit_comment_link('Edit', '<span class="edit-link">', '</span>'); ?></p>
+        <?php
+                break;
+            default :
+        ?>
+        <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 
-    switch ( $comment->comment_type ) :
-        case 'pingback' :
-        case 'trackback' :
-    ?>
-    <li class="post pingback">
-        <p>Pingback: <?php comment_author_link(); ?><?php edit_comment_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p>
-    <?php
-            break;
-        default :
-    ?>
-    <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+            <article class="post-comment clearfix">
 
-        <article class="post-comment clearfix">
-
-            <?php echo get_avatar( $comment, 150 ); ?>
-
-            <div>
+                <?php echo get_avatar($comment, 150); ?>
 
                 <header>
 
@@ -67,106 +65,108 @@ function ss_comment( $comment, $args, $depth ) {
 
                     $author = get_comment_author();
                     $link   = get_comment_author_url();
-                    $author = ( $link == '' ) ? $author : '<a href="' . $link . '" target="_blank">' . $author . '</a>'
+                    $author = ($link == '') ? $author : '<a href="' . $link . '" target="_blank">' . $author . '</a>'
 
                     ?>
 
                     <h1 class="heading4"><?php echo $author; ?></h1>
 
-                    <time datetime="<?php echo get_comment_time( 'c' ); ?>"><?php echo get_comment_time( 'M d, Y' ); ?></time>
+                    <p><time datetime="<?php echo get_comment_time('c'); ?>"><?php echo get_comment_time('M d, Y'); ?></time></p>
 
                 </header>
 
-                <?php
+                <div>
 
-                edit_comment_link( 'Edit', '<span class="edit-link">', '</span>' );
+                    <?php
 
-                if ( $comment->comment_approved == '0' ){ ?>
+                    edit_comment_link('Edit', '<p class="edit-link">', '</p>');
 
-                    <i>Your comment is awaiting moderation</i>
+                    if ($comment->comment_approved == '0') {
 
-                <?php } ?>
+                        echo '<p><i>Your comment is awaiting moderation</i></p>';
 
-                <?php comment_text(); ?>
+                    }
 
-                <p class="right">
-                    <?php comment_reply_link( array_merge( $args, array( 'reply_text' => 'Reply', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-                </p><!-- .reply -->
+                    comment_text();
 
-            </div>
+                    ?>
 
-        </article>
+                    <p class="right meta">
+                        <?php comment_reply_link(array_merge($args, array('reply_text' => 'Reply', 'depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
+                    </p><!-- reply -->
 
-    <?php
-            break;
+                </div>
 
-    endswitch;
+            </article>
 
-}
+        <?php
+                break;
 
+        endswitch;
+    }
 } // ends check for ss_comment()
 
 //Change the Excerpt Length
-function ss_excerpt_length( $length ) {
+function ss_excerpt_length($length){
 
     return 30;
 
 }
-add_filter( 'excerpt_length', 'ss_excerpt_length' );
+add_filter('excerpt_length', 'ss_excerpt_length');
 
 //Remove the [..] from the excerpt
-add_filter( 'excerpt_more', '__return_null' );
+add_filter('excerpt_more', '__return_null');
 
 //Registers Widgetized Sidebars
 function ss_widgets_init() {
 
     //Register Another Sidebar for Widgets Like Twitter
-    register_sidebar( array(
+    register_sidebar(array(
 
-        'name' => 'Footer Widgets',
+        'name' => 'Sidebar Widgets',
         'id' => 'ss_widgets',
         'description' => 'Widgets in this area will be shown on the right-hand side.',
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
-        'before_title' => '<h6 class="heading3">',
+        'before_title' => '<h6 class="heading4">',
         'after_title' => '</h6>'
 
-    ) );
+  ));
 
 }
-add_action( 'widgets_init', 'ss_widgets_init' );
+add_action('widgets_init', 'ss_widgets_init');
 
 //Enqueues CSS and JS for the Theme
 function ss_scripts_styles(){
 
-    wp_enqueue_style( 'google_fonts', '//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic|Open+Sans:700' );
+    wp_enqueue_style('google_fonts', '//fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Ubuntu:400,700,400italic,700italic');
 
-    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.min.js' );
+    wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/modernizr.min.js');
 
-    if( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+    if(defined('SCRIPT_DEBUG')&& SCRIPT_DEBUG){
 
-        wp_enqueue_script( 'functionalityDev', get_template_directory_uri() . '/js/functionality.js', array( 'jquery' ), '1.0', true );
-        wp_enqueue_style( 'styleDev', get_stylesheet_directory_uri() . '/css/style.css', '', '1.0' );
+        wp_enqueue_script('functionalityDev', get_template_directory_uri() . '/js/functionality.js', array('jquery'), '1.0', true);
+        wp_enqueue_style('styleDev', get_stylesheet_directory_uri() . '/css/style.css', '', '1.02');
 
     } else {
 
-        wp_enqueue_script( 'functionality', get_template_directory_uri() . '/js/functionality.min.js', array( 'jquery' ), '1.0', true );
-        wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/css/style.min.css', '', '1.0' );
+        wp_enqueue_script('functionality', get_template_directory_uri() . '/js/functionality.min.js', array('jquery'), '1.0', true);
+        wp_enqueue_style('style', get_stylesheet_directory_uri() . '/css/style.min.css', '', '1.02');
 
     }
 
-    if ( is_singular( 'post' ) ){
+    if (is_singular('post')){
 
-        wp_enqueue_script( 'comment-reply' );
+        wp_enqueue_script('comment-reply');
 
     }
 
-    wp_enqueue_style( 'ps_lte_ie8', get_stylesheet_directory_uri().'/css/ie.css' );
+    wp_enqueue_style('ps_lte_ie8', get_stylesheet_directory_uri().'/css/ie.css');
 
-    $GLOBALS[ 'wp_styles' ]->add_data( 'ps_lte_ie8', 'conditional', 'lte IE 8' );
+    $GLOBALS[ 'wp_styles' ]->add_data('ps_lte_ie8', 'conditional', 'lte IE 8');
 
 }
-add_action( 'wp_enqueue_scripts', 'ss_scripts_styles' );
+add_action('wp_enqueue_scripts', 'ss_scripts_styles');
 
 function ss_custom_widget_counter($params) {
 
@@ -186,3 +186,32 @@ function ss_custom_widget_counter($params) {
     return $params;
 }
 add_filter('dynamic_sidebar_params','ss_custom_widget_counter');
+
+//removes "current_page_parent from blog menu item"
+add_filter('nav_menu_css_class', 'current_type_nav_class', 10, 2);
+function current_type_nav_class($classes, $item) {
+    // Get post_type for this post
+    $post_type = get_query_var('post_type');
+
+    // Removes current_page_parent class from blog menu item
+    if (get_post_type() == $post_type) {
+        $classes = array_filter($classes, 'get_current_value');
+    }
+
+    // Go to Menus and add a menu class named: {custom-post-type}-menu-item
+    // This adds a current_page_parent class to the parent menu item
+    if (in_array($post_type . '-menu-item', $classes)) {
+        array_push($classes, 'current_page_parent');
+    }
+
+    return $classes;
+}
+function get_current_value($element) {
+    return ($element != 'current_page_parent');
+}
+
+//Registers Field in ACF
+function ss_acf_register_fields(){
+    include_once('acf-custom-fields/separator-v4.php');
+}
+add_action('acf/register_fields', 'ss_acf_register_fields');

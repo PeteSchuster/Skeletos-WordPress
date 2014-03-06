@@ -1,15 +1,7 @@
 .footer {
-    padding: 1.25em 0;
-    background: $text-color;
-    color: #fff;
-}
-.footer a {
-    color: #fff;
-}
-
-.back-to-top {
-    display: block;
-    margin-bottom: 20px;
+    padding: 30px 0;
+    background: $greyLight;
+    position: relative;
     text-align: center;
 }
 
@@ -17,13 +9,10 @@
     ul {
         display: none;
     }
-    @include respond-to(768) {
-        li {
-            float: left;
-            margin-left: 20px;
-        }
-        li:first-child {
-            margin-left: 0;
-        }
+    li {
+        display: inline-block;
+    }
+    a {
+        padding: 0 10px;
     }
 }

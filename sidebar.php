@@ -4,12 +4,12 @@
 */
 ?>
 
-<div class="sidebar content-block" role="complementary"><div class="wrapper">
+<div class="sidebar" role="complementary">
 
     <ul class="list-widgets clearfix">
 
-        <?php dynamic_sidebar( 'ss_widgets' ); ?>
+        <?php dynamic_sidebar('ss_widgets' ); ?>
 
     </ul>
 
-</div></div><!--end .sidebar-->
+</div><!--end .sidebar-->

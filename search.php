@@ -8,31 +8,7 @@ get_header(); ?>
 
     <?php
 
-    $archive_title = 'Archives';
-
-    if (is_day()) {
-
-        $archive_title = 'Daily Archives: ' . get_the_date();
-
-    } elseif (is_month()) {
-
-        $archive_title =  'Monthly Archives: ' . get_the_date('F Y' );
-
-    } elseif (is_year()) {
-
-        $archive_title =  'Yearly Archives: ' . get_the_date('Y' );
-
-    } else if (is_category()) {
-
-        $archive_title = 'Category: ' . single_cat_title('', false);
-
-    } else if (is_tag()) {
-
-        $archive_title = 'Tag: ' . single_cat_title('', false);
-
-    }
-
-    echo '<h1 class="page-title">' . $archive_title . '</h1>';
+    echo '<h1 class="page-title">Search for "' . get_search_query() . '"</h1>';
 
     ?>
 

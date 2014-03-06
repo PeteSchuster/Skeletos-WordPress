@@ -11,5 +11,5 @@ body {
     font-family: $primary-font-stack;
     line-height: 1.6;
     @include wordBreak();
-    @include font-size($base-font-size);
+    @include font-size($base-font-size,16);
 }

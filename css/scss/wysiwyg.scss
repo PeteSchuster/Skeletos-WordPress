@@ -1,10 +1,8 @@
 @import 'variables';
 @import 'mixins';
 @import 'base';
-@import 'layout';
-@import 'wordpress';
 
 body {
-    padding: 15px;
+    padding: 15px !important;
     background: none;
 }

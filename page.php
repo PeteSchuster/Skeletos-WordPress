@@ -2,32 +2,27 @@
 /*
     @package Skeletos
 */
-get_header(); ?>
+get_header();
+?>
 
-<main class="content clearfix" role="main">
+<main class="content" role="main"><div class="wrapper clearfix">
 
-    <div class="content-block"><div class="wrapper">
+    <?php
 
-        <?php
+    while (have_posts() ){
 
-        while ( have_posts() ){
+        the_post();
 
-            the_post();
+        echo '<h1 class="page-title">' . get_the_title() . '</h1>';
 
-            echo '<header><h1>' . get_the_title() . '</h1></header>';
+        the_content();
 
-            the_content();
+    } //end while
 
-        } //end while
+    edit_post_link('Edit this entry.', '<p class="clear">', '</p>' );
+    wp_link_pages();
 
-        edit_post_link( 'Edit this entry.', '<p class="clear">', '</p>' );
-        wp_link_pages();
+    ?>
 
-        comments_template();
-
-        ?>
-
-    </div></div><!--/end .content-block-->
-
-</main><!--/end .content-->
+</div></main><!--/end .content-->
 <?php get_footer(); ?>

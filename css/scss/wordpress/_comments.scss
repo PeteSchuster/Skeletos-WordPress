@@ -1,32 +1,38 @@
 .list-comments {
     li.comment {
-        margin-left: -20px;
-        padding: 20px;
-        width: 100%;
-        background: rgba(0,0,0,.07);
+        padding: 10px;
+        background: $greyLightest;
+        border: 1px solid $greyLight
     }
-    li.thread-even {
-        background: rgba(0,0,0,.04);
+    li.even {
+        background: $greyLighter;
     }
     li.bypostauthor {
-        background: #faf7c2;
+        background: $ui-yellowLight;
     }
     ul.children {
-        margin: 20px 20px 0 40px;
+        margin: 0 0 0 10px;
+        list-style: none;
     }
 }
 
 .post-comment {
     > img {
         float: left;
-        margin-right: 20px;
+        margin: 0 20px 20px 0;
         max-width: 65px;
     }
     > div {
-        overflow: hidden;
-        padding-top: 10px;
+        clear: both;
+        ul, ol {
+            margin-bottom: 1.5em;
+        }
+        li ul,
+        li ol {
+            margin-bottom: 0;
+        }
     }
-    p.right {
-        margin: 0;
+    > header h1 {
+        margin-bottom: 0;
     }
 }

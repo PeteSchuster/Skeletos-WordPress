@@ -57,7 +57,7 @@ select {
     border: 1px solid $greyLight;
     border-radius: 0;
     font-size: 1em;
-    background: #fafafa;
+    background: $greyWhite;
     @include box-sizing;
 }
 
@@ -69,7 +69,6 @@ select {
 [type=search],
 textarea {
     width: 100%;
-    max-width: 480px;
     -webkit-appearance: none;
 }
 
@@ -100,7 +99,6 @@ textarea {
 textarea {
     overflow: auto;
     height: 8em;
-    max-width: 600px;
     vertical-align: top;
     resize: vertical;
 }

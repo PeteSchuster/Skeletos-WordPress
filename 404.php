@@ -4,15 +4,11 @@
 */
 get_header(); ?>
 
-<main class="content clearfix" role="main">
+<main class="content" role="main"><div class="wrapper clearfix">
 
-    <div class="content-block"><div class="wrapper">
+    <h1 class="page-title">Error 404 - Not Found</h1>
 
-        <h1>Error 404 - Not Found</h1>
+    <p>Sorry but the page you're looking for is not here...</p>
 
-        <p>Sorry but the page you're looking for is not here...</p>
-
-    </div></div><!--/end .content-block-->
-
-</main><!--/end .content-->
+</div></main><!--/end .content-->
 <?php get_footer(); ?>

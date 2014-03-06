@@ -2,14 +2,21 @@
 // complete color palette
 // ==========================================================================
 
+//brand colors
+$blueLight:         #78a0ff !default;
+$blue:              #4b78fa !default;
+$blueDark:          #436ce0 !default;
+$red:               #eb262e !default;
+$green:             #00a555 !default;
+
 //greys
 $greyWhite:         #fff !default;
 $greyLightest:      #fafafa !default;
 $greyLighter:       #f2f2f2 !default;
-$greyLight:         #ddd !default;
-$grey:              #ccc !default;
+$greyLight:         #eee !default;
+$grey:              #999 !default;
 $greyDark:          #666 !default;
-$greyDarker:        #444 !default;
+$greyDarker:        #4f4f4f !default;
 $greyBlack:         #222 !default;
 
 // system colors
@@ -27,41 +34,37 @@ $ui-blueLight:      #d9edf7 !default;
 // ==========================================================================
 
 // general
-$text-color:                 $greyBlack !default;
+$text-color:                 $greyDarker !default;
 $light-text-color:           $grey !default;
 $reversed-text-color:        $greyWhite !default;
-$link-color:                 null !default;
-$link-hover-color:           null !default;
+$link-color:                 $blue !default;
+$link-hover-color:           $red !default;
 
 // color degrees
-$primary:                           null !default;
-$secondary:                         null !default;
-$alt:                               null !default;
+$primary:                           $blue !default;
+$secondary:                         $blueLight !default;
+$alt:                               $blueDark !default;
 
 // buttons
-$button-text-color:                 null !default;
-$button-border-color:               null !default;
-$button-background-color:           null !default;
+$button-text-color:                 $greyWhite !default;
+$button-background-color:           $greyDark !default;
 //Primary
-$buttonPrimary-text-color:          null !default;
-$buttonPrimary-border-color:        null !default;
-$buttonPrimary-background-color:    null !default;
+$buttonPrimary-text-color:          $greyWhite !default;
+$buttonPrimary-background-color:    $primary !default;
 //Secondary
-$buttonSecondary-text-color:        null !default;
-$buttonSecondary-border-color:      null !default;
-$buttonSecondary-background-color:  null !default;
+$buttonSecondary-text-color:        $greyWhite !default;
+$buttonSecondary-background-color:  $secondary !default;
 //Alt
-$buttonAlt-text-color:              null !default;
-$buttonAlt-border-color:            null !default;
-$buttonAlt-background-color:        null !default;
+$buttonAlt-text-color:              $greyWhite !default;
+$buttonAlt-background-color:        $alt !default;
 
 // headings
-$heading-color-1:          null !default;
-$heading-color-2:          null !default;
-$heading-color-3:          null !default;
-$heading-color-4:          null !default;
-$heading-color-5:          null !default;
-$heading-color-6:          null !default;
+$heading-color-1:          $greyBlack !default;
+$heading-color-2:          $greyBlack !default;
+$heading-color-3:          $greyBlack !default;
+$heading-color-4:          $greyBlack !default;
+$heading-color-5:          $greyBlack !default;
+$heading-color-6:          $greyBlack !default;
 
 // messages
 $warning-color:             $ui-yellow !default;
@@ -78,21 +81,5 @@ $info-bg-color:             $ui-blueLight !default;
 // ==========================================================================
 
 $base-font-size:            16 !default;
-$primary-font-stack:        'Noto Serif', serif;
-$secondary-font-stack:      'Open Sans', sans-serif;
-
-// ==========================================================================
-// logos
-// ==========================================================================
-
-$logo-width:            260 !default;
-$logo-height:           57 !default;
-$logo-desktop-width:    355 !default;
-$logo-desktop-height:   78 !default;
-
-// ==========================================================================
-// System
-// ==========================================================================
-
-$imagePath:     '../images' !default;
-$fontPath:      '../fonts' !default;
+$primary-font-stack:        sans-serif !default;
+$secondary-font-stack:      sans-serif !default;

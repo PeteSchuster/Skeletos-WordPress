@@ -1,26 +1,35 @@
 .validation_message {
-    margin-top: -8px;
-    color: #ff0000;
+    margin-top: calc-target(-8,11);
+    color: $ui-red;
     text-transform: uppercase;
-    font-size: 12 / 16 * 1em;
+    @include font-size(11);
 }
 
 .validation_error,
 #gforms_confirmation_message {
     clear: both;
     overflow: hidden;
-    margin: 0 0 1em -1em;
+    margin: 0 0 1em;
     padding: 1em;
-    width: 100%;
-    border: 1px solid #333;
-    background: #eee;
-    color: #fff;
+    border: 1px solid $ui-blue;
+    background: $ui-blueLight;
+    color: $ui-blue;
 }
 .validation_error {
-    border-color: #cc0000;
-    background-color: #ff9e9e;
+    border-color: $ui-red;
+    color: $ui-red;
+    background-color: $ui-redLight;
 }
 #gforms_confirmation_message {
-    border-color: #005f10;
-    background-color: #7cc187;
+    border-color: $ui-green;
+    color: $ui-green;
+    background-color: $ui-greenLight;
+}
+
+.gform_fields {
+    margin: 0;
+    list-style: none;
+    .gfield {
+        text-align: left;
+    }
 }

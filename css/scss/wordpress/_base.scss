@@ -1,21 +1,65 @@
 .entry {
-    border-bottom: 1px solid $greyLight;
+    margin-bottom: 20px;
+    overflow: hidden;
 }
-.bypostauthor {
-    background: $primary;
-}
-.sticky {
-    background: $greyLight;
+article > header {
+    h1 {
+        margin-bottom: 10px;
+    }
+    p {
+        color: $grey;
+        @include font-size(14);
+        a {
+            color: $grey;
+        }
+    }
 }
 .wp-caption {
     max-width: 100%;
+    text-align: center;
+    img {
+        margin: 0 auto 10px;
+    }
 }
 .gallery-caption,
 .wp-caption-text {
     overflow: hidden;
     max-height: 3.2em;
+    color: $grey;
+    @include font-size(14);
 }
 .gallery-icon img {
     clear: both;
     margin: 0 auto 1.5em;
+}
+
+.meta {
+    color: $grey;
+    @include font-size(14);
+    a {
+        color: $greyDark;
+    }
+}
+
+.page-numbers {
+    list-style: none;
+    margin-left: 0;
+    text-align: center;
+    color: $grey;
+    @include font-size(14);
+    li {
+        display: inline-block;
+    }
+    a {
+        color: $greyBlack;
+    }
+    .next,
+    .prev {
+        text-transform: lowercase;
+        font-family: $secondary-font-stack;
+        font-style: italic;
+    }
+    .page-numbers {
+        padding: 10px;
+    }
 }

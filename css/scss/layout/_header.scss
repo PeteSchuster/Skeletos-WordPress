@@ -1,22 +1,10 @@
 .header {
     text-align: center;
-    @include respond-to(768) {
-        text-align: left;
-    }
-}
-
-.search {
+    background: $greyLight;
+    padding: 15px 0;
     position: relative;
-    clear: both;
-    [type=search],
-    [type=text] {
-        margin: 0;
-    }
-    [type=submit] {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        margin: 0;
+    z-index: 10;
+    @include respond-to(768) {
+        padding: 40px 0 0;
     }
 }

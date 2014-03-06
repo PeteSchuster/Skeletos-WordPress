@@ -1,62 +1,77 @@
 h1,
 .heading1 {
-    margin: 0 0 20 / 36 * 1em;
+    margin: 0 0 calc-target(20,48);
     color: $heading-color-1;
     text-transform: none;
-    font-weight: bold;
+    font-weight: normal;
     font-family: $secondary-font-stack;
-    line-height: 42 / 36 * 1em;
-    @include font-size(24);
+    line-height: calc-target(56,48);
+    @include font-size(48);
+    @include respond-to(480) {
+        margin: 0 0 calc-target(20,56);
+        line-height: calc-target(64,56);
+        @include font-size(56);
+    }
 }
 h2,
 .heading2 {
-    margin: 0 0 20 / 28 * 1em;
+    margin: 0 0 calc-target(20,32);
     color: $heading-color-2;
     text-transform: none;
-    font-weight: bold;
+    font-weight: normal;
     font-family: $secondary-font-stack;
-    line-height: 36 / 28 * 1em;
-    @include font-size(20);
+    line-height: calc-target(40,32);
+    @include font-size(32);
+    @include respond-to(480) {
+        margin: 0 0 calc-target(20,48);
+        line-height: calc-target(56,48);
+        @include font-size(48);
+    }
 }
 h3,
 .heading3 {
-    margin: 0 0 10 / 22 * 1em;
+    margin: 0 0 calc-target(10,28);
     color: $heading-color-3;
     text-transform: none;
-    font-weight: bold;
+    font-weight: normal;
     font-family: $secondary-font-stack;
-    line-height: 28 / 22 * 1em;
-    @include font-size(18);
+    line-height: calc-target(32,28);
+    @include font-size(28);
+    @include respond-to(480) {
+        margin: 0 0 calc-target(10,32);
+        line-height: calc-target(40,32);
+        @include font-size(32);
+    }
 }
 h4,
 .heading4 {
-    margin: 0 0 10 / 22 * 1em;
+    margin: 0 0 calc-target(10,24);
     color: $heading-color-4;
-    text-transform: uppercase;
-    font-weight: bold;
+    text-transform: none;
+    font-weight: normal;
     font-family: $primary-font-stack;
-    line-height: 28 / 18 * 1em;
-    @include font-size(16);
+    line-height: calc-target(36,24);
+    @include font-size(24);
 }
 h5,
 .heading5 {
-    margin: 0 0 10 / 16 * 1em;
+    margin: 0 0 calc-target(10,18);
     color: $heading-color-5;
     text-transform: none;
-    font-weight: bold;
+    font-weight: normal;
     font-family: $primary-font-stack;
-    line-height: 1.6;
-    @include font-size(14);
+    line-height: calc-target(27,18);
+    @include font-size(18);
 }
 h6,
 .heading6 {
-    margin: 0 0 1em;
+    margin: 0 0 calc-target(10,14);;
     color: $heading-color-6;
     text-transform: uppercase;
     font-weight: normal;
-    font-family: $primary-font-stack;
-    line-height: 1.6;
-    @include font-size(12);
+    font-family: $secondary-font-stack;
+    line-height: calc-target(21,14);
+    @include font-size(14);
 }
 
 h1,
@@ -117,11 +132,11 @@ samp {
     _font-family: 'courier new', monospace;
 }
 pre {
-    margin: 0 1.25em 1.25em;
-    padding: 1.25em;
+    margin: 0 0 1.5em;
+    padding: 1em;
     white-space: pre;
     white-space: pre-wrap;
-    word-wrap: break-word;
+    word-wrap: normal;
 }
 small {
     font-size: 85%;
@@ -142,12 +157,17 @@ sub {
 blockquote {
     display: block;
     overflow: hidden;
-    margin: 0 0 1.5em;
-    padding: 1em;
-    font-style: italic;
-}
-blockquote p {
-    font-size: 1em;
+    margin: 0 0 20px -8px;
+    padding-left: 12px;
+    border-left: 4px solid $greyBlack;
+    color: $greyBlack;
+    @include font-size(20);
+    p {
+        font-size: 1em;
+    }
+    :last-child {
+        margin-bottom: 0;
+    }
 }
 abbr[title] {
     border-bottom: 1px dotted;
