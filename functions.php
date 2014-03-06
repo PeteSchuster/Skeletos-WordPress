@@ -8,9 +8,6 @@
 //out to meet WordPress standards
 function ss_skeletos_setup() {
 
-    //remove admin bar
-    //add_filter('show_admin_bar', '__return_false');
-
     //adds wysiwyg style
     add_editor_style('css/wysiwyg.css');
 
@@ -25,10 +22,8 @@ function ss_skeletos_setup() {
 
     //sets content width for embeded media
     if (!isset($content_width)) {
-
-        $content_width = 728;
-
-    }
+        $content_width = 984;
+    } //end if
 
     // This registers the nav in the header
     register_nav_menu('main', 'Main Navigation');
@@ -65,7 +60,7 @@ if (!function_exists('ss_comment')){
 
                     $author = get_comment_author();
                     $link   = get_comment_author_url();
-                    $author = ($link == '') ? $author : '<a href="' . $link . '" target="_blank">' . $author . '</a>'
+                    $author = ($link == '') ? $author : '<a href="' . $link . '" target="_blank">' . $author . '</a>';
 
                     ?>
 

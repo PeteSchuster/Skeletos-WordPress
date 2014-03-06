@@ -8,7 +8,7 @@
 
     <ul class="list-widgets clearfix">
 
-        <?php dynamic_sidebar('ss_widgets' ); ?>
+        <?php dynamic_sidebar('ss_widgets'); ?>
 
     </ul>
 

@@ -10,5 +10,5 @@ get_header(); ?>
 
     <p>Sorry but the page you're looking for is not here...</p>
 
-</div></main><!--/end .content-->
+</div></main><!--/end content-->
 <?php get_footer(); ?>

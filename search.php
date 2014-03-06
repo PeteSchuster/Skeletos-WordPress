@@ -16,9 +16,9 @@ get_header(); ?>
 
     <?php
 
-    if (have_posts() ){
+    if (have_posts()) {
 
-        while (have_posts() ){
+        while (have_posts()) {
 
             the_post();
 
@@ -36,5 +36,5 @@ get_header(); ?>
 
     </div><!--/end content-main-->
 <?php get_sidebar(); ?>
-</div></main><!--/end .content-->
+</div></main><!--/end content-->
 <?php get_footer(); ?>

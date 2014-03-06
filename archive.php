@@ -16,11 +16,11 @@ get_header(); ?>
 
     } elseif (is_month()) {
 
-        $archive_title =  'Monthly Archives: ' . get_the_date('F Y' );
+        $archive_title =  'Monthly Archives: ' . get_the_date('F Y');
 
     } elseif (is_year()) {
 
-        $archive_title =  'Yearly Archives: ' . get_the_date('Y' );
+        $archive_title =  'Yearly Archives: ' . get_the_date('Y');
 
     } else if (is_category()) {
 
@@ -60,5 +60,5 @@ get_header(); ?>
 
     </div><!--/end content-main-->
 <?php get_sidebar(); ?>
-</div></main><!--/end .content-->
+</div></main><!--/end content-->
 <?php get_footer(); ?>

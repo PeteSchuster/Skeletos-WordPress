@@ -10,7 +10,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-<meta charset="<?php bloginfo('charset' ); ?>">
+<meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title><?php wp_title('|', true, 'right'); ?></title>
@@ -26,11 +26,11 @@
 <header class="header" role="banner"><div class="wrapper clearfix">
 
     <div class="hgroup">
-        <h1 class="heading3"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+        <h1 class="heading3"><a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
         <h2 class="heading5"><?php bloginfo('description'); ?></h2>
     </div><!--/end .hgroup-->
 
-    <button id="show-nav" class="ss-text-button show-nav" href="#"><span>Menu</span></button>
+    <button id="show-nav" class="ss-text-button show-nav"><span>Menu</span></button>
 
     <nav id="nav" class="nav" role="navigation">
         <h1 class="visuallyhidden">Main Navigation</h1>

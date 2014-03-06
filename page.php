@@ -9,7 +9,7 @@ get_header();
 
     <?php
 
-    while (have_posts() ){
+    while (have_posts()) {
 
         the_post();
 
@@ -19,10 +19,10 @@ get_header();
 
     } //end while
 
-    edit_post_link('Edit this entry.', '<p class="clear">', '</p>' );
+    edit_post_link('Edit this entry.', '<p class="clear">', '</p>');
     wp_link_pages();
 
     ?>
 
-</div></main><!--/end .content-->
+</div></main><!--/end content-->
 <?php get_footer(); ?>

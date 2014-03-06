@@ -33,28 +33,10 @@
             margin: 0;
         }
     }
-
-    .list-social {
-        margin-bottom: 20px;
-        li {
-            margin-right: 10px;
-            font-size: 16px;
-        }
-    }
-    .ss-button {
-        margin: 0 0 20px 0;
-        display: block;
-        font-family: $secondary-font-stack;
-        text-transform: lowercase;
-        @include font-size(24);
-        + .ss-button {
-            margin-top: -10px;
-        }
-    }
 }
 
 @include respond-to(768) {
-    .sidebar .list-widgets {
+    .list-widgets {
         > li {
             width: 100%;
             float: none;
@@ -69,33 +51,6 @@
             &.widget-even {
                 padding-left: 0;
             }
-        }
-    }
-}
-@include respond-to(1024) {
-    .footer .list-widgets {
-        > li {
-            width: 25%;
-            padding-top: 0;
-            margin-top: 0;
-            border-top: 0;
-            &.widget-odd {
-                clear: none;
-            }
-        }
-        .widget-1 {
-            padding-right: 15px;
-        }
-        .widget-2 {
-            padding-left: 5px;
-            padding-right: 10px;
-        }
-        .widget-3 {
-            padding-left: 10px;
-            padding-right: 5px;
-        }
-        .widget-4 {
-            padding-left: 15px;
         }
     }
 }

@@ -4,7 +4,7 @@
         margin: 0 20px;
     }
     @include respond-to(1024) {
-        max-width: 980px;
+        max-width: 984px;
         margin: 0 auto;
     }
 }
@@ -70,6 +70,9 @@
 .aligncenter {
     margin: 0 auto 20px;
     clear: both;
+    > img {
+        margin: 0 auto;
+    }
 }
 .alignnone {
     margin: 0 0 20px;
