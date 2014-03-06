@@ -33,7 +33,7 @@ function ss_skeletos_setup() {
 add_action('after_setup_theme', 'ss_skeletos_setup');
 
 //Custom Comments List
-if (!function_exists('ss_comment')){
+if (!function_exists('ss_comment')) {
     function ss_comment($comment, $args, $depth) {
 
         $GLOBALS[ 'comment' ] = $comment;
@@ -54,20 +54,15 @@ if (!function_exists('ss_comment')){
 
                 <?php echo get_avatar($comment, 150); ?>
 
+                <?php
+                $author = get_comment_author();
+                $link   = get_comment_author_url();
+                $author = ($link == '') ? $author : '<a href="' . $link . '" target="_blank">' . $author . '</a>';
+                ?>
+
                 <header>
-
-                    <?php
-
-                    $author = get_comment_author();
-                    $link   = get_comment_author_url();
-                    $author = ($link == '') ? $author : '<a href="' . $link . '" target="_blank">' . $author . '</a>';
-
-                    ?>
-
                     <h1 class="heading4"><?php echo $author; ?></h1>
-
-                    <p><time datetime="<?php echo get_comment_time('c'); ?>"><?php echo get_comment_time('M d, Y'); ?></time></p>
-
+                    <p><time datetime="<?php echo get_comment_time('c'); ?>"><?php echo get_comment_time(get_option('date_format')); ?></time></p>
                 </header>
 
                 <div>
@@ -80,7 +75,7 @@ if (!function_exists('ss_comment')){
 
                         echo '<p><i>Your comment is awaiting moderation</i></p>';
 
-                    }
+                    } //end if
 
                     comment_text();
 
@@ -102,10 +97,8 @@ if (!function_exists('ss_comment')){
 } // ends check for ss_comment()
 
 //Change the Excerpt Length
-function ss_excerpt_length($length){
-
+function ss_excerpt_length($length) {
     return 30;
-
 }
 add_filter('excerpt_length', 'ss_excerpt_length');
 
@@ -117,7 +110,6 @@ function ss_widgets_init() {
 
     //Register Another Sidebar for Widgets Like Twitter
     register_sidebar(array(
-
         'name' => 'Sidebar Widgets',
         'id' => 'ss_widgets',
         'description' => 'Widgets in this area will be shown on the right-hand side.',
@@ -125,7 +117,6 @@ function ss_widgets_init() {
         'after_widget'  => '</li>',
         'before_title' => '<h6 class="heading4">',
         'after_title' => '</h6>'
-
   ));
 
 }
@@ -138,7 +129,7 @@ function ss_scripts_styles(){
 
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/modernizr.min.js');
 
-    if(defined('SCRIPT_DEBUG')&& SCRIPT_DEBUG){
+    if (defined('SCRIPT_DEBUG')&& SCRIPT_DEBUG) {
 
         wp_enqueue_script('functionalityDev', get_template_directory_uri() . '/js/functionality.js', array('jquery'), '1.0', true);
         wp_enqueue_style('styleDev', get_stylesheet_directory_uri() . '/css/style.css', '', '1.02');
@@ -148,13 +139,13 @@ function ss_scripts_styles(){
         wp_enqueue_script('functionality', get_template_directory_uri() . '/js/functionality.min.js', array('jquery'), '1.0', true);
         wp_enqueue_style('style', get_stylesheet_directory_uri() . '/css/style.min.css', '', '1.02');
 
-    }
+    } //end if
 
-    if (is_singular('post')){
+    if (is_singular('post')) {
 
         wp_enqueue_script('comment-reply');
 
-    }
+    } //end if
 
     wp_enqueue_style('ps_lte_ie8', get_stylesheet_directory_uri().'/css/ie.css');
 
@@ -170,11 +161,11 @@ function ss_custom_widget_counter($params) {
     $ss_widget_counter++;
     $class = 'class="widget-' . $ss_widget_counter . ' ';
 
-    if($ss_widget_counter % 2) :
+    if ($ss_widget_counter % 2) {
         $class .= 'widget-odd ';
-    else :
+    } else {
         $class .= 'widget-even ';
-    endif;
+    } //end if
 
     $params[0]['before_widget'] = str_replace('class="', $class, $params[0]['before_widget']);
 
@@ -183,30 +174,24 @@ function ss_custom_widget_counter($params) {
 add_filter('dynamic_sidebar_params','ss_custom_widget_counter');
 
 //removes "current_page_parent from blog menu item"
-add_filter('nav_menu_css_class', 'current_type_nav_class', 10, 2);
-function current_type_nav_class($classes, $item) {
+add_filter('nav_menu_css_class', 'ss_current_type_nav_class', 10, 2);
+function ss_current_type_nav_class($classes, $item) {
     // Get post_type for this post
     $post_type = get_query_var('post_type');
 
     // Removes current_page_parent class from blog menu item
     if (get_post_type() == $post_type) {
-        $classes = array_filter($classes, 'get_current_value');
-    }
+        $classes = array_filter($classes, 'ss_get_current_value');
+    } //end if
 
     // Go to Menus and add a menu class named: {custom-post-type}-menu-item
     // This adds a current_page_parent class to the parent menu item
     if (in_array($post_type . '-menu-item', $classes)) {
         array_push($classes, 'current_page_parent');
-    }
+    } //end if
 
     return $classes;
 }
-function get_current_value($element) {
+function ss_get_current_value($element) {
     return ($element != 'current_page_parent');
 }
-
-//Registers Field in ACF
-function ss_acf_register_fields(){
-    include_once('acf-custom-fields/separator-v4.php');
-}
-add_action('acf/register_fields', 'ss_acf_register_fields');

@@ -1,5 +1,6 @@
 $media-query-support: false;
 
+@import 'globals';
 @import 'variables';
 @import 'mixins';
 @import 'base';
@@ -7,6 +8,6 @@ $media-query-support: false;
 @import 'wordpress';
 
 .wrapper {
-    max-width: 1024px;
+    max-width: 984px;
     margin: 0 auto;
 }
