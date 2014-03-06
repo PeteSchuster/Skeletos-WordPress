@@ -798,15 +798,19 @@ article > header p {
   article > header p a {
     color: #999999; }
 
-/* line 17, scss/wordpress/_base.scss */
+/* line 18, scss/wordpress/_base.scss */
+.sticky {
+  background: #d9edf7; }
+
+/* line 22, scss/wordpress/_base.scss */
 .wp-caption {
   max-width: 100%;
   text-align: center; }
-  /* line 20, scss/wordpress/_base.scss */
+  /* line 25, scss/wordpress/_base.scss */
   .wp-caption img {
     margin-bottom: 10px; }
 
-/* line 25, scss/wordpress/_base.scss */
+/* line 30, scss/wordpress/_base.scss */
 .gallery-caption,
 .wp-caption-text {
   overflow: hidden;
@@ -814,39 +818,39 @@ article > header p {
   color: #999999;
   font-size: 0.875em; }
 
-/* line 31, scss/wordpress/_base.scss */
+/* line 36, scss/wordpress/_base.scss */
 .gallery-icon img {
   clear: both;
   margin: 0 auto 1.5em; }
 
-/* line 36, scss/wordpress/_base.scss */
+/* line 41, scss/wordpress/_base.scss */
 .meta {
   color: #999999;
   font-size: 0.875em; }
-  /* line 39, scss/wordpress/_base.scss */
+  /* line 44, scss/wordpress/_base.scss */
   .meta a {
     color: #666666; }
 
-/* line 44, scss/wordpress/_base.scss */
+/* line 49, scss/wordpress/_base.scss */
 .page-numbers {
   list-style: none;
   margin-left: 0;
   text-align: center;
   color: #999999;
   font-size: 0.875em; }
-  /* line 50, scss/wordpress/_base.scss */
+  /* line 55, scss/wordpress/_base.scss */
   .page-numbers li {
     display: inline-block; }
-  /* line 53, scss/wordpress/_base.scss */
+  /* line 58, scss/wordpress/_base.scss */
   .page-numbers a {
     color: #222222; }
-  /* line 57, scss/wordpress/_base.scss */
+  /* line 62, scss/wordpress/_base.scss */
   .page-numbers .next,
   .page-numbers .prev {
     text-transform: lowercase;
     font-family: sans-serif;
     font-style: italic; }
-  /* line 62, scss/wordpress/_base.scss */
+  /* line 67, scss/wordpress/_base.scss */
   .page-numbers .page-numbers {
     padding: 10px; }
 
