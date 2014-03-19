@@ -8,6 +8,8 @@
 
     <article <?php post_class(); ?>>
 
+        <?php get_template_part('partials/featured-image', get_post_format()); ?>
+
         <header>
 
             <h1 class="heading2 entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>

@@ -1,3 +1,8 @@
+/**
+ * Mobile Boilerplate - http://html5boilerplate.com/mobile/
+ * MIT License - https://github.com/h5bp/mobile-boilerplate/blob/master/LICENSE.md
+ */
+
 (function(document) {
 
     window.MBP = window.MBP || {};

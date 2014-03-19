@@ -6,6 +6,8 @@
 
 <article <?php post_class(); ?>>
 
+    <?php get_template_part('partials/featured-image', get_post_format()); ?>
+
     <header>
 
         <h1 class="page-title"><?php the_title(); ?></h1>
