@@ -36,7 +36,6 @@ input::-moz-focus-inner {
 label {
     display: block;
     cursor: pointer;
-    margin-bottom: calc-target(5,14);
     @extend .ss-heading5;
     .required-true {
         color: $error-color;
@@ -75,6 +74,9 @@ textarea {
 [type=checkbox],
 [type=radio] {
     margin: 0 calc-target(10) calc-target(10) 0;
+    + label {
+        display: inline;
+    }
 }
 
 [type=submit],
