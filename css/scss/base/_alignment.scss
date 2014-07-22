@@ -1,0 +1,33 @@
+.alignright,
+.alignleft,
+.aligncenter {
+    margin: 0 auto 20px;
+    clear: both;
+    > img,
+    > a > img {
+        margin: 0 auto;
+    }
+}
+.alignnone {
+    margin: 0 0 20px;
+    clear: both;
+}
+@include respond-to(768) {
+    .alignright {
+        margin: 0 0 20px 20px;
+        float: right;
+        clear: right;
+    }
+    .alignleft {
+        margin: 0 20px 20px 0;
+        float: left;
+        clear: left;
+    }
+    .alignright,
+    .alignleft {
+        > img,
+        > a > img {
+            margin: 0;
+        }
+    }
+}

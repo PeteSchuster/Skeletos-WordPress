@@ -1,10 +1,12 @@
 .wrapper {
-    margin: 0 10px;
+    padding: 0 10px;
+    background: #fff;
+    @include box-sizing;
     @include respond-to(768) {
-        margin: 0 20px;
+        padding: 0 20px;
     }
-    @include respond-to(1024) {
-        max-width: 984px;
+    @include respond-to(1280) {
+        max-width: 1280px;
         margin: 0 auto;
     }
 }
@@ -24,18 +26,31 @@
 @include respond-to(768) {
     [class*="ss-grid"] {
         font-size: 0;
-        .col {
+        > .col {
             padding: 0 10px;
             display: inline-block;
             vertical-align: top;
             font-size: #{$base-font-size}px; //overcome font-size 0 for inline block
             @include box-sizing;
         }
-        .col-1of2:nth-child(odd) {
+        > .col-1of2:nth-child(odd) {
             padding-left: 0;
         }
-        .col-1of2:nth-child(even) {
+        > .col-1of2:nth-child(even) {
             padding-right: 0;
+        }
+    }
+    .wl-grid-alt {
+        overflow: hidden;
+        > .col-1of2:nth-child(odd) {
+            padding-right: 0;
+            padding-left: 10px;
+            float: right;
+        }
+        > .col-1of2:nth-child(even) {
+            padding-left: 0;
+            padding-right: 10px;
+            float: left;
         }
     }
     .col-1of3 {
@@ -56,40 +71,11 @@
     }
 }
 
-@include respond-to(1024) {
+@include respond-to(990) {
     .col-1of4 {
         width: 25%;
     }
     .col-2of4 {
         width: 50%;
-    }
-}
-
-.alignright,
-.alignleft,
-.aligncenter {
-    margin: 0 auto 20px;
-    clear: both;
-    > img {
-        margin: 0 auto;
-    }
-}
-.alignnone {
-    margin: 0 0 20px;
-    clear: both;
-}
-@include respond-to(768) {
-    .alignright {
-        margin: 0 0 20px 20px;
-        float: right;
-        clear: right;
-    }
-    .alignleft {
-        margin: 0 20px 20px 0;
-        float: left;
-        clear: left;
-    }
-    .aligncenter {
-        margin: 0 auto 20px;
     }
 }

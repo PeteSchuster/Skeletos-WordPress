@@ -27,3 +27,12 @@
         width: 25%;
     }
 }
+
+@include respond-to(1280) {
+    .content-main {
+        width: 80%;
+    }
+    .sidebar {
+        width: 20%;
+    }
+}

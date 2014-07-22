@@ -33,3 +33,35 @@
         text-align: left;
     }
 }
+
+label .gfield_required {
+    color: $red;
+}
+
+.ginput_container {
+    > span {
+        display: block;
+        margin-bottom: calc-target(15);
+        > label {
+            color: $greyLight;
+            font-weight: normal;
+            @include font-size(12);
+        }
+        > input, select {
+            margin-bottom: calc-target(4);
+        }
+    }
+}
+
+.gsection {
+    padding-top: 40px;
+}
+
+ul.gfield_checkbox {
+    margin-bottom: calc-target(20);;
+    margin-left: 0;
+    list-style: none;
+    label {
+        font-weight: normal;
+    }
+}

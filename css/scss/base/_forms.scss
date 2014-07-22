@@ -48,6 +48,7 @@ label {
 [type=tel],
 [type=password],
 [type=search],
+[type=number],
 textarea,
 select {
     margin-bottom: calc-target(12);
@@ -66,6 +67,7 @@ select {
 [type=tel],
 [type=password],
 [type=search],
+[type=number],
 textarea {
     width: 100%;
     -webkit-appearance: none;
