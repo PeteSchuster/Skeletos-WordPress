@@ -12,7 +12,7 @@
 
         <header>
 
-            <h1 class="heading2 entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+            <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
             <p class="date">
                 posted by: <?php the_author_link(); ?><br />

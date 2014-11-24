@@ -2,52 +2,46 @@
 
 @mixin transition( $property, $time: 1, $easing: ease-in-out )  {
 
-    $time: $time * 1s;
+  $time: $time * 1s;
 
-    -webkit-transition: $property $time $easing;
-       -moz-transition: $property $time $easing;
-         -o-transition: $property $time $easing;
-        -ms-transition: $property $time $easing;
-            transition: $property $time $easing;
+  -webkit-transition: $property $time $easing;
+     -moz-transition: $property $time $easing;
+     -o-transition: $property $time $easing;
+    -ms-transition: $property $time $easing;
+      transition: $property $time $easing;
 
 }
 
 @mixin gradient( $startColor, $endColor, $startPosition: 0%, $endPosition: 100% )   {
-
-    background-color: $startColor; /* Old browsers */
-    background-image: -moz-linear-gradient(top, $startColor $startPosition, $endColor $endPosition); /* FF3.6+ */
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop($startPosition,$startColor), color-stop($endPosition,$endColor)); /* Chrome,Safari4+ */
-    background-image: -webkit-linear-gradient(top, $startColor $startPosition,$endColor $endPosition); /* Chrome10+,Safari5.1+ */
-    background-image: -o-linear-gradient(top, $startColor $startPosition,$endColor $endPosition); /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(top, $startColor $startPosition,$endColor $endPosition); /* IE10+ */
-    background-image: linear-gradient(top, $startColor $startPosition,$endColor $endPosition); /* W3C */
-
+  background-color: $startColor; /* Old browsers */
+  background-image: -moz-linear-gradient(top, $startColor $startPosition, $endColor $endPosition); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop($startPosition,$startColor), color-stop($endPosition,$endColor)); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, $startColor $startPosition,$endColor $endPosition); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(top, $startColor $startPosition,$endColor $endPosition); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(top, $startColor $startPosition,$endColor $endPosition); /* IE10+ */
+  background-image: linear-gradient(top, $startColor $startPosition,$endColor $endPosition); /* W3C */
 }
 
-@mixin wordBreak(){
-
-    -ms-word-wrap: break-all;
-        word-wrap: break-all;
-        word-wrap: break-word;
-
+@mixin word-break() {
+  -ms-word-wrap: break-all;
+  word-wrap: break-all;
+  word-wrap: break-word;
 }
 
-@mixin box-sizing($prop: border-box){
-
-    -moz-box-sizing: $prop;
-         box-sizing: $prop;
-
+@mixin box-sizing($prop: border-box) {
+  -moz-box-sizing: $prop;
+  box-sizing: $prop;
 }
 
-@mixin visually-hidden(){
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+@mixin visually-hidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 // ==========================================================================
@@ -55,7 +49,7 @@
 // ==========================================================================
 
 @function calc-target($target, $context: $base-font-size, $unit: 1em) {
-    @return $target / $context * $unit;
+  @return $target / $context * $unit;
 }
 
 // ==========================================================================
@@ -65,32 +59,31 @@
 $media-query-support: true !default;
 
 @mixin respond-to($media: 320, $mq-support: $media-query-support) {
-    @if $mq-support == true {
-        // output content wrapped in media queries
-        @media (min-width: #{$media / 16}em) { @content; }
+  @if $mq-support == true {
+    // output content wrapped in media queries
+    @media (min-width: #{$media / 16}em) { @content; }
+  } @elseif $mq-support == false {
+    // just output the content
+    @if $media <= 1024 {
+      @content;
     }
-    @elseif $mq-support == false {
-        // just output the content
-        @if $media <= 1024 {
-            @content;
-        }
-    }
+  }
 }
 
 // ==========================================================================
 // @mixin font-size
 // ==========================================================================
 
-@mixin font-size($targetSize, $base: $base-font-size) {
-    font-size: $targetSize / $base * 1em;
+@mixin font-size($target-size, $base: $base-font-size) {
+  font-size: $target-size / $base * 1em;
 }
 
 // ==========================================================================
 // @mixin letter-spacing
 // ==========================================================================
 
-@mixin letter-spacing($trackingSize) {
-    letter-spacing: $trackingSize / 1000 * 1em;
+@mixin letter-spacing($tracking-size) {
+  letter-spacing: $tracking-size / 1000 * 1em;
 }
 
 // ==========================================================================
@@ -98,15 +91,15 @@ $media-query-support: true !default;
 // ==========================================================================
 
 @mixin icomoon() {
-    font-family: 'icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

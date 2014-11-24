@@ -34,7 +34,6 @@
     <button id="show-nav" class="ss-text-button show-nav"><span>Menu</span></button>
 
     <nav id="nav" class="nav" role="navigation">
-        <h1 class="visuallyhidden">Main Navigation</h1>
         <?php wp_nav_menu(array('theme_location' => 'main', 'menu_class' => 'list-primary-nav clearfix', 'container' => '')); ?>
     </nav><!--/end nav-->
 

@@ -1,0 +1,4 @@
+# Default application configuration that all configurations inherit from.
+linters:
+  PropertySortOrder:
+    order: concentric
