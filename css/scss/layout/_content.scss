@@ -1,38 +1,41 @@
 .content {
-    padding-top: 40px;
-    position: relative;
-    clear: both;
+  position: relative;
+  clear: both;
+  padding-top: 40px;
 }
 
 @include respond-to(768) {
-    .content-main {
-        padding-right: 10px;
-        width: 67%;
-        float: left;
-        @include box-sizing;
-    }
-    .sidebar {
-        padding-left: 10px;
-        width: 33%;
-        float: right;
-        @include box-sizing;
-    }
+  .content-main {
+    float: left;
+    padding-right: 10px;
+    width: 67%;
+    @include box-sizing;
+  }
+
+  .sidebar {
+    float: right;
+    padding-left: 10px;
+    width: 33%;
+    @include box-sizing;
+  }
 }
 
 @include respond-to(1024) {
-    .content-main {
-        width: 75%;
-    }
-    .sidebar {
-        width: 25%;
-    }
+  .content-main {
+    width: 75%;
+  }
+
+  .sidebar {
+    width: 25%;
+  }
 }
 
 @include respond-to(1280) {
-    .content-main {
-        width: 80%;
-    }
-    .sidebar {
-        width: 20%;
-    }
+  .content-main {
+    width: 80%;
+  }
+
+  .sidebar {
+    width: 20%;
+  }
 }

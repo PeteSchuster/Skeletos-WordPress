@@ -1,25 +1,21 @@
-/* ===MIXINS=== */
-
-@mixin transition( $property, $time: 1, $easing: ease-in-out )  {
-
+@mixin transition($property, $time: 1, $easing: ease-in-out) {
   $time: $time * 1s;
 
   -webkit-transition: $property $time $easing;
-     -moz-transition: $property $time $easing;
-     -o-transition: $property $time $easing;
-    -ms-transition: $property $time $easing;
-      transition: $property $time $easing;
-
+  -moz-transition: $property $time $easing;
+  -o-transition: $property $time $easing;
+  -ms-transition: $property $time $easing;
+  transition: $property $time $easing;
 }
 
-@mixin gradient( $startColor, $endColor, $startPosition: 0%, $endPosition: 100% )   {
-  background-color: $startColor; /* Old browsers */
-  background-image: -moz-linear-gradient(top, $startColor $startPosition, $endColor $endPosition); /* FF3.6+ */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop($startPosition,$startColor), color-stop($endPosition,$endColor)); /* Chrome,Safari4+ */
-  background-image: -webkit-linear-gradient(top, $startColor $startPosition,$endColor $endPosition); /* Chrome10+,Safari5.1+ */
-  background-image: -o-linear-gradient(top, $startColor $startPosition,$endColor $endPosition); /* Opera 11.10+ */
-  background-image: -ms-linear-gradient(top, $startColor $startPosition,$endColor $endPosition); /* IE10+ */
-  background-image: linear-gradient(top, $startColor $startPosition,$endColor $endPosition); /* W3C */
+@mixin gradient($start-color, $end-color, $start-position: 0%, $end-position: 100%) {
+  background-color: $start-color;
+  background-image: -moz-linear-gradient(top, $start-color $start-position, $end-color $end-position);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop($start-position, $start-color), color-stop($end-position, $end-color));
+  background-image: -webkit-linear-gradient(top, $start-color $start-position, $end-color $end-position);
+  background-image: -o-linear-gradient(top, $start-color $start-position, $end-color $end-position);
+  background-image: -ms-linear-gradient(top, $start-color $start-position, $end-color $end-position);
+  background-image: linear-gradient(top, $start-color $start-position, $end-color $end-position);
 }
 
 @mixin word-break() {
@@ -73,7 +69,6 @@ $media-query-support: true !default;
 // ==========================================================================
 // @mixin font-size
 // ==========================================================================
-
 @mixin font-size($target-size, $base: $base-font-size) {
   font-size: $target-size / $base * 1em;
 }
@@ -81,7 +76,6 @@ $media-query-support: true !default;
 // ==========================================================================
 // @mixin letter-spacing
 // ==========================================================================
-
 @mixin letter-spacing($tracking-size) {
   letter-spacing: $tracking-size / 1000 * 1em;
 }
@@ -98,8 +92,6 @@ $media-query-support: true !default;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

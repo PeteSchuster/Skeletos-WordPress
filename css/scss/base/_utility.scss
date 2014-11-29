@@ -1,46 +1,49 @@
-.clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
-}
-.clearfix:after {
-    clear: both;
+  display: table;
+  clear: both;
+  content: ' ';
 }
 
 .screenreaderonly,
 .visually-hidden,
 .visuallyhidden {
-    @include visually-hidden;
+  @include visually-hidden;
 }
 
 @media (max-width: 767px) {
-    .desktop {
-        display: none;
-    }
+  .desktop {
+    display: none;
+  }
 }
+
 @include respond-to(768) {
-    .mobile {
-        display: none;
-    }
+  .mobile {
+    display: none;
+  }
 }
 
 .nowrap {
-    white-space: nowrap;
+  white-space: nowrap;
 }
+
 .right {
-    float: right;
+  float: right;
 }
+
 .left {
-    float: left;
+  float: left;
 }
+
 .clear {
-    clear: both;
+  clear: both;
 }
+
 .hide {
-    display: none;
+  display: none;
 }
+
 .ir {
-    display: block;
-    overflow: hidden;
-    text-indent: -999px;
+  display: block;
+  overflow: hidden;
+  text-indent: -999px;
 }

@@ -1,84 +1,97 @@
 [class*="ss-button"] {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 1.5em;
-    padding: calc-target(8) calc-target(22);
-    line-height: 1em;
-    background: $button-background-color;
-    color: $button-text-color;
-    text-align: center;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1.5em;
+  background: $button-background-color;
+  cursor: pointer;
+  padding: calc-target(8) calc-target(22);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1em;
+  color: $button-text-color;
+  font-size: 1em;
+
+  &:hover,
+  &:focus {
+    background: $button-secondary-background-color;
     text-decoration: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-size: 1em;
-    &:hover,
-    &:focus {
-        background: $buttonSecondary-background-color;
-        text-decoration: none;
-        color: $buttonSecondary-text-color;
-    }
-    &:active {
-        background: $buttonAlt-background-color;
-    }
-    + [class*="ss-button"],
-    + [class*="ss-text-button"] {
-        margin-left: .5em;
-    }
-}
-.ss-button-primary {
-    color: $buttonPrimary-text-color;
-    background: $buttonPrimary-background-color;
-}
-.ss-button-secondary {
-    color: $buttonSecondary-text-color;
-    background: $buttonSecondary-background-color;
-    &:hover,
-    &:focus {
-        background: $button-background-color;
-    }
-    &:active {
-        background: $buttonAlt-background-color;
-    }
-}
-.ss-button-alt {
-    color: $buttonAlt-text-color;
-    background: $buttonAlt-background-color;
-}
-.ss-button-small {
-    @include font-size(11);
-}
-.ss-button-large {
-    @include font-size(18);
+    color: $button-secondary-text-color;
+  }
+
+  &:active {
+    background: $button-alt-background-color;
+  }
+
+  + [class*="ss-button"],
+  + [class*="ss-text-button"] {
+    margin-left: 10px;
+  }
 }
 
+.ss-button-primary {
+  background: $button-primary-background-color;
+  color: $button-primary-text-color;
+}
+
+.ss-button-secondary {
+  background: $button-secondary-background-color;
+  color: $button-secondary-text-color;
+
+  &:hover,
+  &:focus {
+    background: $button-background-color;
+  }
+
+  &:active {
+    background: $button-alt-background-color;
+  }
+}
+
+.ss-button-alt {
+  background: $button-alt-background-color;
+  color: $button-alt-text-color;
+}
+
+.ss-button-small {
+  @include font-size(11);
+}
+
+.ss-button-large {
+  @include font-size(18);
+}
 
 [class*="ss-text-button"] {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 1.5em;
-    padding: calc-target(8) 0;
-    line-height: 1em;
-    text-align: center;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1.5em;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: calc-target(8) 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  color: $link-color;
+  font-size: 1em;
+
+  &:hover,
+  &:focus,
+  &:active {
     text-decoration: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    background: 0;
-    border: 0;
-    color: $link-color;
-    font-size: 1em;
-    &:hover,
-    &:focus,
-    &:active {
-        text-decoration: none;
-    }
-    + [class*="ss-button"],
-    + [class*="ss-text-button"] {
-        margin-left: .5em;
-    }
+  }
+
+  + [class*="ss-button"],
+  + [class*="ss-text-button"] {
+    margin-left: 10px;
+  }
 }
+
 .ss-text-button-small {
-    @include font-size(11);
+  @include font-size(11);
 }
+
 .ss-text-button-large {
-    @include font-size(18);
+  @include font-size(18);
 }

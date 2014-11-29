@@ -1,56 +1,67 @@
 .list-widgets {
-    margin: 0;
-    > li {
-        margin-top: 1em;
-        padding-top: 1em;
-        border-top: 1px solid $grey;
-        &:first-child {
-            margin: 0;
-            padding: 0;
-            border: 0;
-        }
-        @include respond-to(480) {
-            width: 50%;
-            float: left;
-            @include box-sizing;
-            &.widget-2 {
-                padding-top: 0;
-                margin-top: 0;
-                border-top: 0;
-            }
-            &.widget-odd {
-                clear: left;
-                padding-right: 10px;
-            }
-            &.widget-even {
-                padding-left: 10px;
-            }
-        }
+  margin: 0;
+
+  > li {
+    margin-top: 1em;
+    border-top: 1px solid $grey;
+    padding-top: 1em;
+
+    &:first-child {
+      margin: 0;
+      border: 0;
+      padding: 0;
     }
+
+    @include respond-to(480) {
+      float: left;
+      width: 50%;
+      @include box-sizing;
+
+      &.widget-2 {
+        margin-top: 0;
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      &.widget-odd {
+        clear: left;
+        padding-right: 10px;
+      }
+
+      &.widget-even {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  ul {
+    margin-bottom: 1.5em;
+
     ul {
-        margin-bottom: 1.5em;
-        ul {
-            margin: 0;
-        }
+      margin: 0;
     }
+  }
 }
 
 @include respond-to(768) {
-    .list-widgets {
-        > li {
-            width: 100%;
-            float: none;
-            &.widget-2 {
-                margin-top: 1em;
-                padding-top: 1em;
-                border-top: 1px solid $grey;
-            }
-            &.widget-odd {
-                padding-right: 0;
-            }
-            &.widget-even {
-                padding-left: 0;
-            }
-        }
+  .list-widgets {
+    > li {
+      float: none;
+      width: 100%;
+
+      &.widget-2 {
+        margin-top: 1em;
+        border-top: 1px solid $grey;
+        padding-top: 1em;
+      }
+
+      &.widget-odd {
+        padding-right: 0;
+      }
+
+      &.widget-even {
+        padding-left: 0;
+      }
     }
+  }
 }

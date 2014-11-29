@@ -3,85 +3,85 @@
 // ==========================================================================
 
 //brand colors
-$blueLight:         #78a0ff !default;
-$blue:              #4b78fa !default;
-$blueDark:          #436ce0 !default;
-$red:               #eb262e !default;
-$green:             #00a555 !default;
+$blue-light:          #78a0ff !default;
+$blue:                #4b78fa !default;
+$blue-dark:           #436ce0 !default;
+$red:                 #eb262e !default;
+$green:               #00a555 !default;
 
 //greys
-$greyWhite:         #fff !default;
-$greyLightest:      #fafafa !default;
-$greyLighter:       #f2f2f2 !default;
-$greyLight:         #eee !default;
-$grey:              #999 !default;
-$greyDark:          #666 !default;
-$greyDarker:        #4f4f4f !default;
-$greyBlack:         #222 !default;
+$grey-white:          #fff !default;
+$grey-lightest:       #fafafa !default;
+$grey-lighter:        #f2f2f2 !default;
+$grey-light:          #eee !default;
+$grey:                #999 !default;
+$grey-dark:           #666 !default;
+$grey-darker:         #4f4f4f !default;
+$grey-black:          #222 !default;
 
 // system colors
-$ui-yellow:         #c09853 !default;
-$ui-yellowLight:    #fcf8e3 !default;
-$ui-red:            #b94a48 !default;
-$ui-redLight:       #f2dede !default;
-$ui-green:          #468847 !default;
-$ui-greenLight:     #dff0d8 !default;
-$ui-blue:           #3a87ad !default;
-$ui-blueLight:      #d9edf7 !default;
+$ui-yellow:           #c09853 !default;
+$ui-yellow-light:     #fcf8e3 !default;
+$ui-red:              #b94a48 !default;
+$ui-red-light:        #f2dede !default;
+$ui-green:            #468847 !default;
+$ui-green-light:      #dff0d8 !default;
+$ui-blue:             #3a87ad !default;
+$ui-blue-light:       #d9edf7 !default;
 
 // social colors
-$facebook-blue:     #3b5998 !default;
-$twitter-blue:      #00aced !default;
-$youtube-red:       #bb0000 !default;
-$pinterest-red:     #cb2027 !default;
-$google-plus-red:   #dd4b39 !default;
+$facebook-blue:       #3b5998 !default;
+$twitter-blue:        #00aced !default;
+$youtube-red:         #b00 !default;
+$pinterest-red:       #cb2027 !default;
+$google-plus-red:     #dd4b39 !default;
 
 // ==========================================================================
 // functional color palette
 // ==========================================================================
 
 // general
-$text-color:                 $greyDarker !default;
+$text-color:                 $grey-darker !default;
 $light-text-color:           $grey !default;
-$reversed-text-color:        $greyWhite !default;
+$reversed-text-color:        $grey-white !default;
 $link-color:                 $blue !default;
 $link-hover-color:           $red !default;
 
 // color degrees
 $primary:                           $blue !default;
-$secondary:                         $blueLight !default;
-$alt:                               $blueDark !default;
+$secondary:                         $blue-light !default;
+$alt:                               $blue-dark !default;
 
 // buttons
-$button-text-color:                 $greyWhite !default;
-$button-background-color:           $greyDark !default;
+$button-text-color:                 $grey-white !default;
+$button-background-color:           $grey-dark !default;
 //Primary
-$buttonPrimary-text-color:          $greyWhite !default;
-$buttonPrimary-background-color:    $primary !default;
+$button-primary-text-color:          $grey-white !default;
+$button-primary-background-color:    $primary !default;
 //Secondary
-$buttonSecondary-text-color:        $greyWhite !default;
-$buttonSecondary-background-color:  $secondary !default;
+$button-secondary-text-color:        $grey-white !default;
+$button-secondary-background-color:  $secondary !default;
 //Alt
-$buttonAlt-text-color:              $greyWhite !default;
-$buttonAlt-background-color:        $alt !default;
+$button-alt-text-color:              $grey-white !default;
+$button-alt-background-color:        $alt !default;
 
 // headings
-$heading-color-1:          $greyBlack !default;
-$heading-color-2:          $greyBlack !default;
-$heading-color-3:          $greyBlack !default;
-$heading-color-4:          $greyBlack !default;
-$heading-color-5:          $greyBlack !default;
-$heading-color-6:          $greyBlack !default;
+$heading-color-1:          $grey-black !default;
+$heading-color-2:          $grey-black !default;
+$heading-color-3:          $grey-black !default;
+$heading-color-4:          $grey-black !default;
+$heading-color-5:          $grey-black !default;
+$heading-color-6:          $grey-black !default;
 
 // messages
 $warning-color:             $ui-yellow !default;
-$warning-bg-color:          $ui-yellowLight !default;
+$warning-bg-color:          $ui-yellow-light !default;
 $error-color:               $ui-red !default;
-$error-bg-color:            $ui-redLight !default;
+$error-bg-color:            $ui-red-light !default;
 $success-color:             $ui-green !default;
-$success-bg-color:          $ui-greenLight !default;
+$success-bg-color:          $ui-green-light !default;
 $info-color:                $ui-blue !default;
-$info-bg-color:             $ui-blueLight !default;
+$info-bg-color:             $ui-blue-light !default;
 
 // ==========================================================================
 // font stacks

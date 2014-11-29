@@ -1,10 +1,11 @@
 .header {
-    text-align: center;
-    background: $greyLight;
-    padding: 15px 0;
-    position: relative;
-    z-index: 10;
-    @include respond-to(768) {
-        padding: 40px 0 0;
-    }
+  position: relative;
+  z-index: 10;
+  background: $grey-light;
+  padding: 15px 0;
+  text-align: center;
+
+  @include respond-to(768) {
+    padding: 40px 0 0;
+  }
 }

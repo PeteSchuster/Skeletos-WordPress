@@ -16,11 +16,62 @@
 @import 'wordpress';
 
 
-@media only print {
-  * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
-  .header, .footer, .sidebar, img, form { display: none !important; }
-  .wrapper, .content, .content-main { width:100%; padding: 0; margin: 0; }
-  a { text-decoration: underline; }
-  pre, blockquote, tr, h2, h3 { page-break-inside: avoid; }
-  p, h2, h3 { orphans: 3; widows: 3; }
+@media print {
+  *,
+  *:before,
+  *:after {
+    box-shadow: none !important;
+    background: transparent !important;
+    text-shadow: none !important;
+    color: #000 !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+
+  abbr[title]:after {
+    content: ' (' attr(title) ')';
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: '';
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }

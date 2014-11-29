@@ -1,79 +1,91 @@
 .nav {
-    display: none;
-    @include respond-to(768) {
-        display: block !important;
-    }
+  display: none;
+
+  @include respond-to(768) {
+    display: block !important;
+  }
 }
 
 .show-nav {
-    margin: 0;
-    @include respond-to(768) {
-        display: none;
-    }
+  margin: 0;
+
+  @include respond-to(768) {
+    display: none;
+  }
 }
 
 .list-primary-nav {
-    font-family: $secondary-font-stack;
-    text-transform: lowercase;
-    @include font-size(14);
-    ul, li {
-        margin: 0;
-        list-style: none;
-    }
-    a {
-        display: block;
-    }
-    ul {
-        display: none;
-    }
-    > li > a {
-        padding: calc-target(10,14) calc-target(15,14);
-        text-decoration: none;
-        border-top: 1px solid $greyLight;
-    }
-    > li.current-menu-item > a,
-    > li.current_page_parent > a,
-    > li.current-menu-ancestor > a {
-        font-style: italic;
-    }
+  text-transform: lowercase;
+  font-family: $secondary-font-stack;
+  @include font-size(14);
+
+  ul,
+  li {
+    margin: 0;
+    list-style: none;
+  }
+
+  a {
+    display: block;
+  }
+
+  ul {
+    display: none;
+  }
+
+  > li > a {
+    border-top: 1px solid $grey-light;
+    padding: calc-target(10, 14) calc-target(15, 14);
+    text-decoration: none;
+  }
+
+  > li.current-menu-item > a,
+  > li.current_page_parent > a,
+  > li.current-menu-ancestor > a {
+    font-style: italic;
+  }
 }
 
 @include respond-to(768) {
-    .list-primary-nav {
-        > li {
-            display: inline-block;
-        }
-        > li > a {
-            border: 0;
-        }
-        // for dropdowns
-        li {
-            position: relative;
-        }
-        li ul {
-            position: absolute;
-            left: 0;
-            z-index: 10;
-            display: none;
-            text-align: left;
-        }
-        li:hover ul,
-        li:focus ul {
-            display: block;
-            background: $greyLighter;
-        }
-        li li a {
-            padding: .75em;
-            width: 150px;
-            text-decoration: none;
-        }
+  .list-primary-nav {
+    > li {
+      display: inline-block;
+
+      > a {
+        border: 0;
+      }
     }
+
+    li {
+      position: relative;
+
+      ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        text-align: left;
+      }
+
+      li a {
+        padding: .75em;
+        width: 150px;
+        text-decoration: none;
+      }
+    }
+
+    li:hover ul,
+    li:focus ul {
+      display: block;
+      background: $grey-lighter;
+    }
+  }
 }
 
 @include respond-to(1024) {
-    .list-primary-nav {
-        > li > a {
-            padding: calc-target(10,14) calc-target(30,14);
-        }
+  .list-primary-nav {
+    > li > a {
+      padding: calc-target(10, 14) calc-target(30, 14);
     }
+  }
 }

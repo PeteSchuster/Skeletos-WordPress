@@ -61,7 +61,7 @@ if (!function_exists('ss_comment')) {
                 ?>
 
                 <header>
-                    <h1 class="heading4"><?php echo $author; ?></h1>
+                    <h4><?php echo $author; ?></h4>
                     <p><time datetime="<?php echo get_comment_time('c'); ?>"><?php echo get_comment_time(get_option('date_format')); ?></time></p>
                 </header>
 
@@ -135,7 +135,7 @@ function ss_scripts_styles(){
         wp_enqueue_script('comment-reply');
     } //end if
 
-    wp_enqueue_style('ps_lte_ie8', get_stylesheet_directory_uri().'/css/ie.css');
+    wp_enqueue_style('ps_lte_ie8', get_stylesheet_directory_uri() . '/css/ie.css');
 
     $GLOBALS[ 'wp_styles' ]->add_data('ps_lte_ie8', 'conditional', 'lte IE 8');
 
@@ -159,7 +159,7 @@ function ss_custom_widget_counter($params) {
 
     return $params;
 }
-add_filter('dynamic_sidebar_params','ss_custom_widget_counter');
+add_filter('dynamic_sidebar_params', 'ss_custom_widget_counter');
 
 //removes "current_page_parent from blog menu item"
 add_filter('nav_menu_css_class', 'ss_current_type_nav_class', 10, 2);

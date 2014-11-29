@@ -1,81 +1,96 @@
 .wrapper {
-    padding: 0 10px;
-    background: #fff;
-    @include box-sizing;
-    @include respond-to(768) {
-        padding: 0 20px;
-    }
-    @include respond-to(1280) {
-        max-width: 1280px;
-        margin: 0 auto;
-    }
+  background: #fff;
+  padding: 0 10px;
+  @include box-sizing;
+
+  @include respond-to(768) {
+    padding: 0 20px;
+  }
+
+  @include respond-to(1280) {
+    margin: 0 auto;
+    max-width: 1280px;
+  }
 }
 
 [class*="list-"] {
-    margin-left: 0;
-    list-style: none;
+  margin-left: 0;
+  list-style: none;
 }
 
 [class*="ss-grid"] {
-    clear: both;
-    .col {
-        margin-bottom: 20px;
-    }
+  clear: both;
+
+  .col {
+    margin-bottom: 20px;
+  }
 }
 
 @include respond-to(768) {
-    [class*="ss-grid"] {
-        font-size: 0;
-        > .col {
-            padding: 0 10px;
-            display: inline-block;
-            vertical-align: top;
-            font-size: #{$base-font-size}px; //overcome font-size 0 for inline block
-            @include box-sizing;
-        }
-        > .col-1of2:nth-child(odd) {
-            padding-left: 0;
-        }
-        > .col-1of2:nth-child(even) {
-            padding-right: 0;
-        }
+  [class*="ss-grid"] {
+    font-size: 0;
+
+    > .col {
+      display: inline-block;
+      padding: 0 10px;
+      vertical-align: top;
+      font-size: #{$base-font-size}px; //overcome font-size 0 for inline block
+      @include box-sizing;
     }
-    .wl-grid-alt {
-        overflow: hidden;
-        > .col-1of2:nth-child(odd) {
-            padding-right: 0;
-            padding-left: 10px;
-            float: right;
-        }
-        > .col-1of2:nth-child(even) {
-            padding-left: 0;
-            padding-right: 10px;
-            float: left;
-        }
+
+    > .col-1of2:nth-child(odd) {
+      padding-left: 0;
     }
-    .col-1of3 {
-        width: 33.3%;
+
+    > .col-1of2:nth-child(even) {
+      padding-right: 0;
     }
-    .col-1of4,
-    .col-1of2 {
-        width: 50%;
+  }
+
+  .wl-grid-alt {
+    overflow: hidden;
+
+    > .col-1of2:nth-child(odd) {
+      float: right;
+      padding-right: 0;
+      padding-left: 10px;
     }
-    .col-2of3 {
-        width: 66.6%;
+
+    > .col-1of2:nth-child(even) {
+      float: left;
+      padding-right: 10px;
+      padding-left: 0;
     }
-    .col-3of4 {
-        width: 75%;
-    }
-    .col-2of4 {
-        width: 100%;
-    }
+  }
+
+  .col-1of3 {
+    width: 33.3%;
+  }
+
+  .col-1of4,
+  .col-1of2 {
+    width: 50%;
+  }
+
+  .col-2of3 {
+    width: 66.6%;
+  }
+
+  .col-3of4 {
+    width: 75%;
+  }
+
+  .col-2of4 {
+    width: 100%;
+  }
 }
 
 @include respond-to(990) {
-    .col-1of4 {
-        width: 25%;
-    }
-    .col-2of4 {
-        width: 50%;
-    }
+  .col-1of4 {
+    width: 25%;
+  }
+
+  .col-2of4 {
+    width: 50%;
+  }
 }

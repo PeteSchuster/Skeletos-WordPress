@@ -1,33 +1,38 @@
 .alignright,
 .alignleft,
 .aligncenter {
-    margin: 0 auto 20px;
-    clear: both;
+  clear: both;
+  margin: 0 auto 20px;
+
+  > img,
+  > a > img {
+    margin: 0 auto;
+  }
+}
+
+.alignnone {
+  clear: both;
+  margin: 0 0 20px;
+}
+
+@include respond-to(768) {
+  .alignright {
+    float: right;
+    clear: right;
+    margin: 0 0 20px 20px;
+  }
+
+  .alignleft {
+    float: left;
+    clear: left;
+    margin: 0 20px 20px 0;
+  }
+
+  .alignright,
+  .alignleft {
     > img,
     > a > img {
-        margin: 0 auto;
+      margin: 0;
     }
-}
-.alignnone {
-    margin: 0 0 20px;
-    clear: both;
-}
-@include respond-to(768) {
-    .alignright {
-        margin: 0 0 20px 20px;
-        float: right;
-        clear: right;
-    }
-    .alignleft {
-        margin: 0 20px 20px 0;
-        float: left;
-        clear: left;
-    }
-    .alignright,
-    .alignleft {
-        > img,
-        > a > img {
-            margin: 0;
-        }
-    }
+  }
 }

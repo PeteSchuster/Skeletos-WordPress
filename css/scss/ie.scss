@@ -8,6 +8,6 @@ $media-query-support: false;
 @import 'wordpress';
 
 .wrapper {
-    max-width: 1024px;
-    margin: 0 auto;
+  margin: 0 auto;
+  max-width: 1024px;
 }
