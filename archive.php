@@ -4,7 +4,7 @@
 */
 get_header(); ?>
 
-<main class="content"><div class="wrapper clearfix">
+<div class="content"><div class="wrapper clearfix">
 
     <?php
 
@@ -36,7 +36,7 @@ get_header(); ?>
 
     ?>
 
-    <div class="content-main" role="main">
+    <main class="content-main" role="main">
 
     <?php
 
@@ -58,7 +58,7 @@ get_header(); ?>
 
     } //end if ?>
 
-    </div><!--/end content-main-->
+    </main><!--/end content-main-->
 <?php get_sidebar(); ?>
-</div></main><!--/end content-->
+</div></div><!--/end content-->
 <?php get_footer(); ?>
