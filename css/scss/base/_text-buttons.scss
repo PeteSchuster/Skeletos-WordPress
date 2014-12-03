@@ -1,0 +1,34 @@
+[class*="ss-text-button"] {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1.5em;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: calc-target(8) 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  color: $link-color;
+  font-size: 1em;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+
+  + [class*="ss-button"],
+  + [class*="ss-text-button"] {
+    margin-left: 10px;
+  }
+}
+
+.ss-text-button-small {
+  @include font-size(11);
+}
+
+.ss-text-button-large {
+  @include font-size(18);
+}

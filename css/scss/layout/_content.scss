@@ -1,18 +1,18 @@
-.content {
+.ss-page-content {
   position: relative;
   clear: both;
   padding-top: 40px;
 }
 
 @include respond-to(768) {
-  .content-main {
+  .ss-page-content-main {
     float: left;
     padding-right: 10px;
     width: 67%;
     @include box-sizing;
   }
 
-  .sidebar {
+  .ss-page-sidebar {
     float: right;
     padding-left: 10px;
     width: 33%;
@@ -21,21 +21,21 @@
 }
 
 @include respond-to(1024) {
-  .content-main {
+  .ss-page-content-main {
     width: 75%;
   }
 
-  .sidebar {
+  .ss-page-sidebar {
     width: 25%;
   }
 }
 
 @include respond-to(1280) {
-  .content-main {
+  .ss-page-content-main {
     width: 80%;
   }
 
-  .sidebar {
+  .ss-page-sidebar {
     width: 20%;
   }
 }

@@ -1,12 +1,12 @@
-<?php
+ <?php
 /*
     @package Skeletos
 */
 get_header(); ?>
 
-<div class="content"><div class="wrapper clearfix">
+<div class="ss-page-content"><div class="wrapper clearfix">
 
-    <main class="content-main" role="main">
+    <main class="ss-page-main" role="main">
 
         <?php
 
@@ -28,7 +28,7 @@ get_header(); ?>
 
         } //end if ?>
 
-    </main><!--/end content-main-->
+    </main><!--/end ss-page-main-->
 <?php get_sidebar(); ?>
-</div></div><!--/end content-->
+</div></div><!--/end ss-page-content-->
 <?php get_footer(); ?>

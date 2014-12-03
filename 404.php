@@ -4,11 +4,11 @@
 */
 get_header(); ?>
 
-<main class="content" role="main"><div class="wrapper clearfix">
+<div class="ss-page-content"><div class="wrapper clearfix">
+    <main class="ss-page-main" role="main">
 
-    <h1 class="page-title">Error 404 - Not Found</h1>
+        <?php get_template_part('partials/404', get_post_format()); ?>
 
-    <p>Sorry but the page you're looking for is not here...</p>
-
-</div></main><!--/end content-->
+    </main><!--/end ss-page-main-->
+</div></div><!--/end ss-page-content-->
 <?php get_footer(); ?>
