@@ -4,7 +4,7 @@
 */
 get_header(); ?>
 
-<div class="ss-page-content"><div class="wrapper clearfix">
+<div class="ss-page-content has-sidebar"><div class="wrapper clearfix">
 
     <?php
 

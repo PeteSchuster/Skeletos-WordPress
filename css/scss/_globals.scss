@@ -66,12 +66,26 @@ $button-alt-text-color:              $grey-white !default;
 $button-alt-background-color:        $alt !default;
 
 // headings
-$heading-color-1:          $grey-black !default;
-$heading-color-2:          $grey-black !default;
-$heading-color-3:          $grey-black !default;
-$heading-color-4:          $grey-black !default;
-$heading-color-5:          $grey-black !default;
-$heading-color-6:          $grey-black !default;
+$heading-1-color:          $grey-black !default;
+$heading-2-color:          $grey-black !default;
+$heading-3-color:          $grey-black !default;
+$heading-4-color:          $grey-black !default;
+$heading-5-color:          $grey-black !default;
+$heading-6-color:          $grey-black !default;
+
+$heading-1-size:            40 !default;
+$heading-2-size:            34 !default;
+$heading-3-size:            20 !default;
+$heading-4-size:            21 !default;
+$heading-5-size:            17 !default;
+$heading-6-size:            12 !default;
+
+$heading-1-height:          48 !default;
+$heading-2-height:          40 !default;
+$heading-3-height:          24 !default;
+$heading-4-height:          26 !default;
+$heading-5-height:          24 !default;
+$heading-6-height:          16 !default;
 
 // messages
 $warning-color:             $ui-yellow !default;

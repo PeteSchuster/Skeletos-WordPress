@@ -33,7 +33,7 @@
 
     <button id="show-nav" class="ss-text-button show-nav"><span>Menu</span></button>
 
-    <nav id="nav" class="nav" role="navigation">
+    <nav id="nav" class="primary-nav" role="navigation">
         <?php wp_nav_menu(array('theme_location' => 'main', 'menu_class' => 'ss-list-primary-nav clearfix', 'container' => '')); ?>
     </nav><!--/end nav-->
 

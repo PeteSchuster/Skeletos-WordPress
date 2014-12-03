@@ -5,7 +5,7 @@
 }
 
 @include respond-to(768) {
-  .ss-page-content-main {
+  .has-sidebar .ss-page-main {
     float: left;
     padding-right: 10px;
     width: 67%;
@@ -21,7 +21,7 @@
 }
 
 @include respond-to(1024) {
-  .ss-page-content-main {
+  .has-sidebar .ss-page-main {
     width: 75%;
   }
 
@@ -31,7 +31,7 @@
 }
 
 @include respond-to(1280) {
-  .ss-page-content-main {
+  .has-sidebar .ss-page-main {
     width: 80%;
   }
 

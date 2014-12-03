@@ -71,6 +71,7 @@ select {
 [type=number],
 textarea {
   width: 100%;
+  max-width: 480px;
   -webkit-appearance: none;
 }
 

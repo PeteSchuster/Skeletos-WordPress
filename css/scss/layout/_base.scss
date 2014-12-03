@@ -1,15 +1,11 @@
 .wrapper {
-  background: #fff;
+  margin: 0 auto;
   padding: 0 10px;
+  max-width: 1280px;
   @include box-sizing;
 
   @include respond-to(768) {
     padding: 0 20px;
-  }
-
-  @include respond-to(1280) {
-    margin: 0 auto;
-    max-width: 1280px;
   }
 }
 
