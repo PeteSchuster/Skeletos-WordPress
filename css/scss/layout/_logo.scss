@@ -1,0 +1,27 @@
+.logo {
+    width: $logo-width;
+    height: $logo-height;
+
+    @include respond-to(768) {
+        width: $logo-width-desktop;
+        height: $logo-height-desktop;
+    }
+}
+
+h1.logo {
+    margin: 0 auto 10px;
+
+    @include respond-to(768) {
+        margin-bottom: 20px;
+    }
+}
+
+a.logo {
+    display: block;
+    background: url('../images/logo-desktop.png?v1.0') no-repeat;
+    background-size: #{$logo-width} #{$logo-height};
+
+    @include respond-to(768) {
+        background-size: #{$logo-width-desktop} #{$logo-height-desktop};
+    }
+}

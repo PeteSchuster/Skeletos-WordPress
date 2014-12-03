@@ -18,3 +18,18 @@
     padding: 0 10px;
   }
 }
+
+.copyright {
+  @include font-size(12);
+
+  a {
+    border-bottom: 1px solid;
+    text-decoration: none;
+    color: $blue-dark;
+
+    &:hover,
+    &:focus {
+      border: 0;
+    }
+  }
+}
