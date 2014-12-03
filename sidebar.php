@@ -5,7 +5,7 @@
 ?>
 
 <aside class="ss-page-sidebar" role="complementary">
-    <ul class="list-widgets clearfix">
+    <ul class="ss-list-widgets clearfix">
         <?php dynamic_sidebar('ss_widgets'); ?>
     </ul>
 </aside><!--end .sidebar-->

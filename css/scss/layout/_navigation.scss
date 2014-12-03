@@ -14,7 +14,7 @@
   }
 }
 
-.list-primary-nav {
+.ss-list-primary-nav {
   text-transform: lowercase;
   font-family: $secondary-font-stack;
   @include font-size(14);
@@ -47,7 +47,7 @@
 }
 
 @include respond-to(768) {
-  .list-primary-nav {
+  .ss-list-primary-nav {
     > li {
       display: inline-block;
 
@@ -83,7 +83,7 @@
 }
 
 @include respond-to(1024) {
-  .list-primary-nav {
+  .ss-list-primary-nav {
     > li > a {
       padding: calc-target(10, 14) calc-target(30, 14);
     }

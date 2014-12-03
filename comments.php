@@ -26,7 +26,7 @@ if (have_comments()) { ?>
     </nav>
     <?php } // check for comment navigation ?>
 
-    <ol class="list-comments">
+    <ol class="ss-list-comments">
         <?php wp_list_comments(array('callback' => 'ss_comment')); ?>
     </ol>
 

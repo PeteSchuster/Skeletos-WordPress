@@ -1,4 +1,4 @@
-.list-widgets {
+.ss-list-widgets {
   margin: 0;
 
   > li {
@@ -44,7 +44,7 @@
 }
 
 @include respond-to(768) {
-  .list-widgets {
+  .ss-list-widgets {
     > li {
       float: none;
       width: 100%;
