@@ -20,17 +20,17 @@ function ss_skeletos_setup() {
     //adds post thumbnail support
     add_theme_support('post-thumbnails');
 
-    //sets content width for embeded media
-    if (!isset($content_width)) {
-        $content_width = 984;
-    } //end if
-
     // This registers the nav in the header
     register_nav_menu('main', 'Main Navigation');
     register_nav_menu('footer', 'Footer Navigation');
 
 }
 add_action('after_setup_theme', 'ss_skeletos_setup');
+
+//sets content width for embeded media
+if (!isset($content_width)) {
+    $content_width = 984;
+} //end if
 
 //Custom Comments List
 if (!function_exists('ss_comment')) {
