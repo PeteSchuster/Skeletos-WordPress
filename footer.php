@@ -4,7 +4,7 @@
 */
 ?>
 
-<footer class="footer" role="contentinfo"><div class="wrapper">
+<footer class="ss-page-footer" role="contentinfo"><div class="wrapper">
 
     <a id="back-to-top" class="ss-text-button" href="#"><span>Back to Top</span></a>
 

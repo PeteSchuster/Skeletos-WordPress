@@ -24,17 +24,17 @@
 
 <body <?php body_class(); ?>>
 
-<header class="header" role="banner"><div class="wrapper clearfix">
+<header class="ss-page-header" role="banner"><div class="wrapper clearfix">
 
     <div class="hgroup">
         <h1 class="heading3"><a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
         <h2 class="heading5"><?php bloginfo('description'); ?></h2>
     </div><!--/end .hgroup-->
 
-    <button id="show-nav" class="ss-text-button show-nav"><span>Menu</span></button>
+    <a id="show-nav" class="ss-text-button show-nav" href="#primary-nav"><span>Menu</span></a>
 
-    <nav id="nav" class="primary-nav" role="navigation">
+    <nav id="primary-nav" class="primary-nav" role="navigation">
         <?php wp_nav_menu(array('theme_location' => 'main', 'menu_class' => 'ss-list-primary-nav clearfix', 'container' => '')); ?>
-    </nav><!--/end nav-->
+    </nav><!--/end primary-nav-->
 
-</div></header><!--/end .header-->
+</div></header><!--/end .ss-page-header-->

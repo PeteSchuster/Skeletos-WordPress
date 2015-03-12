@@ -12,7 +12,7 @@
 
         <h1 class="page-title"><?php the_title(); ?></h1>
 
-        <p class="date">
+        <p class="meta">
             posted by: <?php the_author_link(); ?><br />
             <time datetime="<?php the_time('c'); ?>"><?php the_time(get_option('date_format')); ?></time><br />
             <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;' ); ?>

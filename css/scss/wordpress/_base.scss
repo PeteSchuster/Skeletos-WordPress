@@ -7,15 +7,6 @@ article > header {
   h1 {
     margin-bottom: 10px;
   }
-
-  p {
-    color: $grey;
-    @include font-size(14);
-
-    a {
-      color: $grey;
-    }
-  }
 }
 
 .sticky {
