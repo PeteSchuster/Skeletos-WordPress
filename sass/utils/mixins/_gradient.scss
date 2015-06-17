@@ -1,0 +1,9 @@
+@mixin gradient($start-color, $end-color, $start-position: 0%, $end-position: 100%) {
+  background-color: $start-color;
+  background-image: -moz-linear-gradient(top, $start-color $start-position, $end-color $end-position);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop($start-position, $start-color), color-stop($end-position, $end-color));
+  background-image: -webkit-linear-gradient(top, $start-color $start-position, $end-color $end-position);
+  background-image: -o-linear-gradient(top, $start-color $start-position, $end-color $end-position);
+  background-image: -ms-linear-gradient(top, $start-color $start-position, $end-color $end-position);
+  background-image: linear-gradient(top, $start-color $start-position, $end-color $end-position);
+}

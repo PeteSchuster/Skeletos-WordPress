@@ -1,0 +1,4 @@
+@mixin box-sizing($prop: border-box) {
+  -moz-box-sizing: $prop;
+  box-sizing: $prop;
+}

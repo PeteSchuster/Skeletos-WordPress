@@ -1,0 +1,65 @@
+/*doc
+---
+title: Typography
+name: 2-typography
+category: Base CSS
+---
+
+Typography
+
+*/
+
+p,
+ul,
+ol,
+dl,
+address {
+  margin: 0 0 1.5em;
+  padding: 0;
+  @include font-size($base-font-size);
+}
+
+ul,
+ol,
+dd {
+  margin-left: 1.5em;
+}
+
+li ul,
+li ol {
+  margin-bottom: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+pre {
+  margin: 0 0 1.5em;
+  background: $grey-lightest;
+  padding: .5em;
+  word-wrap: normal;
+}
+
+blockquote {
+  display: block;
+  margin: 0 0 20px;
+  border-left: 3px solid $grey-black;
+  padding-left: 10px;
+  overflow: hidden;
+  color: $grey-black;
+  @include font-size(20);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+hr {
+  margin: 0 0 1.5em;
+}

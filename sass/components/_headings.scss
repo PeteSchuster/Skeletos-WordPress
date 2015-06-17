@@ -1,0 +1,163 @@
+/*doc
+---
+title: Headings
+name: 3-headings
+category: Primitive Components
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example_table
+<h6 class="heading1">Heading Class one</h6>
+
+<h6 class="heading2">Heading Class two</h6>
+
+<h6 class="heading3">Heading Class three</h6>
+
+<h6 class="heading4">Heading Class four</h6>
+
+<h6 class="heading5">Heading Class five</h6>
+
+<h6 class="heading6">Heading Class six</h6>
+```
+
+<h2>Headings</h2>
+
+<h4>Heading Element</h4>
+<h1>Heading Element one</h1>
+<h2>Heading Element two</h2>
+<h3>Heading Element three</h3>
+<h4>Heading Element four</h4>
+<h5>Heading Element five</h5>
+<h6>Heading Element six</h6>
+
+<hr />
+
+<h4>Heading Class</h4>
+<h6 class="heading1">Heading Class one</h6>
+<h6 class="heading2">Heading Class two</h6>
+<h6 class="heading3">Heading Class three</h6>
+<h6 class="heading4">Heading Class four</h6>
+<h6 class="heading5">Heading Class five</h6>
+<h6 class="heading6">Heading Class six</h6>
+
+<hr />
+
+<h4>Long Heading</h4>
+<h6 class="heading1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h6>
+<h6 class="heading2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h6>
+<h6 class="heading3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h6>
+<h6 class="heading4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h6>
+<h6 class="heading5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h6>
+<h6 class="heading6">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h6>
+
+<hr />
+
+<h2>Heading Group</h2>
+
+<div class="hgroup">
+    <h1>Header one</h1>
+    <h2>Header two</h2>
+</div>
+
+<div class="hgroup">
+    <h3>Header three</h3>
+    <h4>Header four</h4>
+</div>
+
+<div class="hgroup">
+    <h5>Header five</h5>
+    <h6>Header six</h6>
+</div>
+
+*/
+
+h1,
+.heading1 {
+  margin: 0 0 calc-target(20, $heading-1-size);
+  text-transform: none;
+  line-height: calc-target($heading-1-height, $heading-1-size);
+  color: $heading-1-color;
+  font-family: $secondary-font-stack;
+  font-weight: normal;
+  @include font-size($heading-1-size);
+}
+
+h2,
+.heading2 {
+  margin: 0 0 calc-target(20, $heading-2-size);
+  text-transform: none;
+  line-height: calc-target($heading-2-height, $heading-2-size);
+  color: $heading-2-color;
+  font-family: $secondary-font-stack;
+  font-weight: normal;
+  @include font-size($heading-2-size);
+}
+
+h3,
+.heading3 {
+  margin: 0 0 calc-target(10, $heading-3-size);
+  text-transform: none;
+  line-height: calc-target($heading-3-height, $heading-3-size);
+  color: $heading-3-color;
+  font-family: $secondary-font-stack;
+  font-weight: normal;
+  @include font-size($heading-3-size);
+}
+
+h4,
+.heading4 {
+  margin: 0 0 calc-target(10, $heading-4-size);
+  text-transform: none;
+  line-height: calc-target($heading-4-height, $heading-4-size);
+  color: $heading-4-color;
+  font-family: $primary-font-stack;
+  font-weight: normal;
+  @include font-size($heading-4-size);
+}
+
+h5,
+.heading5 {
+  margin: 0 0 calc-target(10, $heading-5-size);
+  text-transform: none;
+  line-height: calc-target($heading-5-height, $heading-5-size);
+  color: $heading-5-color;
+  font-family: $primary-font-stack;
+  font-weight: normal;
+  @include font-size($heading-5-size);
+}
+
+h6,
+.heading6 {
+  margin: 0 0 calc-target(10, $heading-6-size);
+  text-transform: uppercase;
+  line-height: calc-target($heading-6-height, $heading-6-size);
+  color: $heading-6-color;
+  font-family: $secondary-font-stack;
+  font-weight: normal;
+  @include font-size($heading-6-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+}
+
+.hgroup {
+  margin-bottom: 20px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  [class*='heading'] {
+    margin: 0;
+  }
+}

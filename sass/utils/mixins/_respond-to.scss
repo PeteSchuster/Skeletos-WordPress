@@ -1,0 +1,17 @@
+// ==========================================================================
+// @mixin respond-to
+// ==========================================================================
+
+$media-query-support: true !default;
+
+@mixin respond-to($media: 320, $mq-support: $media-query-support) {
+  @if $mq-support == true {
+    // output content wrapped in media queries
+    @media (min-width: #{$media / 16}em) { @content; }
+  } @elseif $mq-support == false {
+    // just output the content
+    @if $media <= 1024 {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,127 @@
+/*doc
+---
+title: Globals
+name: 1-globals
+category: Utility CSS
+---
+
+Global variables base variables that are used in the application's CSS. These variables should not be edited directly. Instead, create an override for these defaults in the _variables.scss file.
+
+*/
+
+// ==========================================================================
+// complete color palette
+// ==========================================================================
+
+//brand colors
+$blue-light:          #78a0ff !default;
+$blue:                #4b78fa !default;
+$blue-dark:           #436ce0 !default;
+$red:                 #eb262e !default;
+$green:               #00a555 !default;
+
+//greys
+$grey-white:          #fff !default;
+$grey-lightest:       #fafafa !default;
+$grey-lighter:        #f2f2f2 !default;
+$grey-light:          #eee !default;
+$grey:                #999 !default;
+$grey-dark:           #666 !default;
+$grey-darker:         #4f4f4f !default;
+$grey-black:          #222 !default;
+
+// system colors
+$ui-yellow:           #c09853 !default;
+$ui-yellow-light:     #fcf8e3 !default;
+$ui-red:              #b94a48 !default;
+$ui-red-light:        #f2dede !default;
+$ui-green:            #468847 !default;
+$ui-green-light:      #dff0d8 !default;
+$ui-blue:             #3a87ad !default;
+$ui-blue-light:       #d9edf7 !default;
+
+// social colors
+$facebook-blue:       #3b5998 !default;
+$twitter-blue:        #00aced !default;
+$youtube-red:         #b00 !default;
+$pinterest-red:       #cb2027 !default;
+$google-plus-red:     #dd4b39 !default;
+
+// ==========================================================================
+// functional color palette
+// ==========================================================================
+
+// general
+$text-color:                 $grey-darker !default;
+$light-text-color:           $grey !default;
+$reversed-text-color:        $grey-white !default;
+$link-color:                 $blue !default;
+$link-hover-color:           $red !default;
+
+// color degrees
+$primary:                           $blue !default;
+$secondary:                         $blue-light !default;
+$alt:                               $blue-dark !default;
+
+// buttons
+$button-text-color:                 $grey-white !default;
+$button-background-color:           $grey-dark !default;
+//Primary
+$button-primary-text-color:          $grey-white !default;
+$button-primary-background-color:    $primary !default;
+//Secondary
+$button-secondary-text-color:        $grey-white !default;
+$button-secondary-background-color:  $secondary !default;
+//Alt
+$button-alt-text-color:              $grey-white !default;
+$button-alt-background-color:        $alt !default;
+
+// headings
+$heading-1-color:          $grey-black !default;
+$heading-2-color:          $grey-black !default;
+$heading-3-color:          $grey-black !default;
+$heading-4-color:          $grey-black !default;
+$heading-5-color:          $grey-black !default;
+$heading-6-color:          $grey-black !default;
+
+$heading-1-size:            40 !default;
+$heading-2-size:            34 !default;
+$heading-3-size:            20 !default;
+$heading-4-size:            21 !default;
+$heading-5-size:            17 !default;
+$heading-6-size:            12 !default;
+
+$heading-1-height:          48 !default;
+$heading-2-height:          40 !default;
+$heading-3-height:          24 !default;
+$heading-4-height:          26 !default;
+$heading-5-height:          24 !default;
+$heading-6-height:          16 !default;
+
+// messages
+$warning-color:             $ui-yellow !default;
+$warning-bg-color:          $ui-yellow-light !default;
+$error-color:               $ui-red !default;
+$error-bg-color:            $ui-red-light !default;
+$success-color:             $ui-green !default;
+$success-bg-color:          $ui-green-light !default;
+$info-color:                $ui-blue !default;
+$info-bg-color:             $ui-blue-light !default;
+
+// ==========================================================================
+// font stacks
+// ==========================================================================
+
+$base-font-size:            16 !default;
+$primary-font-stack:        sans-serif !default;
+$secondary-font-stack:      sans-serif !default;
+
+// ==========================================================================
+// logo
+// ==========================================================================
+
+$logo-width:                150px !default;
+$logo-height:               50px !default;
+
+$logo-width-desktop:        300px !default;
+$logo-height-desktop:       100px !default;

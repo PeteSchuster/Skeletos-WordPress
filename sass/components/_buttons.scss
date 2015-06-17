@@ -1,0 +1,88 @@
+/*doc
+---
+title: Buttons
+name: 1-button
+category: Components CSS
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example_table
+<button class="ss-button"><span>Click</span></button>
+
+<button class="ss-button--primary"><span>Click</span></button>
+
+<button class="ss-button--secondary"><span>Click</span></button>
+
+<button class="ss-button--large"><span>Click</span></button>
+
+<button class="ss-button--small"><span>Click</span></button>
+```
+
+*/
+
+[class*="ss-button"] {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1.5em;
+  border: 1px solid transparent;
+  background: $button-background-color;
+  cursor: pointer;
+  padding: calc-target(8) calc-target(22);
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  line-height: 1;
+  color: $button-text-color;
+  font-size: 1em;
+
+  &:hover,
+  &:focus {
+    background: $button-secondary-background-color;
+    text-decoration: none;
+    color: $button-secondary-text-color;
+  }
+
+  &:active {
+    background: $button-alt-background-color;
+    border-color: $button-primary-background-color;
+  }
+
+  + [class*="ss-button"],
+  + [class*="ss-text-button"] {
+    margin-left: 10px;
+  }
+}
+
+.ss-button--primary {
+  background: $button-primary-background-color;
+  color: $button-primary-text-color;
+}
+
+.ss-button--secondary {
+  background: $button-secondary-background-color;
+  color: $button-secondary-text-color;
+
+  &:hover,
+  &:focus {
+    background: $button-background-color;
+  }
+
+  &:active {
+    background: $button-alt-background-color;
+  }
+}
+
+.ss-button--alt {
+  background: $button-alt-background-color;
+  color: $button-alt-text-color;
+}
+
+.ss-button--small {
+  @include font-size(11);
+}
+
+.ss-button--large {
+  @include font-size(18);
+}

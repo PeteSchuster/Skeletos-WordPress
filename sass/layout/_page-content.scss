@@ -1,0 +1,22 @@
+[class*="page-content"] {
+  position: relative;
+  clear: both;
+  padding-top: 40px;
+}
+
+.page-content--has-sidebar .page-main {
+  @include respond-to(768) {
+    float: left;
+    padding-right: 10px;
+    width: 67%;
+    @include box-sizing;
+  }
+
+  @include respond-to(1024) {
+    width: 75%;
+  }
+
+  @include respond-to(1280) {
+    width: 80%;
+  }
+}

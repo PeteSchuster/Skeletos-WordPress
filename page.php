@@ -5,9 +5,9 @@
 get_header();
 ?>
 
-<div class="ss-page-content"><div class="wrapper clearfix">
+<div class="page-content"><div class="wrapper clearfix">
 
-    <main class="ss-page-main" role="main">
+    <main class="page-main" role="main">
 
     <?php
 
@@ -26,6 +26,6 @@ get_header();
 
     ?>
 
-    </main><!--/end ss-page-main-->
-</div></div><!--/end ss-page-content-->
+    </main><!--/end page-main-->
+</div></div><!--/end page-content-->
 <?php get_footer(); ?>

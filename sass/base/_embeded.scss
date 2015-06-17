@@ -1,0 +1,25 @@
+/*doc
+---
+title: Embeded
+name: 4-embeded
+category: Base CSS
+---
+
+Embeded
+
+*/
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+figure {
+  margin: 0;
+}
+
+iframe {
+  max-width: 100%;
+}

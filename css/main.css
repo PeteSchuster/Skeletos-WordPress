@@ -1,0 +1,1415 @@
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/*! HTML5 Boilerplate v5.0.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers:
+ */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+       http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group; }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+/*doc
+---
+title: Globals
+name: 1-globals
+category: Utility CSS
+---
+
+Global variables base variables that are used in the application's CSS. These variables should not be edited directly. Instead, create an override for these defaults in the _variables.scss file.
+
+*/
+/*doc
+---
+title: Base CSS
+name: 0-base-css
+category: Base CSS
+---
+
+## Base CSS
+
+The goal of base CSS is to lay the foundation for the more complex components to build and extend. The philosophy behind base CSS is that it "just works." The rules that are applied base elements should cover how the primitive HTML elements should work on your site. These rules should be applied to element selectors so they can cascade through the site without the reliance of class names.
+
+Imagine yourself as a user of your code and you want to add a new email signup form to the site. The expectation should be that copy and pasting the new form into your site's code should render that form similar to the other forms on the site. It "just works." Certainly, there may be some differences if you establish a more complex layout for the forms, but overall the new form doesn't seem foriegn or out of place with the rest of the UI.
+
+*/
+/*doc
+---
+title: Defaults
+name: 1-defaults
+category: Base CSS
+---
+
+Defaults
+
+*/
+html {
+  font-size: 100%;
+  overflow-y: scroll; }
+
+body {
+  background: #fff;
+  line-height: 1.6;
+  color: #4f4f4f;
+  font-family: sans-serif;
+  -ms-word-wrap: break-all;
+  word-wrap: break-all;
+  word-wrap: break-word;
+  font-size: 1em; }
+
+/*doc
+---
+title: Typography
+name: 2-typography
+category: Base CSS
+---
+
+Typography
+
+*/
+p,
+ul,
+ol,
+dl,
+address {
+  margin: 0 0 1.5em;
+  padding: 0;
+  font-size: 1em; }
+
+ul,
+ol,
+dd {
+  margin-left: 1.5em; }
+
+li ul,
+li ol {
+  margin-bottom: 0; }
+
+li {
+  margin: 0;
+  padding: 0; }
+
+address {
+  font-style: normal; }
+
+pre {
+  margin: 0 0 1.5em;
+  background: #fafafa;
+  padding: .5em;
+  word-wrap: normal; }
+
+blockquote {
+  display: block;
+  margin: 0 0 20px;
+  border-left: 3px solid #222;
+  padding-left: 10px;
+  overflow: hidden;
+  color: #222;
+  font-size: 1.25em; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+hr {
+  margin: 0 0 1.5em; }
+
+/*doc
+---
+title: Links
+name: 3-links
+category: Base CSS
+---
+
+Links
+
+*/
+a {
+  text-decoration: none;
+  color: #4b78fa; }
+  a:focus {
+    outline: thin dotted; }
+  a:hover, a:focus {
+    text-decoration: underline;
+    color: #eb262e; }
+
+/*doc
+---
+title: Embeded
+name: 4-embeded
+category: Base CSS
+---
+
+Embeded
+
+*/
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic; }
+
+figure {
+  margin: 0; }
+
+iframe {
+  max-width: 100%; }
+
+/*doc
+---
+title: Forms
+name: 6-forms
+category: Base CSS
+---
+
+Forms
+
+*/
+fieldset {
+  margin: 0 0 1.5em; }
+
+label {
+  display: block;
+  cursor: pointer; }
+
+[type=text],
+[type=email],
+[type=url],
+[type=tel],
+[type=password],
+[type=search],
+[type=number],
+textarea,
+select {
+  margin-bottom: 0.75em;
+  border: 1px solid #eee;
+  border-radius: 0;
+  background: #fff;
+  padding: 0.625em 0.3125em;
+  max-width: 100%;
+  font-size: 1em;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+[type=text],
+[type=email],
+[type=url],
+[type=tel],
+[type=password],
+[type=search],
+[type=number],
+textarea {
+  width: 100%;
+  max-width: 480px;
+  -webkit-appearance: none; }
+
+[type=checkbox],
+[type=radio] {
+  margin: 0 0.625em 0.625em 0; }
+  [type=checkbox] + label,
+  [type=radio] + label {
+    display: inline; }
+
+textarea {
+  height: 8em; }
+
+/*doc
+---
+title: Tables
+name: 5-tables
+category: Base CSS
+---
+
+Tables
+
+*/
+table {
+  margin-bottom: 1.5em;
+  background: #fff;
+  width: 100%; }
+
+th,
+td {
+  border: 1px solid #eee;
+  padding: .5em;
+  vertical-align: top;
+  font-size: 0.875em; }
+
+tr:nth-child(even) td {
+  background: #fafafa; }
+
+/*doc
+---
+title: Alignment
+name: 7-alignment
+category: Base CSS
+---
+
+Alignment
+
+*/
+.alignright,
+.alignleft,
+.aligncenter {
+  clear: both;
+  margin: 0 auto 20px; }
+  .alignright > img,
+  .alignright > a > img,
+  .alignleft > img,
+  .alignleft > a > img,
+  .aligncenter > img,
+  .aligncenter > a > img {
+    margin: 0 auto; }
+
+.alignnone {
+  clear: both;
+  margin: 0 0 20px; }
+
+@media (min-width: 48em) {
+  .alignright {
+    float: right;
+    clear: right;
+    margin: 0 0 20px 20px; }
+
+  .alignleft {
+    float: left;
+    clear: left;
+    margin: 0 20px 20px 0; }
+
+  .alignright > img,
+  .alignright > a > img,
+  .alignleft > img,
+  .alignleft > a > img {
+    margin: 0; } }
+/*doc
+---
+title: Utility
+name: 8-text-button
+category: Base CSS
+---
+
+Utility
+
+*/
+@media (max-width: 767px) {
+  .desktop {
+    display: none !important; } }
+@media (min-width: 48em) {
+  .mobile {
+    display: none !important; } }
+.nowrap {
+  white-space: nowrap; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.clear {
+  clear: both; }
+
+.hide {
+  display: none; }
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1280px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media (min-width: 48em) {
+    .wrapper {
+      padding: 0 20px; } }
+
+.ss-page-header {
+  position: relative;
+  z-index: 10;
+  background: #eee;
+  padding: 15px 0;
+  text-align: center; }
+  @media (min-width: 48em) {
+    .ss-page-header {
+      padding: 40px 0 0; } }
+
+.ss-logo {
+  width: 150px;
+  height: 50px; }
+  @media (min-width: 48em) {
+    .ss-logo {
+      width: 300px;
+      height: 100px; } }
+
+h1.ss-logo {
+  margin: 0 auto 10px; }
+  @media (min-width: 48em) {
+    h1.ss-logo {
+      margin-bottom: 20px; } }
+
+a.ss-logo {
+  display: block;
+  background: url("../images/logo-desktop.png?v1.0") no-repeat;
+  background-size: 150px 50px; }
+  @media (min-width: 48em) {
+    a.ss-logo {
+      background-size: 300px 100px; } }
+
+.ss-primary-nav {
+  display: none; }
+  .ss-primary-nav:target, .ss-primary-nav.ss-primary-nav--is-active {
+    display: block; }
+  @media (min-width: 48em) {
+    .ss-primary-nav {
+      display: block !important; } }
+
+.ss-primary-nav__show-nav {
+  margin: 0; }
+  @media (min-width: 48em) {
+    .ss-primary-nav__show-nav {
+      display: none; } }
+
+.ss-primary-nav__list {
+  text-transform: lowercase;
+  font-family: sans-serif;
+  font-size: 0.875em; }
+  .ss-primary-nav__list,
+  .ss-primary-nav__list .ss-primary-nav__child-list {
+    margin: 0;
+    list-style: none; }
+  .ss-primary-nav__list .ss-primary-nav__link {
+    display: block; }
+  .ss-primary-nav__list .ss-primary-nav__child-list {
+    display: none; }
+  .ss-primary-nav__list > .ss-primary-nav__item > .ss-primary-nav__link {
+    border-top: 1px solid #eee;
+    padding: 0.71429em 1.07143em;
+    text-decoration: none; }
+
+@media (min-width: 48em) {
+  .ss-primary-nav__list > .ss-primary-nav__item {
+    display: inline-block; }
+    .ss-primary-nav__list > .ss-primary-nav__item > .ss-primary-nav__link {
+      border: 0; }
+  .ss-primary-nav__list .ss-primary-nav__item {
+    position: relative; }
+  .ss-primary-nav__list .ss-primary-nav__child-list {
+    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    text-align: left; }
+    .ss-primary-nav__list .ss-primary-nav__child-list .ss-primary-nav__link {
+      padding: .75em;
+      width: 150px;
+      text-decoration: none; }
+  .ss-primary-nav__list .ss-primary-nav__item:hover .ss-primary-nav__child-list,
+  .ss-primary-nav__list .ss-primary-nav__item:focus .ss-primary-nav__child-list {
+    display: block;
+    background: #f2f2f2; } }
+@media (min-width: 64em) {
+  .ss-primary-nav__list > .ss-primary-nav__item > .ss-primary-nav__link {
+    padding: 0.71429em 2.14286em; } }
+[class*="page-content"] {
+  position: relative;
+  clear: both;
+  padding-top: 40px; }
+
+@media (min-width: 48em) {
+  .page-content--has-sidebar .page-main {
+    float: left;
+    padding-right: 10px;
+    width: 67%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; } }
+@media (min-width: 64em) {
+  .page-content--has-sidebar .page-main {
+    width: 75%; } }
+@media (min-width: 80em) {
+  .page-content--has-sidebar .page-main {
+    width: 80%; } }
+
+@media (min-width: 48em) {
+  .page-aside {
+    float: right;
+    padding-left: 10px;
+    width: 33%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; } }
+@media (min-width: 64em) {
+  .page-aside {
+    width: 25%; } }
+@media (min-width: 80em) {
+  .page-aside {
+    width: 20%; } }
+
+.ss-page-footer {
+  position: relative;
+  clear: both;
+  background: #eee;
+  padding: 30px 0;
+  text-align: center; }
+
+.ss-footer-nav__list {
+  margin-left: 0;
+  list-style: none; }
+
+.ss-footer-nav__child-list {
+  display: none; }
+
+.ss-footer-nav__item {
+  display: inline-block; }
+
+.ss-footer-nav__link {
+  padding: 0 10px; }
+
+.copyright {
+  font-size: 0.75em; }
+
+.copyright__link {
+  text-decoration: none;
+  color: #436ce0; }
+
+/*doc
+---
+title: Grid
+name: 3-grid
+category: Components CSS
+---
+
+<div class="ss-grid">
+  <div class="ss-grid__col--1of2">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan pretium tortor eu laoreet. Phasellus nec rhoncus felis. Proin porttitor velit at mauris auctor, et egestas nibh sagittis. Aenean suscipit volutpat felis, sit amet congue urna. Cras ultrices dictum sapien in eleifend. Suspendisse consectetur suscipit suscipit. Integer euismod magna pulvinar turpis sollicitudin, et elementum ligula tincidunt.</p>
+  </div>
+  <div class="ss-grid__col--1of2">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan pretium tortor eu laoreet. Phasellus nec rhoncus felis. Proin porttitor velit at mauris auctor, et egestas nibh sagittis. Aenean suscipit volutpat felis, sit amet congue urna. Cras ultrices dictum sapien in eleifend. Suspendisse consectetur suscipit suscipit. Integer euismod magna pulvinar turpis sollicitudin, et elementum ligula tincidunt.</p>
+  </div>
+</div>
+
+<div class="ss-grid--alt">
+  <div class="ss-grid__col--1of2">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan pretium tortor eu laoreet. Phasellus nec rhoncus felis. Proin porttitor velit at mauris auctor, et egestas nibh sagittis. Aenean suscipit volutpat felis, sit amet congue urna. Cras ultrices dictum sapien in eleifend. Suspendisse consectetur suscipit suscipit. Integer euismod magna pulvinar turpis sollicitudin, et elementum ligula tincidunt.</p>
+  </div>
+  <div class="ss-grid__col--1of2">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan pretium tortor eu laoreet. Phasellus nec rhoncus felis. Proin porttitor velit at mauris auctor, et egestas nibh sagittis. Aenean suscipit volutpat felis, sit amet congue urna. Cras ultrices dictum sapien in eleifend. Suspendisse consectetur suscipit suscipit. Integer euismod magna pulvinar turpis sollicitudin, et elementum ligula tincidunt.</p>
+  </div>
+</div>
+
+<div class="ss-grid">
+  <div class="ss-grid__col--1of3">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan pretium tortor eu laoreet. Phasellus nec rhoncus felis. Proin porttitor velit at mauris auctor, et egestas nibh sagittis. Aenean suscipit volutpat felis, sit amet congue urna. Cras ultrices dictum sapien in eleifend. Suspendisse consectetur suscipit suscipit. Integer euismod magna pulvinar turpis sollicitudin, et elementum ligula tincidunt.</p>
+  </div>
+  <div class="ss-grid__col--1of3">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan pretium tortor eu laoreet. Phasellus nec rhoncus felis. Proin porttitor velit at mauris auctor, et egestas nibh sagittis. Aenean suscipit volutpat felis, sit amet congue urna. Cras ultrices dictum sapien in eleifend. Suspendisse consectetur suscipit suscipit. Integer euismod magna pulvinar turpis sollicitudin, et elementum ligula tincidunt.</p>
+  </div>
+  <div class="ss-grid__col--1of3">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan pretium tortor eu laoreet. Phasellus nec rhoncus felis. Proin porttitor velit at mauris auctor, et egestas nibh sagittis. Aenean suscipit volutpat felis, sit amet congue urna. Cras ultrices dictum sapien in eleifend. Suspendisse consectetur suscipit suscipit. Integer euismod magna pulvinar turpis sollicitudin, et elementum ligula tincidunt.</p>
+  </div>
+</div>
+
+<div class="ss-grid">
+  <div class="ss-grid__col--1of4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan pretium tortor eu laoreet. Phasellus nec rhoncus felis. Proin porttitor velit at mauris auctor, et egestas nibh sagittis. Aenean suscipit volutpat felis, sit amet congue urna. Cras ultrices dictum sapien in eleifend. Suspendisse consectetur suscipit suscipit. Integer euismod magna pulvinar turpis sollicitudin, et elementum ligula tincidunt.</p>
+  </div>
+  <div class="ss-grid__col--1of4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan pretium tortor eu laoreet. Phasellus nec rhoncus felis. Proin porttitor velit at mauris auctor, et egestas nibh sagittis. Aenean suscipit volutpat felis, sit amet congue urna. Cras ultrices dictum sapien in eleifend. Suspendisse consectetur suscipit suscipit. Integer euismod magna pulvinar turpis sollicitudin, et elementum ligula tincidunt.</p>
+  </div>
+  <div class="ss-grid__col--1of4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan pretium tortor eu laoreet. Phasellus nec rhoncus felis. Proin porttitor velit at mauris auctor, et egestas nibh sagittis. Aenean suscipit volutpat felis, sit amet congue urna. Cras ultrices dictum sapien in eleifend. Suspendisse consectetur suscipit suscipit. Integer euismod magna pulvinar turpis sollicitudin, et elementum ligula tincidunt.</p>
+  </div>
+  <div class="ss-grid__col--1of4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan pretium tortor eu laoreet. Phasellus nec rhoncus felis. Proin porttitor velit at mauris auctor, et egestas nibh sagittis. Aenean suscipit volutpat felis, sit amet congue urna. Cras ultrices dictum sapien in eleifend. Suspendisse consectetur suscipit suscipit. Integer euismod magna pulvinar turpis sollicitudin, et elementum ligula tincidunt.</p>
+  </div>
+</div>
+
+*/
+[class*="ss-grid"] {
+  clear: both; }
+  [class*="ss-grid"] > [class*="ss-grid__col"] {
+    margin-bottom: 20px; }
+
+@media (min-width: 48em) {
+  [class*="ss-grid"] {
+    margin-left: -10px;
+    width: calc(100% + 20);
+    font-size: 0; }
+    [class*="ss-grid"] > [class*="ss-grid__col"] {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      display: inline-block;
+      padding: 0 10px;
+      vertical-align: top;
+      font-size: 16px; }
+
+  .ss-grid--alt {
+    overflow: hidden; }
+    .ss-grid--alt > .ss-grid__col--1of2:nth-child(odd) {
+      float: right; }
+    .ss-grid--alt > .ss-grid__col--1of2:nth-child(even) {
+      float: left; }
+
+  .ss-grid__col--1of3 {
+    width: 33.3%; }
+
+  .ss-grid__col--1of4,
+  .ss-grid__col--1of2 {
+    width: 50%; }
+
+  .ss-grid__col--2of3 {
+    width: 66.6%; }
+
+  .ss-grid__col--3of4 {
+    width: 75%; }
+
+  .ss-grid__col--2of4 {
+    width: 100%; } }
+@media (min-width: 64em) {
+  .ss-grid__col--1of4 {
+    width: 25%; }
+
+  .ss-grid__col--2of4 {
+    width: 50%; } }
+/*doc
+---
+title: Buttons
+name: 1-button
+category: Components CSS
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example_table
+<button class="ss-button"><span>Click</span></button>
+
+<button class="ss-button--primary"><span>Click</span></button>
+
+<button class="ss-button--secondary"><span>Click</span></button>
+
+<button class="ss-button--large"><span>Click</span></button>
+
+<button class="ss-button--small"><span>Click</span></button>
+```
+
+*/
+[class*="ss-button"], [type=submit],
+[type=button] {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1.5em;
+  border: 1px solid transparent;
+  background: #666;
+  cursor: pointer;
+  padding: 0.5em 1.375em;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  line-height: 1;
+  color: #fff;
+  font-size: 1em; }
+  [class*="ss-button"]:hover, [type=submit]:hover,
+  [type=button]:hover,
+  [type=submit]:focus,
+  [type=button]:focus, [class*="ss-button"]:focus, [type=submit]:focus,
+  [type=button]:focus {
+    background: #78a0ff;
+    text-decoration: none;
+    color: #fff; }
+  [class*="ss-button"]:active, [type=submit]:active,
+  [type=button]:active {
+    background: #436ce0;
+    border-color: #4b78fa; }
+  [class*="ss-button"] + [class*="ss-button"], [type=submit] + [class*="ss-button"],
+  [type=button] + [class*="ss-button"], [class*="ss-button"] + [type=submit], [type=submit] + [type=submit],
+  [type=button] + [type=submit],
+  [class*="ss-button"] + [type=button],
+  [type=submit] + [type=button],
+  [type=button] + [type=button],
+  [class*="ss-button"] + [class*="ss-text-button"],
+  [type=submit] + [class*="ss-text-button"],
+  [type=button] + [class*="ss-text-button"] {
+    margin-left: 10px; }
+
+.ss-button--primary {
+  background: #4b78fa;
+  color: #fff; }
+
+.ss-button--secondary {
+  background: #78a0ff;
+  color: #fff; }
+  .ss-button--secondary:hover, .ss-button--secondary:focus {
+    background: #666; }
+  .ss-button--secondary:active {
+    background: #436ce0; }
+
+.ss-button--alt {
+  background: #436ce0;
+  color: #fff; }
+
+.ss-button--small {
+  font-size: 0.6875em; }
+
+.ss-button--large {
+  font-size: 1.125em; }
+
+/*doc
+---
+title: Text Buttons
+name: 2-text-button
+category: Components CSS
+---
+
+Text Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example_table
+<button class="ss-text-button"><span>Click</span></button>
+
+<button class="ss-text-button--large"><span>Click</span></button>
+
+<button class="ss-text-button--small"><span>Click</span></button>
+```
+
+*/
+[class*="ss-text-button"] {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1.5em;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 0.5em 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  color: #4b78fa;
+  font-size: 1em; }
+  [class*="ss-text-button"]:hover, [class*="ss-text-button"]:focus, [class*="ss-text-button"]:active {
+    background: none;
+    text-decoration: none; }
+  [class*="ss-text-button"] + [class*="ss-button"], [class*="ss-text-button"] + [type=submit],
+  [class*="ss-text-button"] + [type=button],
+  [class*="ss-text-button"] + [class*="ss-text-button"] {
+    margin-left: 10px; }
+
+.ss-text-button--small {
+  font-size: 0.6875em; }
+
+.ss-text-button--large {
+  font-size: 1.125em; }
+
+/*doc
+---
+title: Headings
+name: 3-headings
+category: Primitive Components
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example_table
+<h6 class="heading1">Heading Class one</h6>
+
+<h6 class="heading2">Heading Class two</h6>
+
+<h6 class="heading3">Heading Class three</h6>
+
+<h6 class="heading4">Heading Class four</h6>
+
+<h6 class="heading5">Heading Class five</h6>
+
+<h6 class="heading6">Heading Class six</h6>
+```
+
+<h2>Headings</h2>
+
+<h4>Heading Element</h4>
+<h1>Heading Element one</h1>
+<h2>Heading Element two</h2>
+<h3>Heading Element three</h3>
+<h4>Heading Element four</h4>
+<h5>Heading Element five</h5>
+<h6>Heading Element six</h6>
+
+<hr />
+
+<h4>Heading Class</h4>
+<h6 class="heading1">Heading Class one</h6>
+<h6 class="heading2">Heading Class two</h6>
+<h6 class="heading3">Heading Class three</h6>
+<h6 class="heading4">Heading Class four</h6>
+<h6 class="heading5">Heading Class five</h6>
+<h6 class="heading6">Heading Class six</h6>
+
+<hr />
+
+<h4>Long Heading</h4>
+<h6 class="heading1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h6>
+<h6 class="heading2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h6>
+<h6 class="heading3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h6>
+<h6 class="heading4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h6>
+<h6 class="heading5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h6>
+<h6 class="heading6">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h6>
+
+<hr />
+
+<h2>Heading Group</h2>
+
+<div class="hgroup">
+    <h1>Header one</h1>
+    <h2>Header two</h2>
+</div>
+
+<div class="hgroup">
+    <h3>Header three</h3>
+    <h4>Header four</h4>
+</div>
+
+<div class="hgroup">
+    <h5>Header five</h5>
+    <h6>Header six</h6>
+</div>
+
+*/
+h1,
+.heading1 {
+  margin: 0 0 0.5em;
+  text-transform: none;
+  line-height: 1.2em;
+  color: #222;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 2.5em; }
+
+h2,
+.heading2 {
+  margin: 0 0 0.58824em;
+  text-transform: none;
+  line-height: 1.17647em;
+  color: #222;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 2.125em; }
+
+h3,
+.heading3 {
+  margin: 0 0 0.5em;
+  text-transform: none;
+  line-height: 1.2em;
+  color: #222;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 1.25em; }
+
+h4,
+.heading4,
+legend {
+  margin: 0 0 0.47619em;
+  text-transform: none;
+  line-height: 1.2381em;
+  color: #222;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 1.3125em; }
+
+h5,
+.heading5,
+label {
+  margin: 0 0 0.58824em;
+  text-transform: none;
+  line-height: 1.41176em;
+  color: #222;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 1.0625em; }
+
+h6,
+.heading6 {
+  margin: 0 0 0.83333em;
+  text-transform: uppercase;
+  line-height: 1.33333em;
+  color: #222;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 0.75em; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0; }
+
+.hgroup {
+  margin-bottom: 20px; }
+  .hgroup h1,
+  .hgroup h2,
+  .hgroup h3,
+  .hgroup h4,
+  .hgroup h5,
+  .hgroup h6,
+  .hgroup [class*='heading'] {
+    margin: 0; }
+
+/*# sourceMappingURL=main.css.map */

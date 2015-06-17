@@ -1,0 +1,24 @@
+/*doc
+---
+title: Defaults
+name: 1-defaults
+category: Base CSS
+---
+
+Defaults
+
+*/
+
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  background: #fff;
+  line-height: 1.6;
+  color: $text-color;
+  font-family: $primary-font-stack;
+  @include word-break();
+  @include font-size($base-font-size, 16);
+}

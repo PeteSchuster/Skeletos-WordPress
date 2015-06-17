@@ -1,0 +1,5 @@
+@mixin word-break() {
+  -ms-word-wrap: break-all;
+  word-wrap: break-all;
+  word-wrap: break-word;
+}

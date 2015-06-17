@@ -1,0 +1,18 @@
+.ss-footer-nav {}
+
+.ss-footer-nav__list {
+  margin-left: 0;
+  list-style: none;
+}
+
+.ss-footer-nav__child-list {
+  display: none;
+}
+
+.ss-footer-nav__item {
+  display: inline-block;
+}
+
+.ss-footer-nav__link {
+  padding: 0 10px;
+}

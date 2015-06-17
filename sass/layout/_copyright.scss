@@ -1,0 +1,8 @@
+.copyright {
+  @include font-size(12);
+}
+
+.copyright__link {
+  text-decoration: none;
+  color: $blue-dark;
+}
