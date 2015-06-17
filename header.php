@@ -11,10 +11,9 @@
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo('charset'); ?>">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 <title><?php wp_title('|', true, 'right'); ?></title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
@@ -31,10 +30,10 @@
         <h2 class="heading5"><?php bloginfo('description'); ?></h2>
     </div><!--/end .hgroup-->
 
-    <a id="show-nav" class="ss-text-button show-nav" href="#primary-nav"><span>Menu</span></a>
+    <a class="ss-button ss-primary-nav__show-nav" href="#ss-primary-nav"><span>Show Menu</span></a>
 
-    <nav id="primary-nav" class="primary-nav" role="navigation">
-        <?php wp_nav_menu(array('theme_location' => 'main', 'menu_class' => 'ss-list-primary-nav clearfix', 'container' => '')); ?>
+    <nav id="ss-primary-nav" class="ss-primary-nav">
+        <?php wp_nav_menu(array('theme_location' => 'main', 'menu_class' => 'ss-primary-nav__list clearfix', 'container' => '')); ?>
     </nav><!--/end primary-nav-->
 
 </div></header><!--/end .ss-page-header-->

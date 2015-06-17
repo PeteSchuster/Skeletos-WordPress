@@ -1,10 +1,10 @@
-[class*="page-content"] {
+[class*="ss-page-content"] {
   position: relative;
   clear: both;
   padding-top: 40px;
 }
 
-.page-content--has-sidebar .page-main {
+.ss-page-content--has-aside .ss-page-main {
   @include respond-to(768) {
     float: left;
     padding-right: 10px;

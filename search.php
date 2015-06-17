@@ -4,7 +4,7 @@
 */
 get_header(); ?>
 
-<div class="page-content has-sidebar"><div class="wrapper clearfix">
+<div class="ss-page-content--has-aside"><div class="wrapper clearfix">
 
     <?php
 
@@ -12,7 +12,7 @@ get_header(); ?>
 
     ?>
 
-    <main class="page-main" role="main">
+    <main class="ss-page-main" role="main">
 
     <?php
 
@@ -34,7 +34,7 @@ get_header(); ?>
 
     } //end if ?>
 
-    </main><!--/end page-main-->
+    </main><!--/end ss-page-main-->
 <?php get_sidebar(); ?>
-</div></div><!--/end page-content-->
+</div></div><!--/end ss-page-content-->
 <?php get_footer(); ?>

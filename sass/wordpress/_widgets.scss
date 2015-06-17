@@ -1,67 +1,61 @@
-.ss-list-widgets {
+.ss-widgets-list {
   margin: 0;
-
-  > li {
-    margin-top: 1em;
-    border-top: 1px solid $grey;
-    padding-top: 1em;
-
-    &:first-child {
-      margin: 0;
-      border: 0;
-      padding: 0;
-    }
-
-    @include respond-to(480) {
-      float: left;
-      width: 50%;
-      @include box-sizing;
-
-      &.widget-2 {
-        margin-top: 0;
-        border-top: 0;
-        padding-top: 0;
-      }
-
-      &.widget-odd {
-        clear: left;
-        padding-right: 10px;
-      }
-
-      &.widget-even {
-        padding-left: 10px;
-      }
-    }
-  }
-
-  ul {
-    margin-bottom: 1.5em;
-
-    ul {
-      margin: 0;
-    }
-  }
 }
 
-@include respond-to(768) {
-  .ss-list-widgets {
-    > li {
-      float: none;
-      width: 100%;
+.ss-widgets-list__item {
+  margin-top: 1em;
+  border-top: 1px solid $grey;
+  padding-top: 1em;
 
-      &.widget-2 {
-        margin-top: 1em;
-        border-top: 1px solid $grey;
-        padding-top: 1em;
-      }
+  @include respond-to(480) {
+    float: left;
+    width: 50%;
+    @include box-sizing;
+  }
 
-      &.widget-odd {
-        padding-right: 0;
-      }
+  @include respond-to(768) {
+    float: none;
+    width: 100%;
+  }
 
-      &.widget-even {
-        padding-left: 0;
-      }
+  &:first-child {
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+
+  &.widget-2 {
+    @include respond-to(480) {
+      margin-top: 0;
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    @include respond-to(768) {
+      margin-top: 1em;
+      border-top: 1px solid $grey;
+      padding-top: 1em;
+    }
+  }
+
+  &.widget-odd {
+    @include respond-to(480) {
+      clear: left;
+      padding-right: 10px;
+    }
+
+    @include respond-to(768) {
+      padding-right: 0;
+    }
+  }
+
+  &.widget-even {
+    @include respond-to(480) {
+      padding-left: 10px;
+    }
+
+    @include respond-to(768) {
+      padding-left: 0;
     }
   }
 }
