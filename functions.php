@@ -113,7 +113,7 @@ function ss_widgets_init() {
         'name' => 'Sidebar Widgets',
         'id' => 'ss_widgets',
         'description' => 'Widgets in this area will be shown on the right-hand side.',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'before_widget' => '<li id="%1$s" class="ss-widgets-list__item widget %2$s">',
         'after_widget'  => '</li>',
         'before_title' => '<h6 class="heading4">',
         'after_title' => '</h6>'
@@ -148,12 +148,12 @@ function ss_custom_widget_counter($params) {
     global $ss_widget_counter;
 
     $ss_widget_counter++;
-    $class = 'class="widget-' . $ss_widget_counter . ' ';
+    $class = 'class="ss-widgets-list__item--' . $ss_widget_counter . ' ';
 
     if ($ss_widget_counter % 2) {
-        $class .= 'widget-odd ';
+        $class .= 'ss-widgets-list__item--odd ';
     } else {
-        $class .= 'widget-even ';
+        $class .= 'ss-widgets-list__item--even ';
     } //end if
 
     $params[0]['before_widget'] = str_replace('class="', $class, $params[0]['before_widget']);

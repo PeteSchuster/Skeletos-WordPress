@@ -1,5 +1,6 @@
 .ss-widgets-list {
-  margin: 0;
+  margin-left: 0;
+  list-style: none;
 }
 
 .ss-widgets-list__item {
@@ -24,7 +25,7 @@
     padding: 0;
   }
 
-  &.widget-2 {
+  &.ss-widgets-list__item--2 {
     @include respond-to(480) {
       margin-top: 0;
       border-top: 0;
@@ -38,7 +39,7 @@
     }
   }
 
-  &.widget-odd {
+  &.ss-widgets-list__item--odd {
     @include respond-to(480) {
       clear: left;
       padding-right: 10px;
@@ -49,7 +50,7 @@
     }
   }
 
-  &.widget-even {
+  &.ss-widgets-list__item--even {
     @include respond-to(480) {
       padding-left: 10px;
     }

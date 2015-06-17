@@ -1492,7 +1492,8 @@ article > header h1 {
   margin-bottom: 0; }
 
 .ss-widgets-list {
-  margin: 0; }
+  margin-left: 0;
+  list-style: none; }
 
 .ss-widgets-list__item {
   margin-top: 1em;
@@ -1513,27 +1514,27 @@ article > header h1 {
     border: 0;
     padding: 0; }
   @media (min-width: 30em) {
-    .ss-widgets-list__item.widget-2 {
+    .ss-widgets-list__item.ss-widgets-list__item--2 {
       margin-top: 0;
       border-top: 0;
       padding-top: 0; } }
   @media (min-width: 48em) {
-    .ss-widgets-list__item.widget-2 {
+    .ss-widgets-list__item.ss-widgets-list__item--2 {
       margin-top: 1em;
       border-top: 1px solid #999;
       padding-top: 1em; } }
   @media (min-width: 30em) {
-    .ss-widgets-list__item.widget-odd {
+    .ss-widgets-list__item.ss-widgets-list__item--odd {
       clear: left;
       padding-right: 10px; } }
   @media (min-width: 48em) {
-    .ss-widgets-list__item.widget-odd {
+    .ss-widgets-list__item.ss-widgets-list__item--odd {
       padding-right: 0; } }
   @media (min-width: 30em) {
-    .ss-widgets-list__item.widget-even {
+    .ss-widgets-list__item.ss-widgets-list__item--even {
       padding-left: 10px; } }
   @media (min-width: 48em) {
-    .ss-widgets-list__item.widget-even {
+    .ss-widgets-list__item.ss-widgets-list__item--even {
       padding-left: 0; } }
 
 .validation_message {
