@@ -33,7 +33,15 @@
     <a class="ss-button ss-primary-nav__show-nav" href="#ss-primary-nav"><span>Show Menu</span></a>
 
     <nav id="ss-primary-nav" class="ss-primary-nav">
-        <?php wp_nav_menu(array('theme_location' => 'main', 'menu_class' => 'ss-primary-nav__list clearfix', 'container' => '')); ?>
+        <?php
+        wp_nav_menu(
+            array(
+                'theme_location' => 'main',
+                'menu_class' => 'ss-primary-nav__list clearfix',
+                'container' => ''
+            )
+        );
+        ?>
     </nav><!--/end primary-nav-->
 
 </div></header><!--/end .ss-page-header-->

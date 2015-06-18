@@ -8,8 +8,16 @@
 
     <a id="back-to-top" class="ss-text-button" href="#"><span>Back to Top</span></a>
 
-    <nav>
-        <?php wp_nav_menu(array('theme_location' => 'footer', 'menu_class' => 'ss-list-footer-nav clearfix', 'container' => '')); ?>
+    <nav class="ss-footer-nav">
+        <?php
+        wp_nav_menu(
+            array(
+                'theme_location' => 'footer',
+                'menu_class' => 'ss-footer-nav__list clearfix',
+                'container' => ''
+            )
+        );
+        ?>
     </nav>
 
     <p class="copyright">&copy; <?php bloginfo('name'); ?></p>
