@@ -127,18 +127,26 @@ function ss_scripts_styles(){
 
     wp_enqueue_style('google_fonts', '//fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Ubuntu:400,700,400italic,700italic');
 
-    wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.8.3.js');
-    wp_enqueue_script('skeletos-plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '1.0', true);
-    wp_enqueue_script('skeletos-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0', true);
-    wp_enqueue_style('skeletos-main', get_stylesheet_directory_uri() . '/css/main.css', '', '1.0');
+    if (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) {
+        wp_enqueue_script('skeletos-js-modernizr-dev', get_template_directory_uri() . '/js/vendor/modernizr.js');
+        wp_enqueue_script('skeletos-js-plugins-dev', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '1.0', true);
+        wp_enqueue_script('skeletos-js-main-dev', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0', true);
+        wp_enqueue_style('skeletos-css-main-dev', get_stylesheet_directory_uri() . '/css/main.css', '', '1.0');
+    } else {
+        wp_enqueue_script('skeletos-js-top', get_template_directory_uri() . '/js/top.min.js');
+        wp_enqueue_script('skeletos-js-plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '1.0', true);
+        wp_enqueue_script('skeletos-js-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0', true);
+        wp_enqueue_style('skeletos-css-main', get_stylesheet_directory_uri() . '/css/main.css', '', '1.0');
+    }
+
 
     if (is_singular('post')) {
         wp_enqueue_script('comment-reply');
     } //end if
 
-    wp_enqueue_style('ps_lte_ie8', get_stylesheet_directory_uri() . '/css/ie.css');
+    wp_enqueue_style('skeletos-css-ie', get_stylesheet_directory_uri() . '/css/ie.min.css');
 
-    $GLOBALS[ 'wp_styles' ]->add_data('ps_lte_ie8', 'conditional', 'lte IE 8');
+    $GLOBALS['wp_styles']->add_data('skeletos-css-ie', 'conditional', 'lte IE 8');
 
 }
 add_action('wp_enqueue_scripts', 'ss_scripts_styles');
