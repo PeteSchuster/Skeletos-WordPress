@@ -22,31 +22,22 @@ use either a `<button>` or an `<a>` element:
 
 */
 
-[class*="ss-button"] {
-  display: inline-block;
-  position: relative;
-  margin-bottom: 1.5em;
-  border: 1px solid transparent;
-  background: $button-background-color;
-  cursor: pointer;
-  padding: calc-target(8) calc-target(22);
-  text-align: center;
-  text-transform: none;
-  text-decoration: none;
-  line-height: 1;
-  color: $button-text-color;
-  font-size: 1em;
+.ss-button {
+  @include button;
 
   &:hover,
   &:focus {
-    background: $button-secondary-background-color;
-    text-decoration: none;
-    color: $button-secondary-text-color;
+    @include button-hover;
   }
 
   &:active {
-    background: $button-alt-background-color;
-    border-color: $button-primary-background-color;
+    @include button-hover;
+  }
+
+  &:disabled {
+    cursor: default;
+    outline: none;
+    opacity: 0.5;
   }
 
   + [class*="ss-button"],

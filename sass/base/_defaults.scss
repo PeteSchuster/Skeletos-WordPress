@@ -9,16 +9,23 @@ Defaults
 
 */
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 html {
   font-size: 100%;
   overflow-y: scroll;
+  box-sizing: border-box;
 }
 
 body {
+  @include word-break();
+  @include font-size($base-font-size, 16);
   background: #fff;
   line-height: 1.6;
   color: $text-color;
   font-family: $primary-font-stack;
-  @include word-break();
-  @include font-size($base-font-size, 16);
 }

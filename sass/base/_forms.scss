@@ -34,12 +34,13 @@ textarea,
 select {
   margin-bottom: calc-target(12);
   border: 1px solid $grey-light;
+  width: 100%;
+  max-width: 480px;
   border-radius: 0;
   background: $grey-white;
   padding: calc-target(10) calc-target(5);
   max-width: 100%;
   font-size: 1em;
-  @include box-sizing;
 }
 
 [type=text],
@@ -50,9 +51,16 @@ select {
 [type=search],
 [type=number],
 textarea {
-  width: 100%;
-  max-width: 480px;
   -webkit-appearance: none;
+}
+
+input[type=search] {
+  box-sizing: inherit;
+  -webkit-appearance: none;
+}
+
+select {
+  height: 3em;
 }
 
 [type=checkbox],
@@ -66,21 +74,21 @@ textarea {
 
 [type=submit],
 [type=button] {
-  @extend [class*="ss-button"];
+  @include button;
 }
 
 [type=submit]:hover,
 [type=submit]:focus,
 [type=button]:hover,
 [type=button]:focus {
-  @extend [class*="ss-button"]:hover;
+  @include button-hover;
 }
 
 [type=submit]:active,
 [type=submit]:active,
 [type=button]:active,
 [type=button]:active {
-  @extend [class*="ss-button"]:active;
+  @include button-active;
 }
 
 textarea {
