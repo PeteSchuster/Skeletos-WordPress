@@ -128,14 +128,12 @@ function ss_scripts_styles(){
     wp_enqueue_style('google_fonts', '//fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Ubuntu:400,700,400italic,700italic');
 
     if (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) {
-        wp_enqueue_script('skeletos-js-modernizr-dev', get_template_directory_uri() . '/js/vendor/modernizr.js');
-        wp_enqueue_script('skeletos-js-plugins-dev', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '1.0', true);
+        wp_enqueue_script('skeletos-js-top-dev', get_template_directory_uri() . '/js/top.js');
         wp_enqueue_script('skeletos-js-main-dev', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0', true);
         wp_enqueue_style('skeletos-css-main-dev', get_stylesheet_directory_uri() . '/css/main.css', '', '1.0');
     } else {
         wp_enqueue_script('skeletos-js-top', get_template_directory_uri() . '/js/top.min.js');
-        wp_enqueue_script('skeletos-js-plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '1.0', true);
-        wp_enqueue_script('skeletos-js-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0', true);
+        wp_enqueue_script('skeletos-js-main', get_template_directory_uri() . '/js/main.min.js', array('jquery'), '1.0', true);
         wp_enqueue_style('skeletos-css-main', get_stylesheet_directory_uri() . '/css/main.css', '', '1.0');
     }
 

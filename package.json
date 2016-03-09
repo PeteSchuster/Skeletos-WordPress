@@ -28,7 +28,6 @@
   },
   "homepage": "https://github.com/PeteSchuster/Skeletos-WordPress#readme",
   "main": "gulpfile.js",
-  "devDependencies": {},
   "scripts": {
     "test": "gulp test"
   }
