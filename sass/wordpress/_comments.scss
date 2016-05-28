@@ -1,4 +1,7 @@
 .ss-list-comments {
+  list-style: none;
+  margin-left: 0;
+  
   li.comment {
     border: 1px solid $grey-light;
     background: $grey-lightest;
