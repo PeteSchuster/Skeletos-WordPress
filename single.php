@@ -1,24 +1,24 @@
 <?php
 /*
-    @package Skeletos
+  @package Skeletos
 */
 get_header(); ?>
 
 <div class="ss-page-content--has-aside"><div class="wrapper clearfix">
 
-    <main class="ss-page-main" role="main">
+  <main class="ss-page-main" role="main">
 
-    <?php
+  <?php
 
-    while (have_posts()) {
+  while (have_posts()) {
 
-        the_post();
+    the_post();
 
-        get_template_part('partials/single', get_post_format());
+    get_template_part('partials/single', get_post_format());
 
-    } //end while ?>
+  } //end while ?>
 
-    </main><!--/end ss-page-main-->
+  </main><!--/end ss-page-main-->
 <?php get_sidebar(); ?>
 </div></div><!--/end ss-page-content-->
 <?php get_footer(); ?>

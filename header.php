@@ -1,6 +1,6 @@
 <?php
 /*
-    @package Skeletos
+  @package Skeletos
 */
 ?>
 
@@ -25,23 +25,23 @@
 
 <header class="ss-page-header" role="banner"><div class="wrapper clearfix">
 
-    <div class="hgroup">
-        <h1 class="heading3"><a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-        <h2 class="heading5"><?php bloginfo('description'); ?></h2>
-    </div><!--/end .hgroup-->
+  <div class="hgroup">
+    <h1 class="heading3"><a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+    <h2 class="heading5"><?php bloginfo('description'); ?></h2>
+  </div><!--/end .hgroup-->
 
-    <a class="ss-button ss-primary-nav__show-nav" href="#ss-primary-nav"><span>Show Menu</span></a>
+  <a class="ss-button ss-primary-nav__show-nav" href="#ss-primary-nav"><span>Show Menu</span></a>
 
-    <nav id="ss-primary-nav" class="ss-primary-nav">
-        <?php
-        wp_nav_menu(
-            array(
-                'theme_location' => 'main',
-                'menu_class' => 'ss-primary-nav__list clearfix',
-                'container' => ''
-            )
-        );
-        ?>
-    </nav><!--/end primary-nav-->
+  <nav id="ss-primary-nav" class="ss-primary-nav">
+    <?php
+    wp_nav_menu(
+      array(
+        'theme_location' => 'main',
+        'menu_class' => 'ss-primary-nav__list clearfix',
+        'container' => ''
+      )
+    );
+    ?>
+  </nav><!--/end primary-nav-->
 
 </div></header><!--/end .ss-page-header-->

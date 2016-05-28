@@ -1,6 +1,6 @@
 <?php
 /*
-    @package Skeletos
+  @package Skeletos
 */
 ?>
 
