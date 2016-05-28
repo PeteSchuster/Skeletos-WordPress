@@ -1,9 +1,3 @@
 .wrapper {
-  margin: 0 auto;
-  padding: 0 10px;
-  max-width: 1280px;
-
-  @include respond-to(768) {
-    padding: 0 20px;
-  }
+  @include wrapper;
 }

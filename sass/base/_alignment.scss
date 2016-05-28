@@ -26,6 +26,16 @@ Alignment
   margin: 0 0 20px;
 }
 
+.alignright,
+.alignleft,
+.aligncenter,
+.alignnone {
+  &,
+  > img {
+    display: block;
+  }
+}
+
 @include respond-to(768) {
   .alignright {
     float: right;

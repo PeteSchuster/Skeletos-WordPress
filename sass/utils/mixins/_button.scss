@@ -24,3 +24,21 @@
   background: $button-alt-background-color;
   border-color: $button-primary-background-color;
 }
+
+@mixin button-text {
+  border: 0;
+  background: none;
+  padding: 0;
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    background: none;
+    color: $orange;
+  }
+
+  &:active {
+    background: none;
+    color: $orange;
+  }
+}

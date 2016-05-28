@@ -71,9 +71,13 @@ use either a `<button>` or an `<a>` element:
 }
 
 .ss-button--small {
-  @include font-size(11);
+  @include font-size(14);
 }
 
 .ss-button--large {
-  @include font-size(18);
+  @include font-size(24);
+}
+
+.ss-button--text {
+  @include button-text;
 }
