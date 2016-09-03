@@ -4,6 +4,7 @@
   "description": "Skeletos WordPress Boilerplate Theme",
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-concat": "^2.6.0",
     "gulp-jscs": "^3.0.2",
     "gulp-jshint": "^2.0.0",
