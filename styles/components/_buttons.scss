@@ -1,27 +1,3 @@
-/*doc
----
-title: Buttons
-name: 1-button
-category: Components CSS
----
-
-Button styles can be applied to any element. Typically you'll want to
-use either a `<button>` or an `<a>` element:
-
-```html_example_table
-<button class="ss-button"><span>Click</span></button>
-
-<button class="ss-button--primary"><span>Click</span></button>
-
-<button class="ss-button--secondary"><span>Click</span></button>
-
-<button class="ss-button--large"><span>Click</span></button>
-
-<button class="ss-button--small"><span>Click</span></button>
-```
-
-*/
-
 .ss-button {
   @include button;
 
