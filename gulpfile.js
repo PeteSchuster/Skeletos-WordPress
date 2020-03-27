@@ -1,94 +1,62 @@
-'use strict';
+import gulp from 'gulp';
+import less from 'gulp-less';
+import babel from 'gulp-babel';
+import concat from 'gulp-concat';
+import uglify from 'gulp-uglify';
+import rename from 'gulp-rename';
+import cleanCSS from 'gulp-clean-css';
+import del from 'del';
 
-var gulp = require('gulp'),
-    concat = require('gulp-concat'),
-    path = require('path'),
-    sass = require('gulp-sass'),
-    minifycss = require('gulp-minify-css'),
-    autoprefixer = require('gulp-autoprefixer'),
-    livereload = require('gulp-livereload'),
-    uglify = require('gulp-uglify');
+const paths = {
+  styles: {
+    src: 'styles/**/*.scss',
+    dest: 'assets/styles/'
+  },
+  scripts: {
+    src: 'scripts/**/*.js',
+    dest: 'assets/scripts/'
+  }
+};
 
-// styles
+/*
+ * For small tasks you can export arrow functions
+ */
+export const clean = () => del(['assets']);
 
-gulp.task('styles:dev', function () {
-    return gulp.src('sass/main.scss')
-        .pipe(sass()).on('error', sass.logError)
-        .pipe(concat('main.css'))
-        .pipe(autoprefixer({
-            browsers: ['last 3 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('css'))
-        .pipe(livereload());
-});
+/*
+ * You can also declare named functions and export them as tasks
+ */
+export function styles() {
+  return gulp.src(paths.styles.src)
+    .pipe(less())
+    .pipe(cleanCSS())
+    // pass in options to the stream
+    .pipe(rename({
+      basename: 'main',
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(paths.styles.dest));
+}
 
-gulp.task('styles:prod', function () {
-    return gulp.src('sass/main.scss')
-        .pipe(sass()).on('error', sass.logError)
-        .pipe(concat('main.min.css'))
-        .pipe(autoprefixer({
-            browsers: ['last 3 versions'],
-            cascade: false
-        }))
-        .pipe(minifycss())
-        .pipe(gulp.dest('css'));
-});
+export function scripts() {
+  return gulp.src(paths.scripts.src, { sourcemaps: true })
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(concat('main.min.js'))
+    .pipe(gulp.dest(paths.scripts.dest));
+}
 
-gulp.task('styles:ie', function () {
-    return gulp.src('sass/ie.scss')
-        .pipe(sass()).on('error', sass.logError)
-        .pipe(concat('ie.min.css'))
-        .pipe(minifycss())
-        .pipe(gulp.dest('css'));
-});
+/*
+ * You could even use `export as` to rename exported tasks
+ */
+function watchFiles() {
+  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.styles.src, styles);
+}
+export { watchFiles as watch };
 
-gulp.task('styles', ['styles:dev', 'styles:prod', 'styles:ie']);
-
-// scripts
-
-gulp.task('scripts:top:dev', function () {
-    return gulp.src([
-        'javascripts/vendor/modernizr.js',
-        'javascripts/vendor/plugins.js'
-    ])
-        .pipe(concat('top.js'))
-        .pipe(gulp.dest('js'));
-});
-
-gulp.task('scripts:top:prod', function () {
-    return gulp.src([
-        'javascripts/vendor/modernizr.js',
-        'javascripts/vendor/plugins.js'
-    ])
-        .pipe(concat('top.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('js'));
-});
-
-gulp.task('scripts:main:dev', function () {
-    return gulp.src([
-        'javascripts/vendor/slick.js',
-        'javascripts/main.js'
-    ])
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest('js'));
-});
-
-gulp.task('scripts:main:prod', function () {
-    return gulp.src([
-        'javascripts/vendor/slick.js',
-        'javascripts/main.js'
-    ])
-        .pipe(concat('main.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('js'));
-});
-
-gulp.task('scripts', ['scripts:top:dev', 'scripts:top:prod', 'scripts:main:dev', 'scripts:main:prod']);
-
-gulp.task('watch', function() {
-    livereload.listen();
-    gulp.watch('sass/**/*.scss', ['styles']);
-    gulp.watch('javascripts/**/*.js', ['scripts']);
-});
+const build = gulp.series(clean, gulp.parallel(styles, scripts));
+/*
+ * Export a default task
+ */
+export default build;
