@@ -34,14 +34,9 @@ function clean() {
  */
 function styles() {
   return gulp.src(paths.styles.src)
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(cleanCSS())
-    // pass in options to the stream
-    .pipe(rename({
-      basename: 'main',
-      suffix: '.min'
-    }))
     .pipe(gulp.dest(paths.styles.dest));
 }
 

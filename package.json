@@ -44,8 +44,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp watch",
-    "build": "gulp test",
-    "test": "gulp test"
+    "build": "gulp build"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

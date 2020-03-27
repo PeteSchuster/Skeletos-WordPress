@@ -1,18 +1,3 @@
-/*doc
----
-title: Base CSS
-name: 0-base-css
-category: Base CSS
----
-
-## Base CSS
-
-The goal of base CSS is to lay the foundation for the more complex components to build and extend. The philosophy behind base CSS is that it "just works." The rules that are applied base elements should cover how the primitive HTML elements should work on your site. These rules should be applied to element selectors so they can cascade through the site without the reliance of class names.
-
-Imagine yourself as a user of your code and you want to add a new email signup form to the site. The expectation should be that copy and pasting the new form into your site's code should render that form similar to the other forms on the site. It "just works." Certainly, there may be some differences if you establish a more complex layout for the forms, but overall the new form doesn't seem foriegn or out of place with the rest of the UI.
-
-*/
-
 @import 'base/defaults';
 @import 'base/typography';
 @import 'base/headings';
