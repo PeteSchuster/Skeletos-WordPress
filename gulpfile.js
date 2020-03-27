@@ -1,13 +1,14 @@
-import gulp from 'gulp';
-import less from 'gulp-less';
-import babel from 'gulp-babel';
-import concat from 'gulp-concat';
-import uglify from 'gulp-uglify';
-import rename from 'gulp-rename';
-import cleanCSS from 'gulp-clean-css';
-import del from 'del';
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var babel = require('gulp-babel');
+var concat = require('gulp-concat');
+var autoprefixer = require('gulp-autoprefixer');
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
+var cleanCSS = require('gulp-clean-css');
+var del = require('del');
 
-const paths = {
+var paths = {
   styles: {
     src: 'styles/**/*.scss',
     dest: 'assets/styles/'
@@ -18,17 +19,23 @@ const paths = {
   }
 };
 
-/*
- * For small tasks you can export arrow functions
+/* Not all tasks need to use streams, a gulpfile is just another node program
+ * and you can use all packages available on npm, but it must return either a
+ * Promise, a Stream or take a callback and call it
  */
-export const clean = () => del(['assets']);
+function clean() {
+  // You can use multiple globbing patterns as you would with `gulp.src`,
+  // for example if you are using del 2.0 or above, return its promise
+  return del(['assets']);
+}
 
 /*
- * You can also declare named functions and export them as tasks
+ * Define our tasks using plain functions
  */
-export function styles() {
+function styles() {
   return gulp.src(paths.styles.src)
-    .pipe(less())
+    .pipe(sass())
+    .pipe(autoprefixer())
     .pipe(cleanCSS())
     // pass in options to the stream
     .pipe(rename({
@@ -38,7 +45,7 @@ export function styles() {
     .pipe(gulp.dest(paths.styles.dest));
 }
 
-export function scripts() {
+function scripts() {
   return gulp.src(paths.scripts.src, { sourcemaps: true })
     .pipe(babel())
     .pipe(uglify())
@@ -46,17 +53,25 @@ export function scripts() {
     .pipe(gulp.dest(paths.scripts.dest));
 }
 
-/*
- * You could even use `export as` to rename exported tasks
- */
-function watchFiles() {
+function watch() {
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.styles.src, styles);
 }
-export { watchFiles as watch };
 
-const build = gulp.series(clean, gulp.parallel(styles, scripts));
 /*
- * Export a default task
+ * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-export default build;
+var build = gulp.series(clean, gulp.parallel(styles, scripts));
+
+/*
+ * You can use CommonJS `exports` module notation to declare tasks
+ */
+exports.clean = clean;
+exports.styles = styles;
+exports.scripts = scripts;
+exports.watch = watch;
+exports.build = build;
+/*
+ * Define default task that can be called by just running `gulp` from cli
+ */
+exports.default = build;

@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "description": "Skeletos WordPress Boilerplate Theme",
   "dependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
   },
   "repository": {
     "type": "git",
@@ -18,9 +27,28 @@
   "bugs": {
     "url": "https://github.com/PeteSchuster/Skeletos-WordPress/issues"
   },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 1 ie version"
+    ]
+  },
   "homepage": "https://github.com/PeteSchuster/Skeletos-WordPress#readme",
   "main": "gulpfile.js",
   "scripts": {
+    "start": "gulp watch",
+    "build": "gulp test",
     "test": "gulp test"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0"
   }
 }
